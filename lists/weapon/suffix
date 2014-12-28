@@ -1,0 +1,20 @@
+of piercing. 5 d 5 md 1 rl 0		base stats
+of the tinkerer. 1 mu 1 rl 0
+of flury. 1 s 0
+with scope. 50 c 0 	crit = 1/val
+of the pilot. 4 pil 0 		skills
+of the warior. 4 com 0
+of the doctor. 4 sci 0
+of silver tongue. 4 soc 0
+of the battalion. 4 clo 0
+of the waysetter. 4 lead 0
+of heroism. 4 ren 0
+of technology. 4 tec 0
+of the market. 4 inn 0
+of guile. 4 cha 0
+of trading. 4 comm 0
+of agility. 4 dex 0
+of Andoria. 3 sci -3 com 0		mixskills
+of Kronos. -3 sci 3 com 0
+of the Picard.  3 lead 3 intu 0
+of power. 10 md 0
