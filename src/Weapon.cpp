@@ -3,46 +3,11 @@
  *  Weapon class
  */
 
- class CWeapon {
+/* CWeapon::CWeapon(params) {
 
-	private:
-		std::string type;
-		std::string sType;
-		std::string prefix;
-		std::string suffix;
-		std::string name;
-		std::string desc;  // weapon writup
-		int lvl;
-		int tier;
-		  // base stats (lvl + rarity mult)
-		float crit;
-		int shots;  // hits per turn
-		int maxdmg;
-		int dmg;
-		std::string ammoType;  // 
-		int mupgrades;  // max # sockets
-		int nupgrades;  // actual # sockets
-		int *upgrades;  // sockets holding upgrade id
-		int rarity;  // 0-1000
-		int rlvl;  // lvl req
-		int rclout;  // combat subskill req;
-		int rsocial;
-		int *mods;  // other buffs from upgrades?
-		int *id;  // may not use?
+} */
 
-	public:
-		std::string getType() {return type;}
-		std::string getStype() {return sType;}
-		std::string getPrefix() {return prefix;}
-		std::string getSuffix() {return suffix;}
-		std::string getName() {return name;}
-		std::string getDesc() {return desc;}
-		  // getDescription()  // full printout
-		void getBaseStats(CWeapon wep);
-
- };
-
-void getBaseStats(CWeapon wep) {  // int lvl
+void CWeapon::getBaseStats(CWeapon wep) {  // int lvl
 	std::ifstream subTypeFile;
 	std::string path ("lists/weapon/");
 	if (!(wep.rarity.compare("legendary"))) {  // legendary
@@ -73,7 +38,7 @@ void getBaseStats(CWeapon wep) {  // int lvl
 	return;
 }
 
-void getStats(CWeapon wep) {
+void CWeapon::getStats(CWeapon wep) {
 	std::string name;
 	std::string path("lists/weapon/legendary/");
 	if (!wep.rarity.compare("common")) {

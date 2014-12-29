@@ -1,3 +1,8 @@
+/** Trek.cpp CWeapon
+  * 
+  * Random weapon generator and utilities
+*/
+
 #include "global.h"
 
 #define PIL 0
@@ -18,6 +23,46 @@
 #define DEX 15
 #define DMG 0
 
+class CWeapon {
+
+	private:
+		std::string type;
+		std::string sType;
+		std::string prefix;
+		std::string suffix;
+		std::string name;
+		std::string desc;  // weapon writup
+		int lvl;
+		int tier;
+		  // base stats (lvl + rarity mult)
+		float crit;
+		int shots;  // hits per turn
+		int maxdmg;
+		int dmg;
+		std::string ammoType;  // 
+		int mupgrades;  // max # sockets
+		int nupgrades;  // actual # sockets
+		int *upgrades;  // sockets holding upgrade id
+		int rarity;  // 0-1000
+		int rlvl;  // lvl req
+		int rclout;  // combat subskill req;
+		int rsocial;
+		int *mods;  // other buffs from upgrades?
+		int *id;  // may not use?
+
+	public:
+		std::string getType() {return type;}
+		std::string getStype() {return sType;}
+		std::string getPrefix() {return prefix;}
+		std::string getSuffix() {return suffix;}
+		std::string getName() {return name;}
+		std::string getDesc() {return desc;}
+		  // getDescription()  // full printout
+		void getBaseStats(CWeapon wep);
+
+ };
+
+ /**
 int fcountstrings(std::string path){//opens and closes file @path
 	std::fstream file(path);
 	int numlines=0;
