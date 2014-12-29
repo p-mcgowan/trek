@@ -1,3 +1,8 @@
+/** Trek.cpp CWeapon
+  * 
+  * Random weapon generator and utilities
+*/
+
 #include "global.h"
 
 #define PIL 0
@@ -18,40 +23,46 @@
 #define DEX 15
 #define DMG 0
 
-int fcountstrings(std::string path){//opens and closes file @path
-	std::fstream file(path);
-	int numlines=0;
-	std::string str;
-	while (!file.eof()){
-		getline(file, str);
-		numlines++;
-	}
-	file.close();
-	return numlines;
-}
+class CWeapon {
 
-std::string fgetrandomstring(std::string path){
-	int lines=fcountstrings(path);
-	std::string str;
-	int i, j = rndm(0,fcountstrings(path));
-	std::fstream file(path);
-	if (!file.is_open()) {
-		std::cout
-		return "";
-	}
-	getline(file, str);
-	for (i=0;i<j;i++){
-		getline(file, str);
-	}
-	fclose(file);
-	i=0;
-	while(str[i]!='.'){
-		strcpy[i]=str[i];
-		i++;
-	}
-	strcpy[i]='\0';
-	return strcpy;
-}
+	private:
+		std::string type;
+		std::string sType;
+		std::string prefix;
+		std::string suffix;
+		std::string name;
+		std::string desc;  // weapon writup
+		int lvl;
+		int tier;
+		  // base stats (lvl + rarity mult)
+		float crit;
+		int shots;  // hits per turn
+		int maxdmg;
+		int dmg;
+		std::string ammoType;  // 
+		int mupgrades;  // max # sockets
+		int nupgrades;  // actual # sockets
+		int *upgrades;  // sockets holding upgrade id
+		int rarity;  // 0-1000
+		int rlvl;  // lvl req
+		int rclout;  // combat subskill req;
+		int rsocial;
+		int *mods;  // other buffs from upgrades?
+		int *id;  // may not use?
+
+	public:
+		std::string getType() {return type;}
+		std::string getStype() {return sType;}
+		std::string getPrefix() {return prefix;}
+		std::string getSuffix() {return suffix;}
+		std::string getName() {return name;}
+		std::string getDesc() {return desc;}
+		  // getDescription()  // full printout
+		void getBaseStats(CWeapon wep);
+
+ };
+
+
 /**
 void getbasestats(weapon *wep){//int lvl
 	FILE *fstype;
