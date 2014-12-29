@@ -40,7 +40,7 @@
 		  // getDescription()  // full printout
 		void getBaseStats(CWeapon wep);
 
- }
+ };
 
 void getBaseStats(CWeapon wep) {  // int lvl
 	std::ifstream subTypeFile;
