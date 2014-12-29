@@ -33,7 +33,7 @@
 	public:
 		std::string getType(){return type;}
 		std::string getStype(){return sType;}
-		std::string getPrefix()return prefix;}
+		std::string getPrefix(){return prefix;}
 		std::string getSuffix(){return suffix;}
 		std::string getName(){return name;}
 		std::string getDesc(){return desc;}
