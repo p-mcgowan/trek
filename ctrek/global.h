@@ -1,1 +1,0 @@
-double seed=0;
