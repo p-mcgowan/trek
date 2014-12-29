@@ -42,105 +42,107 @@
 
  }
  
-void getbasestats(CWeapon wep){//int lvl
-	std::fstream file;
+void getBaseStats(CWeapon wep){//int lvl
+	std::ifstream subTypeFile;
 	std::string path ("lists/weapon/");
-	if(!strcmp(wep.rarity,"legendary")){//legendary
-		strcat(path,"legendary/");
-		strcat(path,wep.type);
-		strcat(path,"/stats/");
-		strcat(path,wep->stype); //stype holds stats
+	if(!(wep.rarity.compare("legendary"))){//legendary
+		path += "legendary/";
+		path += wep.type;
+		path += "/stats/";
+		path += wep.stype; //stype holds stats
 		//getwepdesc(wep,'l'); //legendary - own writeup
 	}
 	else{ //everything else
-		strcat(path,"stats/");
-		strcat(path,wep->type);
-		strcat(path,"/");
-		strcat(path,wep->stype);
-		wep->name=wep->stype;
+		path += "stats/";
+		path += wep.type;
+		path += "/";
+		path += wep.stype;
+		wep.name = wep.stype;
 		//getwepdesc(wep'n'); //nornmal
 	}
-	fstype=fopen(path,"r");
-	fscanf(fstype,"%d",&(wep->dmg));
-	fscanf(fstype,"%d",&(wep->maxdmg));
-	fscanf(fstype,"%d",&(wep->shots));
-	fscanf(fstype,"%f",&(wep->crit));
-	fscanf(fstype,"%d",&(wep->mupgrades));
-	fscanf(fstype,"%[^\\]",wep->desc);
-	fclose(fstype);
-	wep->tier=wep->mupgrades-1;
-	wep->nupgrades=rndm(0,wep->mupgrades);
+	subTypeFile.open(path.c_str());
+	subTypeFile >> wep.dmg;
+	subTypeFile >> wep.maxdmg;
+	subTypeFile >> wep.shots;
+	subTypeFile >> wep.crit;
+	subTypeFile >> wep.mupgrades;
+	std::getline(wep.desc, subTypeFile);
+	subTypeFile.close();
+	wep.tier = wep.mupgrades - 1;
+	wep.nupgrades = rndm(0, wep.mupgrades);
+	return;
+}
+
+void getStats(CWeapon wep){
+	std::string name;
+	std::string path("lists/weapon/legendary/");
+	if(!wep.rarity.compare("common")) {
+		getBaseStats(wep);
+		wep.prefix="";
+		wep.suffix="";
+		wep.name=wep.stype;
+	}
+	else if(!wep.rarity.compare("uncommon")){
+		getBaseStats(wep);
+		if(rndm(0,1)){
+			wep.suffix="";
+			wep.prefix=fgetrandomstring("lists/weapon/prefix");
+			strcat(name,wep.prefix);
+			strcat(name," ");
+			strcat(name,wep.stype);
+			wep.name=name;
+			getMods(wep,'p');
+		}else{
+			wep.prefix="";
+			wep.suffix=fgetrandomstring("lists/weapon/suffix");
+			strcat(name,wep.stype);
+			strcat(name," ");
+			strcat(name,wep.suffix);
+			wep.name=name;
+			getMods(wep,'s');
+		}
+	}
+	else if(!wep.rarity.compare("rare")){
+		getBaseStats(wep);
+		wep.prefix=fgetrandomstring("lists/weapon/prefix");
+		getMods(wep,'p');
+		wep.suffix=fgetrandomstring("lists/weapon/suffix");
+		getMods(wep,'s');
+		strcat(name,wep.prefix);
+		strcat(name," ");
+		strcat(name,wep.stype);
+		strcat(name," ");
+		strcat(name,wep.suffix);
+		wep.name=name;
+		
+	}
+	else if(!wep.rarity.compare("epic")){
+		getBaseStats(wep);
+		wep.prefix=fgetrandomstring("lists/weapon/prefix");
+		wep.suffix=fgetrandomstring("lists/weapon/suffix");
+		getMods(wep,'e');
+		strcat(name,wep.prefix);
+		strcat(name," ");
+		strcat(name,wep.stype);
+		strcat(name," ");
+		strcat(name,wep.suffix);
+		wep.name=name;
+	}
+	else{//legendary
+		getBaseStats(wep);
+		strcat(path,wep.type);
+		strcat(path,"/");
+		strcat(path,wep.stype);
+		strcat(path,"/names");
+		strcat(name,fgetrandomstring(path));
+		wep.name=name;
+		wep.prefix="";
+		wep.suffix="";
+		getMods(wep,'l');
+	}
 	return;
 }
 /**
-void getstats(weapon *wep){
-	char *name=(char*)calloc(128,sizeof(char)),path[256]="lists/weapon/legendary/";
-	if(!strcmp(wep->rarity,"common")){
-		getbasestats(wep);
-		wep->prefix="";
-		wep->suffix="";
-		wep->name=wep->stype;
-	}
-	else if(!strcmp(wep->rarity,"uncommon")){
-		getbasestats(wep);
-		if(rndm(0,1)){
-			wep->suffix="";
-			wep->prefix=fgetrandomstring("lists/weapon/prefix");
-			strcat(name,wep->prefix);
-			strcat(name," ");
-			strcat(name,wep->stype);
-			wep->name=name;
-			getmods(wep,'p');
-		}else{
-			wep->prefix="";
-			wep->suffix=fgetrandomstring("lists/weapon/suffix");
-			strcat(name,wep->stype);
-			strcat(name," ");
-			strcat(name,wep->suffix);
-			wep->name=name;
-			getmods(wep,'s');
-		}
-	}
-	else if(!strcmp(wep->rarity,"rare")){
-		getbasestats(wep);
-		wep->prefix=fgetrandomstring("lists/weapon/prefix");
-		getmods(wep,'p');
-		wep->suffix=fgetrandomstring("lists/weapon/suffix");
-		getmods(wep,'s');
-		strcat(name,wep->prefix);
-		strcat(name," ");
-		strcat(name,wep->stype);
-		strcat(name," ");
-		strcat(name,wep->suffix);
-		wep->name=name;
-		
-	}
-	else if(!strcmp(wep->rarity,"epic")){
-		getbasestats(wep);
-		wep->prefix=fgetrandomstring("lists/weapon/prefix");
-		wep->suffix=fgetrandomstring("lists/weapon/suffix");
-		getmods(wep,'e');
-		strcat(name,wep->prefix);
-		strcat(name," ");
-		strcat(name,wep->stype);
-		strcat(name," ");
-		strcat(name,wep->suffix);
-		wep->name=name;
-	}
-	else{//legendary
-		getbasestats(wep);
-		strcat(path,wep->type);
-		strcat(path,"/");
-		strcat(path,wep->stype);
-		strcat(path,"/names");
-		strcat(name,fgetrandomstring(path));
-		wep->name=name;
-		wep->prefix="";
-		wep->suffix="";
-		getmods(wep,'l');
-	}
-	return;
-}
 char *getrarity(){//int mult){
 	int i=rndm(0,994);
 	if (i<=750)
@@ -154,19 +156,19 @@ char *getrarity(){//int mult){
 	else
 		return "legendary";
 }
-void getmods(weapon *wep, char mode){
+void getMods(CWeapon wep, char mode){
 	char path[256]="lists/weapon/legendary/";
 	int i,mods;
 	if (mode=='p'){//prefix -- for uncommon, rare, epic
-		findmod("lists/weapon/prefix",wep->prefix,wep,'n');
+		findmod("lists/weapon/prefix",wep.prefix,wep,'n');
 	}
 	if (mode=='s'){//suffix -- for uncommon, rare, epic
-		findmod("lists/weapon/suffix",wep->suffix,wep,'n');
+		findmod("lists/weapon/suffix",wep.suffix,wep,'n');
 	}
 	if (mode=='e'){//epic
 		mods=rndm(3,5);
-		findmod("lists/weapon/prefix",wep->prefix,wep,'n');
-		findmod("lists/weapon/suffix",wep->suffix,wep,'n');
+		findmod("lists/weapon/prefix",wep.prefix,wep,'n');
+		findmod("lists/weapon/suffix",wep.suffix,wep,'n');
 		for(i=0;i<mods;i++){
 			if(rndm(0,1)){
 				findmod("lists/weapon/suffix",fgetrandomstring("lists/weapon/suffix"),wep,'n');
@@ -177,16 +179,16 @@ void getmods(weapon *wep, char mode){
 		}
 	}	
 	if (mode=='l'){//legendary - from file
-		strcat(path,wep->type);
+		strcat(path,wep.type);
 		strcat(path,"/");
-		strcat(path,wep->stype);
+		strcat(path,wep.stype);
 		strcat(path,"/");
-		strcat(path,wep->name);
+		strcat(path,wep.name);
 		findmod(path,"",wep,'l');
 	}
 	return;
 }
-void findmod(char *path,char *matchstr,weapon *wep,char rare){
+void findmod(char *path,char *matchstr,CWeapon wep,char rare){
 	FILE *stringfile;
 	char mod[128]="",dum[256];
 	int val=-1;
@@ -210,61 +212,61 @@ void findmod(char *path,char *matchstr,weapon *wep,char rare){
 	fclose(stringfile);
 	return;
 }
-int processmods(weapon *wep, char *mod, int val){
+int processmods(CWeapon wep, char *mod, int val){
 	if(!strcmp(mod,"c")) // values should be scaled by weapon tier
-		wep->crit+=(float)((float)1/(float)val);
+		wep.crit+=(float)((float)1/(float)val);
 	else if(!strcmp(mod,"s"))
-		wep->shots+=val;
+		wep.shots+=val;
 	else if(!strcmp(mod,"md"))
-		wep->maxdmg+=val;
+		wep.maxdmg+=val;
 	else if(!strcmp(mod,"d"))
-		wep->dmg+=val;
+		wep.dmg+=val;
 	else if(!strcmp(mod,"mu")){
-		if (wep->nupgrades+val<=wep->mupgrades)
-			wep->mupgrades+=val;
+		if (wep.nupgrades+val<=wep.mupgrades)
+			wep.mupgrades+=val;
 	}
 	else if(!strcmp(mod,"u")){
 		//could generate upgrade id from file, place in wep
 	}
 	else if(!strcmp(mod,"rl"))
-		wep->rlvl+=val;
+		wep.rlvl+=val;
 	else if(!strcmp(mod,"rc"))
-		wep->rclout+=val;
+		wep.rclout+=val;
 	else if(!strcmp(mod,"rs"))
-		wep->rsocial+=val;
+		wep.rsocial+=val;
 
 	else if(!strcmp(mod,"pil"))
-		wep->mods[PIL]+=val;
+		wep.mods[PIL]+=val;
 	else if(!strcmp(mod,"com"))
-		wep->mods[COM]+=val;
+		wep.mods[COM]+=val;
 	else if(!strcmp(mod,"sci"))
-		wep->mods[SCI]+=val;
+		wep.mods[SCI]+=val;
 	else if(!strcmp(mod,"soc"))
-		wep->mods[SOC]+=val;
+		wep.mods[SOC]+=val;
 	else if(!strcmp(mod,"clo"))
-		wep->mods[CLO]+=val;
+		wep.mods[CLO]+=val;
 	else if(!strcmp(mod,"lead"))
-		wep->mods[LEAD]+=val;
+		wep.mods[LEAD]+=val;
 	else if(!strcmp(mod,"ren"))
-		wep->mods[REN]+=val;
+		wep.mods[REN]+=val;
 	else if(!strcmp(mod,"mec"))
-		wep->mods[MEC]+=val;
+		wep.mods[MEC]+=val;
 	else if(!strcmp(mod,"abl"))
-		wep->mods[ABL]+=val;
+		wep.mods[ABL]+=val;
 	else if(!strcmp(mod,"intu"))
-		wep->mods[INTU]+=val;
+		wep.mods[INTU]+=val;
 	else if(!strcmp(mod,"inte"))
-		wep->mods[INTE]+=val;
+		wep.mods[INTE]+=val;
 	else if(!strcmp(mod,"tec"))
-		wep->mods[TEC]+=val;
+		wep.mods[TEC]+=val;
 	else if(!strcmp(mod,"inn"))
-		wep->mods[INN]+=val;
+		wep.mods[INN]+=val;
 	else if(!strcmp(mod,"cha"))
-		wep->mods[CHA]+=val;
+		wep.mods[CHA]+=val;
 	else if(!strcmp(mod,"comm"))
-		wep->mods[COMM]+=val;
+		wep.mods[COMM]+=val;
 	else if(!strcmp(mod,"dex"))
-		wep->mods[DEX]+=val;
+		wep.mods[DEX]+=val;
 	else{ 
 		printf("unmatched mod %s value %d\n",mod,val);
 		return 1;
