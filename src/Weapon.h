@@ -62,41 +62,7 @@ class CWeapon {
 
  };
 
- /**
-int fcountstrings(std::string path){//opens and closes file @path
-	std::fstream file(path);
-	int numlines=0;
-	std::string str;
-	while (!file.eof()){
-		getline(file, str);
-		numlines++;
-	}
-	file.close();
-	return numlines;
-}
 
-std::string fgetrandomstring(std::string path){
-	int lines=fcountstrings(path);
-	std::string str;
-	int i, j = rndm(0,fcountstrings(path));
-	std::fstream file(path);
-	if (!file.is_open()) {
-		std::cout
-		return "";
-	}
-	getline(file, str);
-	for (i=0;i<j;i++){
-		getline(file, str);
-	}
-	fclose(file);
-	i=0;
-	while(str[i]!='.'){
-		strcpy[i]=str[i];
-		i++;
-	}
-	strcpy[i]='\0';
-	return strcpy;
-}
 /**
 void getbasestats(weapon *wep){//int lvl
 	FILE *fstype;
