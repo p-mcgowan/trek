@@ -64,7 +64,6 @@ void CWeapon::getBaseStats() {  // int lvl
  */
 void CWeapon::getStats() {
 	std::string name;
-	std::string path("../lists/weapon/legendary/");
 	if (!wep.rarity.compare("common")) {
 		wep.getBaseStats();
 		wep.prefix = "";
@@ -75,49 +74,50 @@ void CWeapon::getStats() {
 		wep.getBaseStats();
 		if (rndm(0,1)) {
 			wep.suffix = "";
-			wep.prefix = getRandomStringFromFile("../lists/weapon/prefix");
+			wep.prefix = getRandomStringFromFile(PREFIX_FILE);
 			name += wep.prefix + " " + wep.stype;
 			wep.name = name;
-			wep.findmod("../lists/weapon/prefix",wep.prefix,wep,'n');
+			wep.findmod(PREFIX_FILE,wep.prefix,wep,'n');
 		}else {
 			wep.prefix = "";
-			wep.suffix = getRandomStringFromFile("../lists/weapon/suffix");
+			wep.suffix = getRandomStringFromFile(SUFFIX_FILE);
 			name += wep.stype + " " + wep.suffix;
 			wep.name = name;
-			wep.findmod("../lists/weapon/suffix",wep.suffix,wep,'n');
+			wep.findmod(SUFFIX_FILE,wep.suffix,wep,'n');
 		}
 	}
 	else if (!wep.rarity.compare("rare")) {
 		wep.getBaseStats();
-		wep.prefix = getRandomStringFromFile("../lists/weapon/prefix");
-		wep.suffix = getRandomStringFromFile("../lists/weapon/suffix");
-		wep.findmod("../lists/weapon/prefix",wep.prefix,wep,'n');
-		wep.findmod("../lists/weapon/suffix",wep.suffix,wep,'n');
+		wep.prefix = getRandomStringFromFile(PREFIX_FILE);
+		wep.suffix = getRandomStringFromFile(SUFFIX_FILE);
+		wep.findmod(PREFIX_FILE,wep.prefix,wep,'n');
+		wep.findmod(SUFFIX_FILE,wep.suffix,wep,'n');
 		name += wep.prefix + " " + wep.stype + " " + wep.suffix;
 		wep.name = name;
 
 	}
 	else if (!wep.rarity.compare("epic")) {
-		wep.getBaseStats(wep);
-		wep.prefix = getRandomStringFromFile("../lists/weapon/prefix");
-		wep.suffix = getRandomStringFromFile("../lists/weapon/suffix");
+		wep.getBaseStats();
+		wep.prefix = getRandomStringFromFile(PREFIX_FILE);
+		wep.suffix = getRandomStringFromFile(SUFFIX_FILE);
 		name += wep.prefix + " " + wep.stype + " " + wep.suffix;
 		wep.name = name;
 
 		mods = rndm(3,5);
-		findmod("../lists/weapon/prefix",wep.prefix,wep,'n');
-		findmod("../lists/weapon/suffix",wep.suffix,wep,'n');
+		findmod(PREFIX_FILE,wep.prefix,wep,'n');
+		findmod(SUFFIX_FILE,wep.suffix,wep,'n');
 		for(i = 0;i<mods;i++) {
 			if (rndm(0,1)) {
-				findmod("../lists/weapon/suffix", getRandomStringFromFile("../lists/weapon/suffix"),wep,'n');
+				findmod(SUFFIX_FILE, getRandomStringFromFile(SUFFIX_FILE),wep,'n');
 			}
 			else {
-				findmod("../lists/weapon/prefix", getRandomStringFromFile("../lists/weapon/prefix"),wep,'n');
+				findmod(PREFIX_FILE, getRandomStringFromFile(PREFIX_FILE),wep,'n');
 			}
 		}
 	}
 	else {  // legendary
-		wep.getBaseStats(wep);
+		std::string path("../lists/weapon/legendary/");
+		wep.getBaseStats();
 		path += wep.type + "/" + wep.stype + "/names";
 		name += getRandomStringFromFile(path);
 		wep.name = name;
@@ -132,12 +132,11 @@ void CWeapon::getStats() {
 /* CWeapon::findmod
  * 
  */
-void CWeapon::findmod(char *path,char *matchstr,CWeapon wep,char rare) {
-	FILE *stringfile;
+void CWeapon::findmod(std::string path, std::string matchstr) {
+	std::ifstream stringFile(path.c_str());
 	char mod[128] = "",dum[256];
 	int val = -1;
-	stringfile = fopen(path,"r");
-	if (rare! = 'l') {
+	if (wep.rarity.compare("legendary")) {
 		fscanf(stringfile,"%[^.]",mod);  // read up to .
 		while(strcmp(matchstr,mod)) {
 			fgets(dum,256,stringfile);  // clear out the stuff after the .

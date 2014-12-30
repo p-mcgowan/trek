@@ -25,8 +25,8 @@
 #define DMG 0
 
 // Prefix and suffix list file locations
-#define FPREFIX "../lists/weapon/prefix"
-#define FSUFFIX "../lists/weapon/suffix"
+#define PREFIX_FILE "../lists/weapon/prefix"
+#define SUFFIX_FILE "../lists/weapon/suffix"
 
 // Thresholds for rarities [0-1000]
 #define COMMONTHRESH 750
