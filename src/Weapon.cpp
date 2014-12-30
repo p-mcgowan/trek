@@ -7,7 +7,7 @@
 
 } */
 
-void CWeapon::getBaseStats(CWeapon wep) {  // int lvl
+void CWeapon::setBaseStats(CWeapon wep) {  // int lvl
 	std::ifstream subTypeFile;
 	std::string path("lists/weapon/");
 	if (!(wep.rarity.compare("legendary"))) {  // legendary
