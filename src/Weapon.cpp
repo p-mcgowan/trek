@@ -138,10 +138,10 @@ void CWeapon::getStats() {
 	return;
 }
 
-/* 
+/* CWeapon::getMods
  * 
  */
-void getMods(std::string const mode) {
+void CWeapon::getMods(std::string const mode) {
 	char path[256] = "../lists/weapon/legendary/";
 	int i,mods;
 	if (mode =='p') {  // prefix -- for uncommon, rare, epic
@@ -174,10 +174,10 @@ void getMods(std::string const mode) {
 	return;
 }
 
-/* 
+/* CWeapon::findmod
  * 
  */
-void findmod(char *path,char *matchstr,CWeapon wep,char rare) {
+void CWeapon::findmod(char *path,char *matchstr,CWeapon wep,char rare) {
 	FILE *stringfile;
 	char mod[128] = "",dum[256];
 	int val = -1;
@@ -202,10 +202,10 @@ void findmod(char *path,char *matchstr,CWeapon wep,char rare) {
 	return;
 }
 
-/* 
+/* CWeapon::processmods
  * 
  */
-int processmods(CWeapon wep, char *mod, int val) {
+int CWeapon::processmods(CWeapon wep, char *mod, int val) {
 	if (!strcmp(mod,"c"))  // values should be scaled by weapon tier
 		wep.crit+= (float)((float)1/(float)val);
 	else if (!strcmp(mod,"s"))
