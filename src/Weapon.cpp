@@ -4,13 +4,13 @@
  */
 
 CWeapon::CWeapon() {  // params - lvl, raremult...
-        std::string path("../lists/weapon/names/");
-        type = getRandomStringFromFile("../lists/weapon/names/type");
-        path += type;
-        stype = getRandomStringFromFile(path);
-        wep.setRarity();
-        wep.getStats();
-        return;
+    std::string path("../lists/weapon/names/");
+    type = getRandomStringFromFile("../lists/weapon/names/type");
+    path += type;
+    stype = getRandomStringFromFile(path);
+    wep.setRarity();
+    wep.setStats();
+    return;
 }
 
 /* 
@@ -30,39 +30,10 @@ void setRarity() {  // int mult) {
 		rarity = "legendary";
 }
 
-/* CWeapon::getBaseStats
- * Sets the weapon's basic stats based on rarity and weapon type/sub type
- */
-void CWeapon::getBaseStats() {  // int lvl
-	std::ifstream subTypeFile;
-	std::string path("../lists/weapon/");
-	if (!rarity.compare("legendary")) {  // legendary
-		path += "legendary/" + type + "/stats/" + stype;  // stype holds stats
-		// wep.getwepdesc(wep,'l');  // legendary - own writeup
-	}
-	else {  // everything else
-		path += "stats/" + type + "/" + stype;
-		name = stype;
-		// wep.getwepdesc(wep'n');  // nornmal
-	}
-	subTypeFile.open(path.c_str());
-	subTypeFile >> dmg;
-	subTypeFile >> maxdmg;
-	subTypeFile >> shots;
-	subTypeFile >> crit;
-	subTypeFile >> mupgrades;
-	std::getline(desc, subTypeFile);
-	subTypeFile.close();
-	tier = mupgrades - 1;
-	nupgrades = rndm(0, mupgrades);
-	return;
-}
-
-
-/* CWeapon::getStats
+/* CWeapon::setStats
  * Sets stat modifiers from file for a weapon, based on rarity
  */
-void CWeapon::getStats() {
+void CWeapon::setStats() {
 	std::string name;
 	if (!rarity.compare("common")) {
 		wep.getBaseStats();
@@ -126,6 +97,34 @@ void CWeapon::getStats() {
 		path += type + "/" + stype + "/" + name;
 		wep.findMod(path,"",wep,'l');
 	}
+	return;
+}
+
+/* CWeapon::getBaseStats
+ * Sets the weapon's basic stats based on rarity and weapon type/sub type
+ */
+void CWeapon::getBaseStats() {  // int lvl
+	std::ifstream subTypeFile;
+	std::string path("../lists/weapon/");
+	if (!rarity.compare("legendary")) {  // legendary
+		path += "legendary/" + type + "/stats/" + stype;  // stype holds stats
+		// wep.getwepdesc(wep,'l');  // legendary - own writeup
+	}
+	else {  // everything else
+		path += "stats/" + type + "/" + stype;
+		name = stype;
+		// wep.getwepdesc(wep'n');  // nornmal
+	}
+	subTypeFile.open(path.c_str());
+	subTypeFile >> dmg;
+	subTypeFile >> maxdmg;
+	subTypeFile >> shots;
+	subTypeFile >> crit;
+	subTypeFile >> mupgrades;
+	std::getline(desc, subTypeFile);
+	subTypeFile.close();
+	tier = mupgrades - 1;
+	nupgrades = rndm(0, mupgrades);
 	return;
 }
 
