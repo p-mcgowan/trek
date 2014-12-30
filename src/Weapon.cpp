@@ -3,9 +3,15 @@
  *  Weapon class
  */
 
-/* CWeapon::CWeapon(params) {
-
-} */
+CWeapon::CWeapon() {  // params - lvl, raremult...
+        std::string path("../lists/weapon/names/");
+        wep.type = fgetrandomstring("../lists/weapon/names/type");
+        path += wep.type;
+        wep.stype = fgetrandomstring(path);
+        wep.rarity = getrarity();
+        getstats(wep);
+        return;
+}
 
 void CWeapon::setBaseStats(CWeapon wep) {  // int lvl
 	std::ifstream subTypeFile;
