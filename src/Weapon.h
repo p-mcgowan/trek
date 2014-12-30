@@ -1,10 +1,11 @@
-/** Trek.cpp CWeapon
-  * 
-  * Random weapon generator and utilities
-*/
+/* Trek.cpp CWeapon
+ * 
+ * Random weapon generator and utilities
+ */
 
 #include "global.h"
 
+// Modifier definitions
 #define PIL 0
 #define COM 1
 #define SCI 2
@@ -22,6 +23,17 @@
 #define COMM 14
 #define DEX 15
 #define DMG 0
+
+// Prefix and suffix list file locations
+#define FPREFIX "../lists/weapon/prefix"
+#define FSUFFIX "../lists/weapon/suffix"
+
+// Thresholds for rarities [0-1000]
+#define COMMONTHRESH 750
+#define UNCOMMONTHRESH 900
+#define RARETHRESH 983
+#define EPICTHRESH 994
+
 
 class CWeapon {
 
@@ -59,17 +71,11 @@ class CWeapon {
 		std::string getDesc() {return desc;}
 		  // getDescription()  // full printout
 		void getBaseStats(CWeapon wep);
+		void setBaseStats(weapon *wep);
+		void setRarity();
+		void getmods(weapon *wep, char mode);
+		void findmod(char *path,char *matchstr,weapon *wep,char rare);
+		int processmods(weapon *wep, char *mod, int val);
+		int getwepdesc(weapon *wep);
 
  };
-
-
-void setBaseStats(weapon *wep){
-
-void setRarity(){
-void getmods(weapon *wep, char mode){
-void findmod(char *path,char *matchstr,weapon *wep,char rare){
-int processmods(weapon *wep, char *mod, int val){
-int getwepdesc(weapon *wep)
-
-
-
