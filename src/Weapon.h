@@ -79,3 +79,26 @@ class CWeapon {
 		int getwepdesc(weapon *wep);
 
  };
+
+/* Map strings from mod files to array indeces
+ *
+ */
+ std::map<std::string,int> modToIndex = {
+	{"PILOT", 0},
+	{"COMBAT", 1},
+	{"SCIENCE", 2},
+	{"SOCIAL", 3},
+	{"CLOUT", 4},
+	{"LEADERSHIP", 5},
+	{"REKNOWN", 6},
+	{"MECHAPT", 7},
+	{"ABL", 8},
+	{"INTUITION", 9},
+	{"INTELECT", 10},
+	{"TECHAPT", 11},
+	{"INNOVATION", 12},
+	{"CHARISMA", 13},
+	{"COMMERCE", 14},
+	{"DEXTERITY", 15},
+	{"DMG", 0}
+};

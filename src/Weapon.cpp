@@ -61,8 +61,8 @@ void CWeapon::setStats() {
 		wep.getBaseStats();
 		prefix = getRandomStringFromFile(PREFIX_FILE);
 		suffix = getRandomStringFromFile(SUFFIX_FILE);
-		wep.findMod(PREFIX_FILE,prefix,wep,'n');
-		wep.findMod(SUFFIX_FILE,suffix,wep,'n');
+		wep.findMod();
+		wep.findMod();
 		name += prefix + " " + stype + " " + suffix;
 		name = name;
 
@@ -79,10 +79,10 @@ void CWeapon::setStats() {
 		wep.findMod(SUFFIX_FILE,suffix,wep,'n');
 		for(i = 0;i<mods;i++) {
 			if (rndm(0,1)) {
-				wep.findMod(SUFFIX_FILE, getRandomStringFromFile(SUFFIX_FILE),wep,'n');
+				wep.findMod();
 			}
 			else {
-				wep.findMod(PREFIX_FILE, getRandomStringFromFile(PREFIX_FILE),wep,'n');
+				wep.findMod();
 			}
 		}
 	}
@@ -133,10 +133,9 @@ void CWeapon::getBaseStats() {  // int lvl
  */
 void CWeapon::findmod(std::string path, std::string matchstr) {
 	std::ifstream stringFile(path.c_str());
-	char mod[128] = "",dum[256];
-	int val = -1;
+	std::string buffer;
 	if (rarity.compare("legendary")) {
-		fscanf(stringfile,"%[^.]",mod);  // read up to .
+		getline(path.c_str(), buffer);
 		while(strcmp(matchstr,mod)) {
 			fgets(dum,256,stringfile);  // clear out the stuff after the .
 			fscanf(stringfile,"%[^.]",mod);  // get next name
