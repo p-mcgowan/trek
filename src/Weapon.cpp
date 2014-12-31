@@ -124,42 +124,29 @@ void CWeapon::getBaseStats() {  // int lvl
  * 
  */
 void CWeapon::findmod(std::string path, std::string matchstr) {
-	std::ifstream stringFile(path.c_str());
+	std::ifstream modFile(path.c_str());
 	std::string modName, modValues;
 	if (rarity.compare("legendary")) {
-		getline(path.c_str(), buffer);
-		while(strcmp(matchstr,mod)) {
-			fgets(dum,256,stringfile);  // clear out the stuff after the .
-			fscanf(stringfile,"%[^.]",mod);  // get next name
-		}
-		fgetc(stringfile);  // clear out .
+		getline(path.c_str());
+		// process single string
 	}
-	fscanf(stringfile,"%d %s",&val,mod);  // at least 1
-	while(val! = 0) {
-		if (processmods(wep,mod,val)) {
-			printf("Mod defect = %s",path);
-			while(getchar()! = 'y') {}
+	else {
+		std::string s;
+		getline(path.c_str(), s);
+		std::string token;
+		std::string delimiter = " ";
+		size_t pos = 0;
+		while ((pos = s.find(delimiter)) != std::string::npos) {
+    		NAME = s.substr(0, pos);
+    		s.erase(0, pos + delimiter.length());
+    		pos = s.find(delimiter)
+    		VAL = s.substr(0, pos);
+    		s.erase(0, pos + delimiter.length());
+    		processTokenPair();
 		}
-		fscanf(stringfile,"%d %s",&val,mod);
 	}
-	fclose(stringfile);
+	modFile.close();
 	return;
-	/*
-	std::string s = "NAME val NAME val";
-	std::string delimiter = " ";
-
-	size_t pos = 0;
-	std::string token;
-	while ((pos = s.find(delimiter)) != std::string::npos) {
-    	NAME = s.substr(0, pos);
-    	s.erase(0, pos + delimiter.length());
-    	pos = s.find(delimiter)
-    	VAL = s.substr(0, pos);
-    	s.erase(0, pos + delimiter.length());
-    	processTokenPair()
-	}
-	std::cout << s << std::endl;
-	*
 }
 
 /* CWeapon::processmods
