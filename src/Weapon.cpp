@@ -35,14 +35,13 @@ void setRarity() {  // int mult) {
  */
 void CWeapon::setStats() {
 	std::string name;
+	wep.getBaseStats();
 	if (!rarity.compare("common")) {
-		wep.getBaseStats();
 		prefix = "";
 		suffix = "";
 		name = stype;
 	}
 	else if (!rarity.compare("uncommon")) {
-		wep.getBaseStats();
 		if (rndm(0,1)) {
 			suffix = "";
 			prefix = getRandomStringFromFile(PREFIX_FILE);
@@ -58,7 +57,6 @@ void CWeapon::setStats() {
 		}
 	}
 	else if (!rarity.compare("rare")) {
-		wep.getBaseStats();
 		prefix = getRandomStringFromFile(PREFIX_FILE);
 		suffix = getRandomStringFromFile(SUFFIX_FILE);
 		wep.findMod();
@@ -68,7 +66,6 @@ void CWeapon::setStats() {
 
 	}
 	else if (!rarity.compare("epic")) {
-		wep.getBaseStats();
 		prefix = getRandomStringFromFile(PREFIX_FILE);
 		suffix = getRandomStringFromFile(SUFFIX_FILE);
 		name += prefix + " " + stype + " " + suffix;
@@ -88,7 +85,6 @@ void CWeapon::setStats() {
 	}
 	else {  // legendary
 		std::string path("../lists/weapon/legendary/");
-		wep.getBaseStats();
 		path += type + "/" + stype + "/names";
 		name += getRandomStringFromFile(path);
 		name = name;
