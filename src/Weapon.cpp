@@ -17,7 +17,7 @@ CWeapon::CWeapon() {  // params - lvl, raremult...
  * 
  */
 void setRarity() {  // int mult) {
-	int i = rndm(0,1000);
+	int i = rndm(0, 1000);
 	if (i <= COMMONTHRESH)
 		rarity = "common";
 	else if (i <= UNCOMMONTHRESH)
@@ -34,7 +34,7 @@ void setRarity() {  // int mult) {
  * Sets stat modifiers from file for a weapon, based on rarity
  */
 void CWeapon::setStats() {
-	std::string name;
+	std::string wepName;
 	wep.getBaseStats();
 	if (!rarity.compare("common")) {
 		prefix = "";
@@ -42,56 +42,55 @@ void CWeapon::setStats() {
 		name = stype;
 	}
 	else if (!rarity.compare("uncommon")) {
-		if (rndm(0,1)) {
+		if (rndm(0, 1)) {
 			suffix = "";
 			prefix = getRandomStringFromFile(PREFIX_FILE);
-			name += prefix + " " + stype;
-			name = name;
-			wep.findMod(PREFIX_FILE,prefix,wep,'n');
+			wepName += prefix + " " + stype;
+			name = wepName;
+			wep.findMod(PREFIX_FILE);
 		}else {
 			prefix = "";
 			suffix = getRandomStringFromFile(SUFFIX_FILE);
-			name += stype + " " + suffix;
-			name = name;
-			wep.findMod(SUFFIX_FILE,suffix,wep,'n');
+			wepName += stype + " " + suffix;
+			name = wepName;
+			wep.findMod(SUFFIX_FILE);
 		}
 	}
 	else if (!rarity.compare("rare")) {
 		prefix = getRandomStringFromFile(PREFIX_FILE);
 		suffix = getRandomStringFromFile(SUFFIX_FILE);
-		wep.findMod();
-		wep.findMod();
-		name += prefix + " " + stype + " " + suffix;
-		name = name;
+		wep.findMod(PREFIX_FILE);
+		wep.findMod(SUFFIX_FILE);
+		wepName += prefix + " " + stype + " " + suffix;
+		name = wepName;
 
 	}
 	else if (!rarity.compare("epic")) {
 		prefix = getRandomStringFromFile(PREFIX_FILE);
 		suffix = getRandomStringFromFile(SUFFIX_FILE);
-		name += prefix + " " + stype + " " + suffix;
-		name = name;
+		wepName += prefix + " " + stype + " " + suffix;
+		name = wepName;
 
-		mods = rndm(3,5);
-		wep.findMod(PREFIX_FILE,prefix,wep,'n');
-		wep.findMod(SUFFIX_FILE,suffix,wep,'n');
-		for(i = 0;i<mods;i++) {
-			if (rndm(0,1)) {
-				wep.findMod();
+		mods = rndm(3, 5);
+		wep.findMod(PREFIX_FILE);
+		wep.findMod(SUFFIX_FILE);
+		for(i = 0; i < mods; i++) {
+			if (rndm(0, 1)) {
+				wep.findMod(PREFIX_FILE);
 			}
 			else {
-				wep.findMod();
+				wep.findMod(SUFFIX_FILE);
 			}
 		}
 	}
-	else {  // legendary
+	else {
 		std::string path("../lists/weapon/legendary/");
 		path += type + "/" + stype + "/names";
 		name += getRandomStringFromFile(path);
-		name = name;
 		prefix = "";
 		suffix = "";
-		path += type + "/" + stype + "/" + name;
-		wep.findMod(path,"",wep,'l');
+		path = "../lists/weapon/legendary/" + type + "/" + stype + "/" + name;
+		wep.findMod(path);
 	}
 	return;
 }
@@ -102,14 +101,11 @@ void CWeapon::setStats() {
 void CWeapon::getBaseStats() {  // int lvl
 	std::ifstream subTypeFile;
 	std::string path("../lists/weapon/");
-	if (!rarity.compare("legendary")) {  // legendary
-		path += "legendary/" + type + "/stats/" + stype;  // stype holds stats
-		// wep.getwepdesc(wep,'l');  // legendary - own writeup
+	if (!rarity.compare("legendary")) {
+		path += "legendary/" + type + "/stats/" + stype;
 	}
-	else {  // everything else
+	else {
 		path += "stats/" + type + "/" + stype;
-		name = stype;
-		// wep.getwepdesc(wep'n');  // nornmal
 	}
 	subTypeFile.open(path.c_str());
 	subTypeFile >> dmg;
@@ -129,7 +125,7 @@ void CWeapon::getBaseStats() {  // int lvl
  */
 void CWeapon::findmod(std::string path, std::string matchstr) {
 	std::ifstream stringFile(path.c_str());
-	std::string buffer;
+	std::string modName, modValues;
 	if (rarity.compare("legendary")) {
 		getline(path.c_str(), buffer);
 		while(strcmp(matchstr,mod)) {
@@ -154,6 +150,7 @@ void CWeapon::findmod(std::string path, std::string matchstr) {
  * 
  */
 int CWeapon::processmods(CWeapon wep, char *mod, int val) {
+	// mapping -> modval = modToIndex[stringID]
 	if (!strcmp(mod,"c"))  // values should be scaled by weapon tier
 		crit+= (float)((float)1/(float)val);
 	else if (!strcmp(mod,"s"))

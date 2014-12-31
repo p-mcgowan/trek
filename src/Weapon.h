@@ -70,14 +70,6 @@ class CWeapon {
 		std::string getName() {return name;}
 		std::string getDesc() {return desc;}
 		  // getDescription()  // full printout
-		void getBaseStats(CWeapon wep);
-		void setBaseStats(weapon *wep);
-		void setRarity();
-		void getmods(weapon *wep, char mode);
-		void findmod(char *path,char *matchstr,weapon *wep,char rare);
-		int processmods(weapon *wep, char *mod, int val);
-		int getwepdesc(weapon *wep);
-
  };
 
 /* Map strings from mod files to array indeces
