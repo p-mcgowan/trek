@@ -154,7 +154,33 @@ void CWeapon::findmod(std::string path, std::string matchstr) {
  */
 int CWeapon::processmods(CWeapon wep, char *mod, int val) {
 	// mapping -> modval = modToIndex[stringID]
-	if (!strcmp(mod,"c"))  // values should be scaled by weapon tier
+	switch(modToIndex[modType]) {
+		case :
+			break;
+		case :
+			break;
+		case :
+			break;
+		case :
+			break;
+		case :
+			break;
+		case :
+			break;
+		case :
+			break;
+		case :
+			break;
+		case :
+			break;
+		case :
+			break;
+		case :
+			break;
+		case :
+			break;
+		
+	}
 		crit+= (float)((float)1/(float)val);
 	else if (!strcmp(mod,"s"))
 		shots+= val;

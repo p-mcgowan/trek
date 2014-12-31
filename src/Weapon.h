@@ -6,23 +6,23 @@
 #include "global.h"
 
 // Modifier definitions
-#define PIL 0
-#define COM 1
-#define SCI 2
-#define SOC 3
-#define CLO 4
-#define LEAD 5
-#define REN 6
-#define MEC 7
-#define ABL 8
-#define INTU 9
-#define INTE 10
-#define TEC 11
-#define INN 12
-#define CHA 13
-#define COMM 14
-#define DEX 15
-#define DMG 0
+#define PILOT 		0
+#define COMBAT 		1
+#define SCIENCE 	2
+#define SOCIAL 		3
+#define CLOUT 		4
+#define LEADERSHIP 	5
+#define REKNOWN 	6
+#define MECHAPT 	7
+#define ABL 		8
+#define INTUITION 	9
+#define INTELECT 	10
+#define TECHAPT 	11
+#define INNOVATION 	12
+#define CHARISMA 	13
+#define COMMERCE 	14
+#define DEXTERITY 	15
+#define DMG 		16
 
 // Prefix and suffix list file locations
 #define PREFIX_FILE "../lists/weapon/prefix"
@@ -92,5 +92,6 @@ class CWeapon {
 	{"CHARISMA", 13},
 	{"COMMERCE", 14},
 	{"DEXTERITY", 15},
-	{"DMG", 0}
+	{"DMG", 16}
+
 };
