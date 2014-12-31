@@ -153,90 +153,51 @@ void CWeapon::findmod(std::string path, std::string matchstr) {
  * 
  */
 int CWeapon::processmods(CWeapon wep, char *mod, int val) {
-	// mapping -> modval = modToIndex[stringID]
 	switch(modToIndex[modType]) {
-		case :
+		case CRIT:
+			crit += (float)((float)1/(float)val);
 			break;
-		case :
+		case SHOTS:
+			shots += val;
 			break;
-		case :
+		case MAXDMG:
+			maxdmg += val;
 			break;
-		case :
+		case MAXUPGRADES:
+			if (nupgrades + val <= mupgrades)
+				mupgrades += val;
 			break;
-		case :
+		case LVLREQ:
+			rlvl += val;
 			break;
-		case :
+		case CLOUTREQ:
+			rclout += val;
 			break;
-		case :
+		case SOCIALREQ:
+			rsocial += val;
 			break;
-		case :
+		case PILOT:
+		case COMBAT:
+		case SCIENCE:
+		case SOCIAL:
+		case CLOUT:
+		case LEADERSHIP:
+		case REKNOWN:
+		case MECHAPT:
+		case ABL:
+		case INTUITION:
+		case INTELECT:
+		case TECHAPT:
+		case INNOVATION:
+		case CHARISMA:
+		case COMMERCE:
+		case DEXTERITY:
+			mods[modToIndex[modType]] += modValue;
 			break;
-		case :
+		default:
+			std::cout << "unmatched mod pair" << modType << modToIndex[modType];
+			return 1;
 			break;
-		case :
-			break;
-		case :
-			break;
-		case :
-			break;
-		
-	}
-		crit+= (float)((float)1/(float)val);
-	else if (!strcmp(mod,"s"))
-		shots+= val;
-	else if (!strcmp(mod,"md"))
-		maxdmg+= val;
-	else if (!strcmp(mod,"d"))
-		dmg+= val;
-	else if (!strcmp(mod,"mu")) {
-		if (nupgrades+val< = mupgrades)
-			mupgrades+= val;
-	}
-	else if (!strcmp(mod,"u")) {
-		  // could generate upgrade id from file, place in wep
-	}
-	else if (!strcmp(mod,"rl"))
-		rlvl+= val;
-	else if (!strcmp(mod,"rc"))
-		rclout+= val;
-	else if (!strcmp(mod,"rs"))
-		rsocial+= val;
-
-	else if (!strcmp(mod,"pil"))
-		mods[PIL]+= val;
-	else if (!strcmp(mod,"com"))
-		mods[COM]+= val;
-	else if (!strcmp(mod,"sci"))
-		mods[SCI]+= val;
-	else if (!strcmp(mod,"soc"))
-		mods[SOC]+= val;
-	else if (!strcmp(mod,"clo"))
-		mods[CLO]+= val;
-	else if (!strcmp(mod,"lead"))
-		mods[LEAD]+= val;
-	else if (!strcmp(mod,"ren"))
-		mods[REN]+= val;
-	else if (!strcmp(mod,"mec"))
-		mods[MEC]+= val;
-	else if (!strcmp(mod,"abl"))
-		mods[ABL]+= val;
-	else if (!strcmp(mod,"intu"))
-		mods[INTU]+= val;
-	else if (!strcmp(mod,"inte"))
-		mods[INTE]+= val;
-	else if (!strcmp(mod,"tec"))
-		mods[TEC]+= val;
-	else if (!strcmp(mod,"inn"))
-		mods[INN]+= val;
-	else if (!strcmp(mod,"cha"))
-		mods[CHA]+= val;
-	else if (!strcmp(mod,"comm"))
-		mods[COMM]+= val;
-	else if (!strcmp(mod,"dex"))
-		mods[DEX]+= val;
-	else {
-		printf("unmatched mod %s value %d\n",mod,val);
-		return 1;
 	}
 	return 0;
 }
