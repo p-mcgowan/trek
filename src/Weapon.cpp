@@ -144,6 +144,22 @@ void CWeapon::findmod(std::string path, std::string matchstr) {
 	}
 	fclose(stringfile);
 	return;
+	/*
+	std::string s = "NAME val NAME val";
+	std::string delimiter = " ";
+
+	size_t pos = 0;
+	std::string token;
+	while ((pos = s.find(delimiter)) != std::string::npos) {
+    	NAME = s.substr(0, pos);
+    	s.erase(0, pos + delimiter.length());
+    	pos = s.find(delimiter)
+    	VAL = s.substr(0, pos);
+    	s.erase(0, pos + delimiter.length());
+    	processTokenPair()
+	}
+	std::cout << s << std::endl;
+	*
 }
 
 /* CWeapon::processmods
