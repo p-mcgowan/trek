@@ -138,14 +138,24 @@ void CWeapon::applyMods() {
 		if (suffix != "") {
 			modFile.open(SUFFIX_FILE);
 			istream::getline(modFile, modLine);
+			while (!modLine.compare(suffix)) {
+				istream::getline(modFile, modLine);
+				istream::getline(modFile, modLine);
+			}
+			istream::getline(modFile, modLine);
 			size_t pos = 0;
 			while ((pos = modLine.find(delimiter)) != std::string::npos) {
-    			NAME = modLinesubstr(0, pos);
+    			modName = modLinesubstr(0, pos);
     			modLine.erase(0, pos + delimiter.length());
     			pos = modLine.find(delimiter)
-    			VAL = modLine.substr(0, pos);
     			modLine.erase(0, pos + delimiter.length());
-    			processTokenPair();
+
+				pos = modLine.find(delimiter);
+    			modValue = modLinesubstr(0, pos);
+    			modLine.erase(0, pos + delimiter.length());
+    			pos = modLine.find(delimiter)
+    			modValue.erase(0, pos + delimiter.length());    			
+    			processTokenPair(modName, std::stoi(modValue));
 			}
 		}
 	}
@@ -153,11 +163,11 @@ void CWeapon::applyMods() {
 	return;
 }
 
-/* CWeapon::processmods
+/* CWeapon::processMods
  * 
  */
-int CWeapon::processmods() {
-	switch(modToIndex[modType]) {
+int CWeapon::processMods(std::string modName, int modValue) {
+	switch(modToIndex[modName]) {
 		case DMG:
 			dmg += modValue;
 		case CRIT:
@@ -198,10 +208,10 @@ int CWeapon::processmods() {
 		case CHARISMA:
 		case COMMERCE:
 		case DEXTERITY:
-			mods[modToIndex[modType]] += modValue;
+			mods[modToIndex[modName]] += modValue;
 			break;
 		default:
-			std::cout << "unmatched mod pair" << modType << modToIndex[modType];
+			std::cout << "unmatched mod pair" << modName << modToIndex[modName];
 			return 1;
 			break;
 	}
