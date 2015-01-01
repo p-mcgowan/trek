@@ -22,7 +22,15 @@
 #define CHARISMA 	13
 #define COMMERCE 	14
 #define DEXTERITY 	15
-#define DMG 		16
+#define DMG			16
+#define CRIT		17
+#define SHOTS		18
+#define MAXDMG		19
+#define MAXUPGRADES 20
+#define LVLREQ		21
+#define CLOUTREQ	22
+#define SOCIALREQ	23
+
 
 // Prefix and suffix list file locations
 #define PREFIX_FILE "../lists/weapon/prefix"
@@ -99,6 +107,12 @@ class CWeapon {
 	{"CHARISMA", 13},
 	{"COMMERCE", 14},
 	{"DEXTERITY", 15},
-	{"DMG", 16}
-
+{"DMG, 16"},
+{"CRIT, 17"},
+{"SHOTS, 18"},
+{"MAXDMG, 19"},
+{"MAXUPGRADES, 20}
+{"LVLREQ, 21"},
+{"CLOUTREQ, 22"},
+{"SOCIALREQ, 23"}
 };
