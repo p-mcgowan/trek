@@ -125,7 +125,7 @@ void CWeapon::getBaseStats() {  // int lvl
 void CWeapon::applyMods() {
 	std::ifstream modFile;
 	std::string path;
-	std::string modName, modValues;
+	std::string modName, modValue, modLine, delimiter = " ";
 	if (rarity.compare("legendary")) {
 		path = "../lists/weapon/legendary/" + type + "/" + stype + "/" + name;
 		istream::getline(path.c_str());
@@ -137,19 +137,16 @@ void CWeapon::applyMods() {
 		}
 		if (suffix != "") {
 			modFile.open(SUFFIX_FILE);
-		}
-		std::string s;
-		istream::getline(modFile, s);
-		std::string token;
-		std::string delimiter = " ";
-		size_t pos = 0;
-		while ((pos = s.find(delimiter)) != std::string::npos) {
-    		NAME = s.substr(0, pos);
-    		s.erase(0, pos + delimiter.length());
-    		pos = s.find(delimiter)
-    		VAL = s.substr(0, pos);
-    		s.erase(0, pos + delimiter.length());
-    		processTokenPair();
+			istream::getline(modFile, modLine);
+			size_t pos = 0;
+			while ((pos = modLine.find(delimiter)) != std::string::npos) {
+    			NAME = modLinesubstr(0, pos);
+    			modLine.erase(0, pos + delimiter.length());
+    			pos = modLine.find(delimiter)
+    			VAL = modLine.substr(0, pos);
+    			modLine.erase(0, pos + delimiter.length());
+    			processTokenPair();
+			}
 		}
 	}
 	modFile.close();
