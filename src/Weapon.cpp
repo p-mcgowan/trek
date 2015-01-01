@@ -145,17 +145,17 @@ void CWeapon::applyMods() {
 			istream::getline(modFile, modLine);
 			size_t pos = 0;
 			while ((pos = modLine.find(delimiter)) != std::string::npos) {
-    			modName = modLinesubstr(0, pos);
+    			modValue = modLine.substr(0, pos);
     			modLine.erase(0, pos + delimiter.length());
     			pos = modLine.find(delimiter)
-    			modLine.erase(0, pos + delimiter.length());
+    			modValue.erase(0, pos + delimiter.length());
 
-				pos = modLine.find(delimiter);
-    			modValue = modLinesubstr(0, pos);
+    			pos = modLine.find(delimiter);
+    			modName = modLine.substr(0, pos);
     			modLine.erase(0, pos + delimiter.length());
     			pos = modLine.find(delimiter)
-    			modValue.erase(0, pos + delimiter.length());    			
-    			processTokenPair(modName, std::stoi(modValue));
+    			modLine.erase(0, pos + delimiter.length());
+    			processMods(modName, std::stoi(modValue));
 			}
 		}
 	}
@@ -171,26 +171,26 @@ int CWeapon::processMods(std::string modName, int modValue) {
 		case DMG:
 			dmg += modValue;
 		case CRIT:
-			crit += (float)((float)1/(float)val);
+			crit += (float)((float)1/(float)modValue);
 			break;
 		case SHOTS:
-			shots += val;
+			shots += modValue;
 			break;
 		case MAXDMG:
-			maxdmg += val;
+			maxdmg += modValue;
 			break;
 		case MAXUPGRADES:
-			if (nupgrades + val <= mupgrades)
-				mupgrades += val;
+			if (nupgrades + modValue <= mupgrades)
+				mupgrades += modValue;
 			break;
 		case LVLREQ:
-			rlvl += val;
+			rlvl += modValue;
 			break;
 		case CLOUTREQ:
-			rclout += val;
+			rclout += modValue;
 			break;
 		case SOCIALREQ:
-			rsocial += val;
+			rsocial += modValue;
 			break;
 		case PILOT:
 		case COMBAT:
@@ -211,7 +211,7 @@ int CWeapon::processMods(std::string modName, int modValue) {
 			mods[modToIndex[modName]] += modValue;
 			break;
 		default:
-			std::cout << "unmatched mod pair" << modName << modToIndex[modName];
+			std::cout << "unmatched mod pair" << modName << " => " << modToIndex[modName];
 			return 1;
 			break;
 	}
