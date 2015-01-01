@@ -47,41 +47,41 @@ void CWeapon::setStats() {
 			prefix = getRandomStringFromFile(PREFIX_FILE);
 			wepName += prefix + " " + stype;
 			name = wepName;
-			wep.findMod(PREFIX_FILE);
+			wep.applyMods();
 		}else {
 			prefix = "";
 			suffix = getRandomStringFromFile(SUFFIX_FILE);
 			wepName += stype + " " + suffix;
 			name = wepName;
-			wep.findMod(SUFFIX_FILE);
+			wep.applyMods();
 		}
 	}
 	else if (!rarity.compare("rare")) {
 		prefix = getRandomStringFromFile(PREFIX_FILE);
 		suffix = getRandomStringFromFile(SUFFIX_FILE);
-		wep.findMod(PREFIX_FILE);
-		wep.findMod(SUFFIX_FILE);
+		wep.applyMods();
 		wepName += prefix + " " + stype + " " + suffix;
 		name = wepName;
 
 	}
 	else if (!rarity.compare("epic")) {
-		prefix = getRandomStringFromFile(PREFIX_FILE);
-		suffix = getRandomStringFromFile(SUFFIX_FILE);
-		wepName += prefix + " " + stype + " " + suffix;
-		name = wepName;
-
-		mods = rndm(3, 5);
-		wep.findMod(PREFIX_FILE);
-		wep.findMod(SUFFIX_FILE);
+		mods = rndm(4, 6);
 		for(i = 0; i < mods; i++) {
 			if (rndm(0, 1)) {
-				wep.findMod(PREFIX_FILE);
+				suffix = "";
+				prefix = getRandomStringFromFile(PREFIX_FILE);
 			}
 			else {
-				wep.findMod(SUFFIX_FILE);
+				suffix = getRandomStringFromFile(SUFFIX_FILE);;
+				prefix = "";
 			}
+			wep.applyMods();
 		}
+		prefix = getRandomStringFromFile(PREFIX_FILE);
+		suffix = getRandomStringFromFile(SUFFIX_FILE);
+		wep.applyMods();
+		wepName += prefix + " " + stype + " " + suffix;
+		name = wepName;
 	}
 	else {
 		std::string path("../lists/weapon/legendary/");
@@ -90,7 +90,7 @@ void CWeapon::setStats() {
 		prefix = "";
 		suffix = "";
 		path = "../lists/weapon/legendary/" + type + "/" + stype + "/" + name;
-		wep.findMod(path);
+		wep.applyMods();
 	}
 	return;
 }
@@ -120,10 +120,10 @@ void CWeapon::getBaseStats() {  // int lvl
 	return;
 }
 
-/* CWeapon::findmod
+/* CWeapon::applyMods
  * 
  */
-void CWeapon::findmod(std::string path, std::string matchstr) {
+void CWeapon::applyMods() {
 	std::ifstream modFile(path.c_str());
 	std::string modName, modValues;
 	if (rarity.compare("legendary")) {
@@ -152,8 +152,10 @@ void CWeapon::findmod(std::string path, std::string matchstr) {
 /* CWeapon::processmods
  * 
  */
-int CWeapon::processmods(CWeapon wep, char *mod, int val) {
+int CWeapon::processmods() {
 	switch(modToIndex[modType]) {
+		case DMG:
+			dmg += modValue;
 		case CRIT:
 			crit += (float)((float)1/(float)val);
 			break;
