@@ -34,7 +34,8 @@ void setRarity() {  // int mult) {
  * Sets stat modifiers from file for a weapon, based on rarity
  */
 void CWeapon::setStats() {
-	std::string wepName;
+	std::ifstream modFile;
+	std::string wepName, path, modLine;
 	wep.getBaseStats();
 	if (!rarity.compare("common")) {
 		prefix = "";
@@ -47,13 +48,27 @@ void CWeapon::setStats() {
 			prefix = getRandomStringFromFile(PREFIX_FILE);
 			wepName += prefix + " " + stype;
 			name = wepName;
-			wep.applyMods();
+			modFile.open(PREFIX_FILE);
+			istream::getline(modFile, modLine);
+			while (!modLine.compare(prefix)) {
+				istream::getline(modFile, modLine);
+				istream::getline(modFile, modLine);
+			}
+			istream::getline(modFile, modLine);
+			wep.applyMods(modLine);
 		}else {
 			prefix = "";
 			suffix = getRandomStringFromFile(SUFFIX_FILE);
 			wepName += stype + " " + suffix;
 			name = wepName;
-			wep.applyMods();
+			modFile.open(SUFFIX_FILE);
+			istream::getline(modFile, modLine);
+			while (!modLine.compare(suffix)) {
+				istream::getline(modFile, modLine);
+				istream::getline(modFile, modLine);
+			}
+			istream::getline(modFile, modLine);
+			wep.applyMods(modLine);
 		}
 	}
 	else if (!rarity.compare("rare")) {
@@ -89,7 +104,9 @@ void CWeapon::setStats() {
 		name += getRandomStringFromFile(path);
 		prefix = "";
 		suffix = "";
-		wep.applyMods();
+		path = "../lists/weapon/legendary/" + type + "/" + stype + "/" + name;
+		istream::getline(path.c_str(), modLine);
+		wep.applyMods(modLine);
 	}
 	return;
 }
@@ -122,72 +139,22 @@ void CWeapon::getBaseStats() {  // int lvl
 /* CWeapon::applyMods
  * 
  */
-void CWeapon::applyMods() {
-	std::ifstream modFile;
-	std::string path;
-	std::string modName, modValue, modLine, delimiter = " ";
-	if (rarity.compare("legendary")) {
-		path = "../lists/weapon/legendary/" + type + "/" + stype + "/" + name;
-		istream::getline(path.c_str(), modLine);
-		size_t pos = 0;
-		while ((pos = modLine.find(delimiter)) != std::string::npos) {
-    		modValue = modLine.substr(0, pos);
-    		modLine.erase(0, pos + delimiter.length());
-    		pos = modLine.find(delimiter)
-    		modValue.erase(0, pos + delimiter.length());
-   			pos = modLine.find(delimiter);
-   			modName = modLine.substr(0, pos);
-   			modLine.erase(0, pos + delimiter.length());
-   			pos = modLine.find(delimiter)
-   			modLine.erase(0, pos + delimiter.length());
-   			processMods(modName, std::stoi(modValue));
-		}
-	} else {
-		if (prefix != "") {
-			modFile.open(PREFIX_FILE);
-			istream::getline(modFile, modLine);
-			while (!modLine.compare(suffix)) {
-				istream::getline(modFile, modLine);
-				istream::getline(modFile, modLine);
-			}
-			istream::getline(modFile, modLine);
-			size_t pos = 0;
-			while ((pos = modLine.find(delimiter)) != std::string::npos) {
-    			modValue = modLine.substr(0, pos);
-    			modLine.erase(0, pos + delimiter.length());
-    			pos = modLine.find(delimiter)
-    			modValue.erase(0, pos + delimiter.length());
+void CWeapon::applyMods(std::string modLine) {
+	std::string modName, modValue, delimiter = " ";
 
-    			pos = modLine.find(delimiter);
-    			modName = modLine.substr(0, pos);
-    			modLine.erase(0, pos + delimiter.length());
-    			pos = modLine.find(delimiter)
-    			modLine.erase(0, pos + delimiter.length());
-    			processMods(modName, std::stoi(modValue));
-		}
-		if (suffix != "") {
-			modFile.open(SUFFIX_FILE);
-			istream::getline(modFile, modLine);
-			while (!modLine.compare(suffix)) {
-				istream::getline(modFile, modLine);
-				istream::getline(modFile, modLine);
-			}
-			istream::getline(modFile, modLine);
-			size_t pos = 0;
-			while ((pos = modLine.find(delimiter)) != std::string::npos) {
-    			modValue = modLine.substr(0, pos);
-    			modLine.erase(0, pos + delimiter.length());
-    			pos = modLine.find(delimiter)
-    			modValue.erase(0, pos + delimiter.length());
-
-    			pos = modLine.find(delimiter);
-    			modName = modLine.substr(0, pos);
-    			modLine.erase(0, pos + delimiter.length());
-    			pos = modLine.find(delimiter)
-    			modLine.erase(0, pos + delimiter.length());
-    			processMods(modName, std::stoi(modValue));
-			}
-		}
+	size_t pos = 0;
+	while ((pos = modLine.find(delimiter)) != std::string::npos) {
+		modValue = modLine.substr(0, pos);
+		modLine.erase(0, pos + delimiter.length());
+		pos = modLine.find(delimiter)
+		modLine.erase(0, pos + delimiter.length());
+		
+		pos = modLine.find(delimiter);
+		modName = modLine.substr(0, pos);
+		modLine.erase(0, pos + delimiter.length());
+		pos = modLine.find(delimiter)
+		modLine.erase(0, pos + delimiter.length());
+		processMods(modName, std::stoi(modValue));
 	}
 	modFile.close();
 	return;
