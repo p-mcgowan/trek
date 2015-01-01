@@ -3,6 +3,8 @@
  * Random weapon generator class
  */
 
+#define "Weapon.h"
+
 CWeapon::CWeapon() {  // params - lvl, raremult...
     std::string path("../lists/weapon/names/");
     type = getRandomStringFromFile("../lists/weapon/names/type");
