@@ -200,7 +200,7 @@ int CWeapon::processMods(std::string modName, int modValue) {
 		case LEADERSHIP:
 		case REKNOWN:
 		case MECHAPT:
-		case ABL:
+		case ABILITY:
 		case INTUITION:
 		case INTELECT:
 		case TECHAPT:

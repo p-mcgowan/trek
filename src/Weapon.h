@@ -84,7 +84,7 @@ class CWeapon {
 	{"LEADERSHIP", 5},
 	{"REKNOWN", 6},
 	{"MECHAPT", 7},
-	{"ABL", 8},
+	{"ABILITY", 8},
 	{"INTUITION", 9},
 	{"INTELECT", 10},
 	{"TECHAPT", 11},
