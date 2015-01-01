@@ -128,12 +128,42 @@ void CWeapon::applyMods() {
 	std::string modName, modValue, modLine, delimiter = " ";
 	if (rarity.compare("legendary")) {
 		path = "../lists/weapon/legendary/" + type + "/" + stype + "/" + name;
-		istream::getline(path.c_str());
-		// process single line of mods
-	}
-	else {
+		istream::getline(path.c_str(), modLine);
+		size_t pos = 0;
+		while ((pos = modLine.find(delimiter)) != std::string::npos) {
+    		modValue = modLine.substr(0, pos);
+    		modLine.erase(0, pos + delimiter.length());
+    		pos = modLine.find(delimiter)
+    		modValue.erase(0, pos + delimiter.length());
+   			pos = modLine.find(delimiter);
+   			modName = modLine.substr(0, pos);
+   			modLine.erase(0, pos + delimiter.length());
+   			pos = modLine.find(delimiter)
+   			modLine.erase(0, pos + delimiter.length());
+   			processMods(modName, std::stoi(modValue));
+		}
+	} else {
 		if (prefix != "") {
 			modFile.open(PREFIX_FILE);
+			istream::getline(modFile, modLine);
+			while (!modLine.compare(suffix)) {
+				istream::getline(modFile, modLine);
+				istream::getline(modFile, modLine);
+			}
+			istream::getline(modFile, modLine);
+			size_t pos = 0;
+			while ((pos = modLine.find(delimiter)) != std::string::npos) {
+    			modValue = modLine.substr(0, pos);
+    			modLine.erase(0, pos + delimiter.length());
+    			pos = modLine.find(delimiter)
+    			modValue.erase(0, pos + delimiter.length());
+
+    			pos = modLine.find(delimiter);
+    			modName = modLine.substr(0, pos);
+    			modLine.erase(0, pos + delimiter.length());
+    			pos = modLine.find(delimiter)
+    			modLine.erase(0, pos + delimiter.length());
+    			processMods(modName, std::stoi(modValue));
 		}
 		if (suffix != "") {
 			modFile.open(SUFFIX_FILE);
