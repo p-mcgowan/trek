@@ -1,4 +1,4 @@
-/* Trek.cpp CWeapon
+/* Trek.cpp - CWeapon
  * 
  * Random weapon generator and utilities
  */
@@ -70,6 +70,13 @@ class CWeapon {
 		std::string getName() {return name;}
 		std::string getDesc() {return desc;}
 		  // getDescription()  // full printout
+		void setRarity();
+		void setStats();
+		std::string getModLine(std::string path, std::string toFind);
+		void getBaseStats();
+		void processModLine(std::string modLine);
+		int applyMods(std::string modName, int modValue);
+
  };
 
 /* Map strings from mod files to array indeces
