@@ -89,7 +89,6 @@ void CWeapon::setStats() {
 		name += getRandomStringFromFile(path);
 		prefix = "";
 		suffix = "";
-		path = "../lists/weapon/legendary/" + type + "/" + stype + "/" + name;
 		wep.applyMods();
 	}
 	return;
@@ -113,7 +112,7 @@ void CWeapon::getBaseStats() {  // int lvl
 	subTypeFile >> shots;
 	subTypeFile >> crit;
 	subTypeFile >> mupgrades;
-	std::getline(desc, subTypeFile);
+	istream::getline(desc, subTypeFile);
 	subTypeFile.close();
 	tier = mupgrades - 1;
 	nupgrades = rndm(0, mupgrades);
@@ -124,15 +123,23 @@ void CWeapon::getBaseStats() {  // int lvl
  * 
  */
 void CWeapon::applyMods() {
-	std::ifstream modFile(path.c_str());
+	std::ifstream modFile;
+	std::string path;
 	std::string modName, modValues;
 	if (rarity.compare("legendary")) {
-		getline(path.c_str());
-		// process single string
+		path = "../lists/weapon/legendary/" + type + "/" + stype + "/" + name;
+		istream::getline(path.c_str());
+		// process single line of mods
 	}
 	else {
+		if (prefix != "") {
+			modFile.open(PREFIX_FILE);
+		}
+		if (suffix != "") {
+			modFile.open(SUFFIX_FILE);
+		}
 		std::string s;
-		getline(path.c_str(), s);
+		istream::getline(modFile, s);
 		std::string token;
 		std::string delimiter = " ";
 		size_t pos = 0;
