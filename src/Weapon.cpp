@@ -41,25 +41,23 @@ void CWeapon::setRarity() {  // int mult) {
  * based on rarity
  */
 void CWeapon::setStats() {
-	std::string wepName, path, modLine;
+	std::string path, modLine;
 	this->getBaseStats();
 	if (!this->rarity.compare("common")) {
 		this->prefix = "";
 		this->suffix = "";
-		this->name = this->sType;
+		//this->name = this->sType;
 	}
 	else if (!this->rarity.compare("uncommon")) {
 		if (rndm(0, 1)) {
 			this->suffix = "";
 			this->prefix = getRandomStringFromFile(PREFIX_FILE);
-			wepName += this->prefix + " " + this->sType;
-			this->name = wepName;
+			this->name = this->prefix + " " + this->sType;
 			this->processModLine(getModLine(PREFIX_FILE, this->prefix));
 		}else {
 			this->prefix = "";
 			this->suffix = getRandomStringFromFile(SUFFIX_FILE);
-			wepName += this->sType + " " + this->suffix;
-			this->name = wepName;
+			//this->name = this->sType + " " + this->suffix;
 			this->processModLine(getModLine(SUFFIX_FILE, this->suffix));
 		}
 	}
@@ -68,8 +66,8 @@ void CWeapon::setStats() {
 		this->suffix = getRandomStringFromFile(SUFFIX_FILE);
 		this->processModLine(getModLine(SUFFIX_FILE, this->suffix));
 		this->processModLine(getModLine(PREFIX_FILE, this->prefix));
-		wepName += this->prefix + " " + this->sType + " " + this->suffix;
-		this->name = wepName;
+		//wepName += this->prefix + " " + this->sType + " " + this->suffix;
+		//this->name = wepName;
 
 	}
 	else if (!this->rarity.compare("epic")) {
@@ -88,8 +86,7 @@ void CWeapon::setStats() {
 		this->suffix = getRandomStringFromFile(SUFFIX_FILE);
 		this->processModLine(getModLine(SUFFIX_FILE, this->suffix));
 		this->processModLine(getModLine(PREFIX_FILE, this->prefix));
-		wepName += this->prefix + " " + this->sType + " " + this->suffix;
-		this->name = wepName;
+		//this->name = wepName;
 	}
 	else {
 		std::string path("../lists/weapon/legendary/");
@@ -102,6 +99,8 @@ void CWeapon::setStats() {
 		std::getline(legendaryFile, modLine);
 		this->processModLine(modLine);
 	}
+	if(this->rarity.compare("legendary"))
+		this->name = this->prefix + " " + this->sType + " " + this->suffix;
 	return;
 }
 

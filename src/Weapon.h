@@ -74,12 +74,27 @@ class CWeapon {
 	public:
 		CWeapon();
 		std::string getType() {return type;}
-		std::string getStype() {return sType;}
+		std::string getSType() {return sType;}
 		std::string getPrefix() {return prefix;}
 		std::string getSuffix() {return suffix;}
 		std::string getName() {return name;}
 		std::string getDesc() {return desc;}
-		  // getDescription()  // full printout
+		int getLvl() {return lvl;}
+		int getTier() {return tier;}
+		float getCrit() {return crit;}
+		int getShots() {return shots;}
+		int getMaxdmg() {return maxdmg;}
+		int getDmg() {return dmg;}
+		std::string getAmmoType() {return ammoType;}
+		int getMupgrades() {return mupgrades;}
+		int getNupgrades() {return nupgrades;}
+		int *getUpgrades() {return upgrades;}
+		std::string getRarity() {return rarity;}
+		int getRlvl() {return rlvl;}
+		int getRclout() {return rclout;}
+		int getRsocial() {return rsocial;}
+		int getMods(int i) {return mods[i];}
+
 		void setRarity();
 		void setStats();
 		std::string getModLine(std::string path, std::string toFind);
