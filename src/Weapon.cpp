@@ -9,11 +9,11 @@
 
 CWeapon::CWeapon() {  // params - lvl, raremult...
     std::string path("../lists/weapon/names/");
-    type = getRandomStringFromFile("../lists/weapon/names/type");
-    path += type;
-    stype = getRandomStringFromFile(path);
-    wep.setRarity();
-    wep.setStats();
+    this->type = getRandomStringFromFile("../lists/weapon/names/type");
+    path += this->type;
+    this->sType = getRandomStringFromFile(path);
+    this->setRarity();
+    this->setStats();
     return;
 }
 
@@ -21,18 +21,18 @@ CWeapon::CWeapon() {  // params - lvl, raremult...
  * 
  * Applies a random rarity to a weapon
  */
-void setRarity() {  // int mult) {
+void CWeapon::setRarity() {  // int mult) {
 	int i = rndm(0, 1000);
 	if (i <= COMMONTHRESH)
-		rarity = "common";
+		this->rarity = "common";
 	else if (i <= UNCOMMONTHRESH)
-		rarity = "uncommon";
+		this->rarity = "uncommon";
 	else if (i <= RARETHRESH)
-		rarity = "rare";
+		this->rarity = "rare";
 	else if (i <= EPICTHRESH)
-		rarity = "epic";
+		this->rarity = "epic";
 	else
-		rarity = "legendary";
+		this->rarity = "legendary";
 }
 
 /* CWeapon::setStats
@@ -42,116 +42,117 @@ void setRarity() {  // int mult) {
  */
 void CWeapon::setStats() {
 	std::string wepName, path, modLine;
-	wep.getBaseStats();
-	if (!rarity.compare("common")) {
-		prefix = "";
-		suffix = "";
-		name = stype;
+	this->getBaseStats();
+	if (!this->rarity.compare("common")) {
+		this->prefix = "";
+		this->suffix = "";
+		this->name = this->sType;
 	}
-	else if (!rarity.compare("uncommon")) {
+	else if (!this->rarity.compare("uncommon")) {
 		if (rndm(0, 1)) {
-			suffix = "";
-			prefix = getRandomStringFromFile(PREFIX_FILE);
-			wepName += prefix + " " + stype;
-			name = wepName;
-			wep.processModLine(getModLine(PREFIX_FILE, prefix));
+			this->suffix = "";
+			this->prefix = getRandomStringFromFile(PREFIX_FILE);
+			wepName += this->prefix + " " + this->sType;
+			this->name = wepName;
+			this->processModLine(getModLine(PREFIX_FILE, this->prefix));
 		}else {
-			prefix = "";
-			suffix = getRandomStringFromFile(SUFFIX_FILE);
-			wepName += stype + " " + suffix;
-			name = wepName;
-			wep.processModLine(getModLine(SUFFIX_FILE, suffix));
+			this->prefix = "";
+			this->suffix = getRandomStringFromFile(SUFFIX_FILE);
+			wepName += this->sType + " " + this->suffix;
+			this->name = wepName;
+			this->processModLine(getModLine(SUFFIX_FILE, this->suffix));
 		}
 	}
-	else if (!rarity.compare("rare")) {
-		prefix = getRandomStringFromFile(PREFIX_FILE);
-		suffix = getRandomStringFromFile(SUFFIX_FILE);
-		wep.processModLine(getModLine(SUFFIX_FILE, suffix));
-		wep.processModLine(getModLine(PREFIX_FILE, prefix));
-		wepName += prefix + " " + stype + " " + suffix;
-		name = wepName;
+	else if (!this->rarity.compare("rare")) {
+		this->prefix = getRandomStringFromFile(PREFIX_FILE);
+		this->suffix = getRandomStringFromFile(SUFFIX_FILE);
+		this->processModLine(getModLine(SUFFIX_FILE, this->suffix));
+		this->processModLine(getModLine(PREFIX_FILE, this->prefix));
+		wepName += this->prefix + " " + this->sType + " " + this->suffix;
+		this->name = wepName;
 
 	}
-	else if (!rarity.compare("epic")) {
-		mods = rndm(4, 6);
-		for(i = 0; i < mods; i++) {
+	else if (!this->rarity.compare("epic")) {
+		int mods = rndm(4, 6);
+		for(int i = 0; i < mods; i++) {
 			if (rndm(0, 1)) {
-				prefix = getRandomStringFromFile(PREFIX_FILE);
-				wep.processModLine(getModLine(PREFIX_FILE, prefix));
+				this->prefix = getRandomStringFromFile(PREFIX_FILE);
+				this->processModLine(getModLine(PREFIX_FILE, this->prefix));
 			}
 			else {
-				suffix = getRandomStringFromFile(SUFFIX_FILE);;
-				wep.processModLine(getModLine(SUFFIX_FILE, suffix));
+				this->suffix = getRandomStringFromFile(SUFFIX_FILE);;
+				this->processModLine(getModLine(SUFFIX_FILE, this->suffix));
 			}
 		}
-		prefix = getRandomStringFromFile(PREFIX_FILE);
-		suffix = getRandomStringFromFile(SUFFIX_FILE);
-		wep.processModLine(getModLine(SUFFIX_FILE, suffix));
-		wep.processModLine(getModLine(PREFIX_FILE, prefix));
-		wepName += prefix + " " + stype + " " + suffix;
-		name = wepName;
+		this->prefix = getRandomStringFromFile(PREFIX_FILE);
+		this->suffix = getRandomStringFromFile(SUFFIX_FILE);
+		this->processModLine(getModLine(SUFFIX_FILE, this->suffix));
+		this->processModLine(getModLine(PREFIX_FILE, this->prefix));
+		wepName += this->prefix + " " + this->sType + " " + this->suffix;
+		this->name = wepName;
 	}
 	else {
 		std::string path("../lists/weapon/legendary/");
-		path += type + "/" + stype + "/names";
-		name += getRandomStringFromFile(path);
-		prefix = "";
-		suffix = "";
-		path = "../lists/weapon/legendary/" + type + "/" + stype + "/" + name;
-		istream::getline(path.c_str(), modLine);
-		wep.processModLine(modLine);
+		path += this->type + "/" + this->sType + "/names";
+		this->name += getRandomStringFromFile(path);
+		this->prefix = "";
+		this->suffix = "";
+		path = "../lists/weapon/legendary/" + this->type + "/" + this->sType + "/" + this->name;
+		std::ifstream legendaryFile(path.c_str());
+		std::getline(legendaryFile, modLine);
+		this->processModLine(modLine);
 	}
 	return;
 }
 
 /* CWeapon::getModLine
  * 
- * Searches for the matching string in prefix or suffix file and
+ * Searches for the matching string in this->prefix or this->suffix file and
  * returns the corresponding line of mods after it
  */
 std::string CWeapon::getModLine(std::string path, std::string toFind) {
 	std::ifstream modFile(path.c_str());
 	std::string modLine;
-	istream::getline(modFile, modLine);
+	std::getline(modFile, modLine);
 	while (!modLine.compare(toFind)) {
-		istream::getline(modFile, modLine);
-		istream::getline(modFile, modLine);
+		std::getline(modFile, modLine);
+		std::getline(modFile, modLine);
 	}
-	istream::getline(modFile, modLine);
+	std::getline(modFile, modLine);
 	modFile.close();
 	return modLine;
 }
 
 /* CWeapon::getBaseStats
  *
- * Sets the weapon's basic stats based on rarity and weapon
- * type/sub type
+ * Sets the weapon's basic stats based on this->rarity and weapon
+ * this->type/sub this->type
  */
 void CWeapon::getBaseStats() {  // int lvl
 	std::ifstream subTypeFile;
 	std::string path("../lists/weapon/");
-	if (!rarity.compare("legendary")) {
-		path += "legendary/" + type + "/stats/" + stype;
+	if (!this->rarity.compare("legendary")) {
+		path += "legendary/" + this->type + "/stats/" + this->sType;
 	}
 	else {
-		path += "stats/" + type + "/" + stype;
+		path += "stats/" + this->type + "/" + this->sType;
 	}
 	subTypeFile.open(path.c_str());
-	subTypeFile >> dmg;
-	subTypeFile >> maxdmg;
-	subTypeFile >> shots;
-	subTypeFile >> crit;
-	subTypeFile >> mupgrades;
-	istream::getline(desc, subTypeFile);
+	subTypeFile >> this->dmg;
+	subTypeFile >> this->maxdmg;
+	subTypeFile >> this->shots;
+	subTypeFile >> this->crit;
+	subTypeFile >> this->mupgrades;
+	std::getline(subTypeFile, this->desc);
 	subTypeFile.close();
-	tier = mupgrades - 1;
-	nupgrades = rndm(0, mupgrades);
+	this->tier = mupgrades - 1;
+	this->nupgrades = rndm(0, this->mupgrades);
 	return;
 }
 
 /* CWeapon::processModLine
  *
- * Reads valur, name pairs from string and passes them to processing
+ * Reads valur, this->name pairs from string and passes them to processing
  */
 void CWeapon::processModLine(std::string modLine) {
 	std::string modName, modValue, delimiter = " ";
@@ -160,17 +161,16 @@ void CWeapon::processModLine(std::string modLine) {
 	while ((pos = modLine.find(delimiter)) != std::string::npos) {
 		modValue = modLine.substr(0, pos);
 		modLine.erase(0, pos + delimiter.length());
-		pos = modLine.find(delimiter)
+		pos = modLine.find(delimiter);
 		modLine.erase(0, pos + delimiter.length());
 		
 		pos = modLine.find(delimiter);
 		modName = modLine.substr(0, pos);
 		modLine.erase(0, pos + delimiter.length());
-		pos = modLine.find(delimiter)
+		pos = modLine.find(delimiter);
 		modLine.erase(0, pos + delimiter.length());
 		applyMods(modName, std::stoi(modValue));
 	}
-	modFile.close();
 	return;
 }
 
@@ -180,28 +180,28 @@ void CWeapon::processModLine(std::string modLine) {
 int CWeapon::applyMods(std::string modName, int modValue) {
 	switch(modToIndex[modName]) {
 		case DMG:
-			dmg += modValue;
+			this->dmg += modValue;
 		case CRIT:
-			crit += (float)((float)1/(float)modValue);
+			this->crit += (float)((float)1/(float)modValue);
 			break;
 		case SHOTS:
-			shots += modValue;
+			this->shots += modValue;
 			break;
 		case MAXDMG:
-			maxdmg += modValue;
+			this->maxdmg += modValue;
 			break;
 		case MAXUPGRADES:
 			if (nupgrades + modValue <= mupgrades)
 				mupgrades += modValue;
 			break;
 		case LVLREQ:
-			rlvl += modValue;
+			this->rlvl += modValue;
 			break;
 		case CLOUTREQ:
-			rclout += modValue;
+			this->rclout += modValue;
 			break;
 		case SOCIALREQ:
-			rsocial += modValue;
+			this->rsocial += modValue;
 			break;
 		case PILOT:
 		case COMBAT:
@@ -219,7 +219,7 @@ int CWeapon::applyMods(std::string modName, int modValue) {
 		case CHARISMA:
 		case COMMERCE:
 		case DEXTERITY:
-			mods[modToIndex[modName]] += modValue;
+			this->mods[modToIndex[modName]] += modValue;
 			break;
 		default:
 			std::cout << "unmatched mod pair" << modName << " => " << modToIndex[modName];

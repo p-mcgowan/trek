@@ -4,6 +4,7 @@
  */
 
 #include "global.h"
+#include "fileUtils.h"
 
 // Modifier definitions
 #define PILOT 		0
@@ -14,7 +15,7 @@
 #define LEADERSHIP 	5
 #define REKNOWN 	6
 #define MECHAPT 	7
-#define ABL 		8
+#define ABILITY		8
 #define INTUITION 	9
 #define INTELECT 	10
 #define TECHAPT 	11
@@ -63,11 +64,11 @@ class CWeapon {
 		int mupgrades;  // max # sockets
 		int nupgrades;  // actual # sockets
 		int *upgrades;  // sockets holding upgrade id
-		int rarity;  // 0-1000
+		std::string rarity;  // 0-1000
 		int rlvl;  // lvl req
 		int rclout;  // combat subskill req;
 		int rsocial;
-		int *mods;  // other buffs from upgrades?
+		int mods[20];  // other buffs from upgrades?
 		int *id;  // may not use?
 
 	public:
