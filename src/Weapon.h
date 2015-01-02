@@ -71,6 +71,7 @@ class CWeapon {
 		int *id;  // may not use?
 
 	public:
+		CWeapon();
 		std::string getType() {return type;}
 		std::string getStype() {return sType;}
 		std::string getPrefix() {return prefix;}
