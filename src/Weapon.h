@@ -108,12 +108,12 @@ class CWeapon {
 	{"CHARISMA", 13},
 	{"COMMERCE", 14},
 	{"DEXTERITY", 15},
-{"DMG, 16"},
-{"CRIT, 17"},
-{"SHOTS, 18"},
-{"MAXDMG, 19"},
-{"MAXUPGRADES, 20}
-{"LVLREQ, 21"},
-{"CLOUTREQ, 22"},
-{"SOCIALREQ, 23"}
+	{"DMG", 16},
+	{"CRIT", 17},
+	{"SHOTS", 18},
+	{"MAXDMG", 19},
+	{"MAXUPGRADES", 20},
+	{"LVLREQ", 21},
+	{"CLOUTREQ", 22},
+	{"SOCIALREQ", 23},
 };
