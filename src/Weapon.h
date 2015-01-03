@@ -6,7 +6,7 @@
 #include "global.h"
 #include "fileUtils.h"
 
-// Modifier definitions
+// Stats definitions
 #define PILOT 		0
 #define COMBAT 		1
 #define SCIENCE 	2
@@ -68,7 +68,7 @@ class CWeapon {
 		int rlvl;  // lvl req
 		int rclout;  // combat subskill req;
 		int rsocial;
-		int mods[20];  // other buffs from upgrades?
+		int stats[20] = {0};  // other buffs from upgrades?
 		int *id;  // may not use?
 
 	public:
@@ -93,21 +93,21 @@ class CWeapon {
 		int getRlvl() {return rlvl;}
 		int getRclout() {return rclout;}
 		int getRsocial() {return rsocial;}
-		int getMods(int i) {return mods[i];}
+		int getStats(int i) {return stats[i];}
 
 		void setRarity();
 		void setStats();
-		std::string getModLine(std::string path, std::string toFind);
+		std::string getStatsLine(std::string path, std::string toFind);
 		void getBaseStats();
-		void processModLine(std::string modLine);
-		int applyMods(std::string modName, int modValue);
+		void processStatsLine(std::string modLine);
+		int applyStats(std::string modName, int modValue);
 
  };
 
 /* Map strings from mod files to array indeces
  *
  */
- std::map<std::string,int> modToIndex = {
+ std::map<std::string,int> statToIndex = {
 	{"PILOT", 0},
 	{"COMBAT", 1},
 	{"SCIENCE", 2},
@@ -131,5 +131,31 @@ class CWeapon {
 	{"MAXUPGRADES", 20},
 	{"LVLREQ", 21},
 	{"CLOUTREQ", 22},
-	{"SOCIALREQ", 23},
+	{"SOCIALREQ", 23}
+};
+ std::map<int,std::string> indexToStat = {
+	{0, "PILOT"},
+	{1, "COMBAT"},
+	{2, "SCIENCE"},
+	{3, "SOCIAL"},
+	{4, "CLOUT"},
+	{5, "LEADERSHIP"},
+	{6, "REKNOWN"},
+	{7, "MECHAPT"},
+	{8, "ABILITY"},
+	{9, "INTUITION"},
+	{10, "INTELECT"},
+	{11, "TECHAPT"},
+	{12, "INNOVATION"},
+	{13, "CHARISMA"},
+	{14, "COMMERCE"},
+	{15, "DEXTERITY"},
+	{16, "DMG"},
+	{17, "CRIT"},
+	{18, "SHOTS"},
+	{19, "MAXDMG"},
+	{20, "MAXUPGRADES"},
+	{21, "LVLREQ"},
+	{22, "CLOUTREQ"},
+	{23, "SOCIALREQ"}
 };

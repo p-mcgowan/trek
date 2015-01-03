@@ -3,10 +3,12 @@
 #include <map>
 #include <algorithm>  // std::count - fileUtils.h
 
-double seed=0;
+bool seeded = false;
 
 int rndm(int low, int high) {
-	if (time(NULL) != seed)
+	if (!seeded) {
 		srand(time(NULL));
-	return low + rand()%high;
+		seeded = true;
+	}
+	return low + (rand() % (int)(high - low));
 }
