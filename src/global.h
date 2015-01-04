@@ -2,7 +2,6 @@
 #include <fstream>
 #include <map>
 #include <algorithm>  // std::count - fileUtils.h
-#include <assert.h>
 
 #define LOGDN(m) do {if(debug) {std::cout << m;}} while(0)
 #define LOGD(m) do {if(debug) {std::cout << m << std::endl;}} while(0)

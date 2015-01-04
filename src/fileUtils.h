@@ -1,11 +1,8 @@
-#define TYPE 1
-#define NAME 2
-
 /* countLinesInFile
  * Returns number of lines in a file
  */
 int countLinesInFile(std::string path){//opens and closes file @path
-	std::ifstream file(path);//.c_str());
+	std::ifstream file(path);
 	if (!file.is_open()) {
 		LOGERR("getRandomStringFromFile: Error opening file for reading: \"" << path << "\"", 1);
 	}
@@ -14,34 +11,22 @@ int countLinesInFile(std::string path){//opens and closes file @path
 	return nLines;
 }
 
-std::string getRandomStringFromFile(std::string path){
+std::string getRandomStringFromFile(std::string path, bool mode = true) {
 	std::string str;
-	int lines = countLinesInFile(path);
-	int j = rndm(0, lines/2);
-	std::fstream file(path);//.c_str());
+	int j, lines = countLinesInFile(path);
+	if (mode)
+		j = rndm(0, lines/2);
+	else
+		j = rndm(0, lines);
+	std::fstream file(path);
 	if (!file.is_open()) {
 		LOGERR("getRandomStringFromFile: Error opening file for reading: \"" << path << "\"", 1);
 	}
 	getline(file, str);
 	for (int i = 0; i < j; i++) {
 		getline(file, str);
-		getline(file, str);
-	}
-	file.close();
-	return trimCRLF(str);
-}
-
-std::string getRandomTypeFromFile(std::string path){
-	std::string str;
-	//LOGD("getRandomTypeFromFile: " << path << ", lines: " << countLinesInFile(path));
-	int j = rndm(0, countLinesInFile(path));
-	std::fstream file(path);//.c_str());
-	if (!file.is_open()) {
-		LOGERR("getRandomStringFromFile: Error opening file for reading: \"" << path << "\"", 1);
-	}
-	getline(file, str);
-	for (int i = 0; i < j; i++) {
-		getline(file, str);
+		if (mode)
+			getline(file, str);
 	}
 	file.close();
 	return trimCRLF(str);

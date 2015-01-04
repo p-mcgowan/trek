@@ -8,10 +8,10 @@
  class CWeapon;
 
 CWeapon::CWeapon() {  // params - lvl, raremult...
-    this->type = getRandomTypeFromFile("../lists/weapon/names/type");
+    this->type = getRandomStringFromFile("../lists/weapon/names/type", false);
     std::string path("../lists/weapon/names/" + this->type);
     //LOGD("main: path - " << path << ", type - " << this->type);
-    this->sType = getRandomTypeFromFile(path);
+    this->sType = getRandomStringFromFile(path, false);
     this->setRarity();
     this->setStats();
     return;
@@ -84,7 +84,7 @@ void CWeapon::setStats() {
 	else {
 		std::string path("../lists/weapon/legendary/");
 		path += this->type + "/" + this->sType + "/names";
-		this->name += getRandomStringFromFile(path);
+		this->name = getRandomStringFromFile(path);
 		this->prefix = "";
 		this->suffix = "";
 		this->processStatsLine(getStatsLine(path, this->name));
@@ -105,7 +105,7 @@ void CWeapon::setStats() {
  * returns the corresponding line of stat bonuses after it
  */
 std::string CWeapon::getStatsLine(std::string path, std::string toFind) {
-	std::ifstream statsFile(path.c_str());
+	std::ifstream statsFile(path);//.c_str());
 	if (!statsFile.is_open()) {
 		LOGERR("getStatsLine: Error opening file for reading: " << path, 1);
 	}
@@ -141,7 +141,7 @@ void CWeapon::setBaseStats() {  // int lvl
 	else {
 		path += "stats/" + this->type + "/" + this->sType;
 	}
-	std::ifstream subTypeFile(path.c_str());
+	std::ifstream subTypeFile(path);//.c_str());
 	if (!subTypeFile.is_open()) {
 		LOGERR("setBaseStats: Error opening file for reading: " << path, 1);
 	}
@@ -172,6 +172,7 @@ void CWeapon::processStatsLine(std::string statsLine) {
 
 		statsName = statsLine.substr(0, pos);
 		statsLine.erase(0, pos + delimiter.length());
+		LOGD("parsing: " << statsName << " - " << statsValue);
 		applyStats(statsName, std::stoi(statsValue));
 	}
 	return;
