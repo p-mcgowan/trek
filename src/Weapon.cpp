@@ -10,7 +10,7 @@
 CWeapon::CWeapon() {  // params - lvl, raremult...
     this->type = getRandomTypeFromFile("../lists/weapon/names/type");
     std::string path("../lists/weapon/names/" + this->type);
-    std::cout << "main: path - " << path << ", type - " << this->type << std::endl;
+    //LOGD("main: path - " << path << ", type - " << this->type);
     this->sType = getRandomTypeFromFile(path);
     this->setRarity();
     this->setStats();
@@ -42,7 +42,7 @@ void CWeapon::setRarity() {  // int mult) {
  */
 void CWeapon::setStats() {
 	std::string path, statsLine;
-	this->getBaseStats();
+	this->setBaseStats();
 	if (!this->rarity.compare("common")) {
 		this->prefix = "";
 		this->suffix = "";
@@ -107,29 +107,33 @@ void CWeapon::setStats() {
 std::string CWeapon::getStatsLine(std::string path, std::string toFind) {
 	std::ifstream statsFile(path.c_str());
 	if (!statsFile.is_open()) {
-		std::cout << "getStatsLine: Error opening file for reading: " << path;
-		assert(true);
+		LOGERR("getStatsLine: Error opening file for reading: " << path, 1);
 	}
 	std::string statsLine, t;
 	std::getline(statsFile, statsLine);
-	trimCRLF(statsLine);
+	statsLine = trimCRLF(statsLine);
+	//LOGD("statsLine: " << statsLine << " toFind: " << toFind);
+	//LOGDN("key:"); std::cin >> t;
 	while (statsLine.compare(toFind)) {
 		std::getline(statsFile, statsLine);
 		std::getline(statsFile, statsLine);
-		trimCRLF(statsLine);
+		statsLine = trimCRLF(statsLine);
+		//LOGD("statsLine: " << statsLine << " toFind: " << toFind);
+		//LOGDN("key:"); std::cin >> t;
 	}
 	std::getline(statsFile, statsLine);
-	std::cout << statsLine << std::endl;
+	//LOGD("statsLine: " << statsLine << " toFind: " << toFind);
+	//LOGDN("key:"); std::cin >> t;
 	statsFile.close();
-	return statsLine;
+	return trimCRLF(statsLine);
 }
 
-/* CWeapon::getBaseStats
+/* CWeapon::setBaseStats
  *
  * Sets the weapon's basic stats based on this->rarity and weapon
  * this->type/sub this->type
  */
-void CWeapon::getBaseStats() {  // int lvl
+void CWeapon::setBaseStats() {  // int lvl
 	std::string path("../lists/weapon/");
 	if (!this->rarity.compare("legendary")) {
 		path += "legendary/" + this->type + "/" + this->sType + "/stats";
@@ -139,8 +143,7 @@ void CWeapon::getBaseStats() {  // int lvl
 	}
 	std::ifstream subTypeFile(path.c_str());
 	if (!subTypeFile.is_open()) {
-		std::cout << "getBaseStats: Error opening file for reading: " << path;
-		assert(true);
+		LOGERR("setBaseStats: Error opening file for reading: " << path, 1);
 	}
 	subTypeFile >> this->dmg;
 	subTypeFile >> this->maxdmg;
@@ -159,7 +162,7 @@ void CWeapon::getBaseStats() {  // int lvl
  * Reads valur, this->name pairs from string and passes them to processing
  */
 void CWeapon::processStatsLine(std::string statsLine) {
-	trimCRLF(statsLine);
+	statsLine = trimCRLF(statsLine);
 	std::string statsName, statsValue, delimiter = " ";
 	size_t pos = 0;
 	while ((pos = statsLine.find(delimiter)) != std::string::npos) {
@@ -222,7 +225,7 @@ int CWeapon::applyStats(std::string statsName, int statsValue) {
 			this->stats[statToIndex[statsName]] += statsValue;
 			break;
 		default:
-			std::cout << "unmatched stats pair" << statsName << " => " << statToIndex[statsName];
+			LOGW("unmatched stats pair" << statsName << " => " << statToIndex[statsName]);
 			return 1;
 			break;
 	}

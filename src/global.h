@@ -4,7 +4,10 @@
 #include <algorithm>  // std::count - fileUtils.h
 #include <assert.h>
 
-#define LOGD(m) do { if(debug) {std::cout << m << std::endl} } while (0)
+#define LOGDN(m) do {if(debug) {std::cout << m;}} while(0)
+#define LOGD(m) do {if(debug) {std::cout << m << std::endl;}} while(0)
+#define LOGW(m) do {std::cout << m << std::endl;} while(0)
+#define LOGERR(m, n) std::cout << m << std::endl; exit (n);
 
 bool seeded = false;
 bool debug = true;

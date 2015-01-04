@@ -7,8 +7,7 @@
 int countLinesInFile(std::string path){//opens and closes file @path
 	std::ifstream file(path);//.c_str());
 	if (!file.is_open()) {
-		std::cout << "countLinesInFile: Error opening file for reading: \"" << path << "\"" <<std::endl;
-		assert(true);
+		LOGERR("getRandomStringFromFile: Error opening file for reading: \"" << path << "\"", 1);
 	}
 	int nLines = std::count(std::istreambuf_iterator<char>(file), std::istreambuf_iterator<char>(), '\n');
 	file.close();
@@ -21,8 +20,7 @@ std::string getRandomStringFromFile(std::string path){
 	int j = rndm(0, lines/2);
 	std::fstream file(path);//.c_str());
 	if (!file.is_open()) {
-		std::cout << "getRandomStringFromFile: Error opening file for reading: \"" << path << "\"" <<std::endl;
-		assert(true);
+		LOGERR("getRandomStringFromFile: Error opening file for reading: \"" << path << "\"", 1);
 	}
 	getline(file, str);
 	for (int i = 0; i < j; i++) {
@@ -35,13 +33,11 @@ std::string getRandomStringFromFile(std::string path){
 
 std::string getRandomTypeFromFile(std::string path){
 	std::string str;
-	std::cout << "getRandomTypeFromFile: " << path << ", lines: ";
-	std::cout << countLinesInFile(path) << std::endl;
+	//LOGD("getRandomTypeFromFile: " << path << ", lines: " << countLinesInFile(path));
 	int j = rndm(0, countLinesInFile(path));
 	std::fstream file(path);//.c_str());
 	if (!file.is_open()) {
-		std::cout << "getRandomTypeFromFile: Error opening file for reading: \"" << path << "\"" <<std::endl;
-		assert(true);
+		LOGERR("getRandomStringFromFile: Error opening file for reading: \"" << path << "\"", 1);
 	}
 	getline(file, str);
 	for (int i = 0; i < j; i++) {

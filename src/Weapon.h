@@ -98,7 +98,7 @@ class CWeapon {
 		void setRarity();
 		void setStats();
 		std::string getStatsLine(std::string path, std::string toFind);
-		void getBaseStats();
+		void setBaseStats();
 		void processStatsLine(std::string modLine);
 		int applyStats(std::string modName, int modValue);
 
