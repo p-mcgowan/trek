@@ -22,7 +22,7 @@ CWeapon::CWeapon() {  // params - lvl, raremult...
  * Applies a random rarity to a weapon
  */
 void CWeapon::setRarity() {  // int mult) {
-	int i = rndm(0, 1000);
+	int i = rndm(0, 1000) + COMMONTHRESH;
 	if (i <= COMMONTHRESH)
 		this->rarity = "common";
 	else if (i <= UNCOMMONTHRESH)
@@ -109,13 +109,22 @@ void CWeapon::setStats() {
  */
 std::string CWeapon::getStatsLine(std::string path, std::string toFind) {
 	std::ifstream statsFile(path.c_str());
-	std::string statsLine;
+	if (!statsFile.is_open()) {
+		std::cout << "getStatsLine: Error opening file for reading: " << path;
+		assert(true);
+	}
+	std::string statsLine, t;
 	std::getline(statsFile, statsLine);
+	std::cout << toFind << ":" << statsLine << std::endl;
 	while (statsLine.compare(toFind)) {
+		std::cin >> t;
 		std::getline(statsFile, statsLine);
+		std::cout << statsLine << std::endl;
 		std::getline(statsFile, statsLine);
+		std::cout << statsLine << std::endl;
 	}
 	std::getline(statsFile, statsLine);
+	std::cout << statsLine << std::endl;
 	statsFile.close();
 	return statsLine;
 }
@@ -126,15 +135,18 @@ std::string CWeapon::getStatsLine(std::string path, std::string toFind) {
  * this->type/sub this->type
  */
 void CWeapon::getBaseStats() {  // int lvl
-	std::ifstream subTypeFile;
 	std::string path("../lists/weapon/");
 	if (!this->rarity.compare("legendary")) {
-		path += "legendary/" + this->type + this->sType + "stats";
+		path += "legendary/" + this->type + "/" + this->sType + "/stats";
 	}
 	else {
 		path += "stats/" + this->type + "/" + this->sType;
 	}
-	subTypeFile.open(path.c_str());
+	std::ifstream subTypeFile(path.c_str());
+	if (!subTypeFile.is_open()) {
+		std::cout << "getBaseStats: Error opening file for reading: " << path;
+		assert(true);
+	}
 	subTypeFile >> this->dmg;
 	subTypeFile >> this->maxdmg;
 	subTypeFile >> this->shots;
@@ -174,7 +186,7 @@ int CWeapon::applyStats(std::string statsName, int statsValue) {
 		case DMG:
 			this->dmg += statsValue;
 		case CRIT:
-			this->crit += (float)((float)1/(float)statsValue);
+			this->crit += statsValue;
 			break;
 		case SHOTS:
 			this->shots += statsValue;
