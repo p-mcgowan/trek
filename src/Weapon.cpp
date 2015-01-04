@@ -46,7 +46,6 @@ void CWeapon::setStats() {
 	if (!this->rarity.compare("common")) {
 		this->prefix = "";
 		this->suffix = "";
-		//this->name = this->sType;
 	}
 	else if (!this->rarity.compare("uncommon")) {
 		if (rndm(0, 1)) {
@@ -81,7 +80,6 @@ void CWeapon::setStats() {
 		this->suffix = getRandomStringFromFile(SUFFIX_FILE);
 		this->processStatsLine(getStatsLine(SUFFIX_FILE, this->suffix));
 		this->processStatsLine(getStatsLine(PREFIX_FILE, this->prefix));
-		//this->name = wepName;
 	}
 	else {
 		std::string path("../lists/weapon/legendary/");
@@ -114,13 +112,11 @@ std::string CWeapon::getStatsLine(std::string path, std::string toFind) {
 	}
 	std::string statsLine, t;
 	std::getline(statsFile, statsLine);
-	statsLine.erase(std::remove(statsLine.begin(), statsLine.end(), '\r'), statsLine.end());
-	statsLine.erase(std::remove(statsLine.begin(), statsLine.end(), '\n'), statsLine.end());
+	trimCRLF(statsLine);
 	while (statsLine.compare(toFind)) {
 		std::getline(statsFile, statsLine);
 		std::getline(statsFile, statsLine);
-		statsLine.erase(std::remove(statsLine.begin(), statsLine.end(), '\r'), statsLine.end());
-		statsLine.erase(std::remove(statsLine.begin(), statsLine.end(), '\n'), statsLine.end());
+		trimCRLF(statsLine);
 	}
 	std::getline(statsFile, statsLine);
 	std::cout << statsLine << std::endl;
@@ -163,6 +159,7 @@ void CWeapon::getBaseStats() {  // int lvl
  * Reads valur, this->name pairs from string and passes them to processing
  */
 void CWeapon::processStatsLine(std::string statsLine) {
+	trimCRLF(statsLine);
 	std::string statsName, statsValue, delimiter = " ";
 	size_t pos = 0;
 	while ((pos = statsLine.find(delimiter)) != std::string::npos) {

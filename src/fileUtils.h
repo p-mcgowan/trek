@@ -30,9 +30,7 @@ std::string getRandomStringFromFile(std::string path){
 		getline(file, str);
 	}
 	file.close();
-	str.erase(std::remove(str.begin(), str.end(), '\r'), str.end());
-	str.erase(std::remove(str.begin(), str.end(), '\n'), str.end());
-	return str.c_str();
+	return trimCRLF(str);
 }
 
 std::string getRandomTypeFromFile(std::string path){
@@ -50,7 +48,5 @@ std::string getRandomTypeFromFile(std::string path){
 		getline(file, str);
 	}
 	file.close();
-	str.erase(std::remove(str.begin(), str.end(), '\r'), str.end());
-	str.erase(std::remove(str.begin(), str.end(), '\n'), str.end());
-	return str.c_str();
+	return trimCRLF(str);
 }
