@@ -50,7 +50,7 @@ int main() {
 				}
 			}
 		}
-		std::cin >> dummy;
+		getch();//std::cin >> dummy;
 
 	}
 				//<< "id " << wep.getId() << std::endl;
