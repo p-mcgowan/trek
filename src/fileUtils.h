@@ -23,7 +23,6 @@ std::string getRandomStringFromFile(std::string path){
 	getline(file, str);
 	for (int i = 0; i < j; i++) {
 		getline(file, str);
-		getline(file, str);
 	}
 	file.close();
 	return std::string(str.c_str());
