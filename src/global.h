@@ -7,6 +7,7 @@
 #define LOGD(m) do { if(debug) {std::cout << m << std::endl} } while (0)
 
 bool seeded = false;
+bool debug = true;
 
 int rndm(int low, int high) {
 	if (!seeded) {
