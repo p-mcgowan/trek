@@ -2,12 +2,14 @@
 #include <fstream>
 #include <map>
 #include <algorithm>  // std::count - fileUtils.h
-#include <curses.h>
-/*#ifndef MSWINDOWS
-#include "getch.h"
+#ifndef MSWINDOWS
+extern "C"
+{
+  #include "getch.h"
+}
 #else
 #include <conio.h>
-#endif*/
+#endif
 
 #define LOGDN(m) do {if(debug) {std::cout << m;}} while(0)
 #define LOGD(m) do {if(debug) {std::cout << m << std::endl;}} while(0)
@@ -18,15 +20,15 @@ bool seeded = false;
 bool debug = true;
 
 int rndm(int low, int high) {
-	if (!seeded) {
-		srand(time(NULL));
-		seeded = true;
-	}
-	return low + (rand() % (int)(high - low));
+  if (!seeded) {
+    srand(time(NULL));
+    seeded = true;
+  }
+  return low + (rand() % (int)(high - low));
 }
 
 std::string trimCRLF(std::string s) {
-	s.erase(std::remove(s.begin(), s.end(), '\r'), s.end());
-	s.erase(std::remove(s.begin(), s.end(), '\n'), s.end());
-	return s;
+  s.erase(std::remove(s.begin(), s.end(), '\r'), s.end());
+  s.erase(std::remove(s.begin(), s.end(), '\n'), s.end());
+  return s;
 }
