@@ -11,10 +11,10 @@ int countLinesInFile(std::string path){//opens and closes file @path
 	return nLines;
 }
 
-std::string getRandomStringFromFile(std::string path, int mode){
+std::string getRandomStringFromFile(std::string path){
 	int lines = countLinesInFile(path);
 	std::string str;
-	int j = rndm(0, lines/mode);
+	int j = rndm(0, lines);
 	std::fstream file(path.c_str());
 	if (!file.is_open()) {
 		std::cout << "Error opening file for reading: " << path;
@@ -23,8 +23,7 @@ std::string getRandomStringFromFile(std::string path, int mode){
 	getline(file, str);
 	for (int i = 0; i < j; i++) {
 		getline(file, str);
-		if (mode == NAME)
-			getline(file, str);
+		getline(file, str);
 	}
 	file.close();
 	return std::string(str.c_str());

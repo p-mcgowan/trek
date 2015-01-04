@@ -9,9 +9,9 @@
 
 CWeapon::CWeapon() {  // params - lvl, raremult...
     std::string path("../lists/weapon/names/");
-    this->type = getRandomStringFromFile("../lists/weapon/names/type", TYPE);
+    this->type = getRandomStringFromFile("../lists/weapon/names/type");
     path += this->type;
-    this->sType = getRandomStringFromFile(path, TYPE);
+    this->sType = getRandomStringFromFile(path);
     this->setRarity();
     this->setStats();
     return;
@@ -51,39 +51,34 @@ void CWeapon::setStats() {
 	else if (!this->rarity.compare("uncommon")) {
 		if (rndm(0, 1)) {
 			this->suffix = "";
-			this->prefix = getRandomStringFromFile(PREFIX_FILE, NAME);
-			this->name = this->prefix + " " + this->sType;
+			this->prefix = getRandomStringFromFile(PREFIX_FILE);
 			this->processStatsLine(getStatsLine(PREFIX_FILE, this->prefix));
 		}else {
 			this->prefix = "";
-			this->suffix = getRandomStringFromFile(SUFFIX_FILE, NAME);
-			//this->name = this->sType + " " + this->suffix;
+			this->suffix = getRandomStringFromFile(SUFFIX_FILE);
 			this->processStatsLine(getStatsLine(SUFFIX_FILE, this->suffix));
 		}
 	}
 	else if (!this->rarity.compare("rare")) {
-		this->prefix = getRandomStringFromFile(PREFIX_FILE, NAME);
-		this->suffix = getRandomStringFromFile(SUFFIX_FILE, NAME);
+		this->prefix = getRandomStringFromFile(PREFIX_FILE);
+		this->suffix = getRandomStringFromFile(SUFFIX_FILE);
 		this->processStatsLine(getStatsLine(SUFFIX_FILE, this->suffix));
 		this->processStatsLine(getStatsLine(PREFIX_FILE, this->prefix));
-		//wepName += this->prefix + " " + this->sType + " " + this->suffix;
-		//this->name = wepName;
-
 	}
 	else if (!this->rarity.compare("epic")) {
 		int mods = rndm(4, 6);
 		for(int i = 0; i < mods; i++) {
 			if (rndm(0, 1)) {
-				this->prefix = getRandomStringFromFile(PREFIX_FILE, NAME);
+				this->prefix = getRandomStringFromFile(PREFIX_FILE);
 				this->processStatsLine(getStatsLine(PREFIX_FILE, this->prefix));
 			}
 			else {
-				this->suffix = getRandomStringFromFile(SUFFIX_FILE, NAME);
+				this->suffix = getRandomStringFromFile(SUFFIX_FILE);
 				this->processStatsLine(getStatsLine(SUFFIX_FILE, this->suffix));
 			}
 		}
-		this->prefix = getRandomStringFromFile(PREFIX_FILE, NAME);
-		this->suffix = getRandomStringFromFile(SUFFIX_FILE, NAME);
+		this->prefix = getRandomStringFromFile(PREFIX_FILE);
+		this->suffix = getRandomStringFromFile(SUFFIX_FILE);
 		this->processStatsLine(getStatsLine(SUFFIX_FILE, this->suffix));
 		this->processStatsLine(getStatsLine(PREFIX_FILE, this->prefix));
 		//this->name = wepName;
@@ -91,16 +86,19 @@ void CWeapon::setStats() {
 	else {
 		std::string path("../lists/weapon/legendary/");
 		path += this->type + "/" + this->sType + "/names";
-		this->name += getRandomStringFromFile(path, TYPE);
+		this->name += getRandomStringFromFile(path);
 		this->prefix = "";
 		this->suffix = "";
-		path = "../lists/weapon/legendary/" + this->type + "/" + this->sType + "/" + this->name;
-		std::ifstream legendaryFile(path.c_str());
-		std::getline(legendaryFile, statsLine);
-		this->processStatsLine(statsLine);
+		path = "../lists/weapon/legendary/" + this->type + "/" + this->sType + "/stats";
+		this->processStatsLine(getStatsLine(path, this->name));
 	}
-	if(this->rarity.compare("legendary"))
-		this->name = this->prefix + " " + this->sType + " " + this->suffix;
+	if(this->rarity.compare("legendary")) {
+		name = this->sType;
+		if (this->prefix != "")
+			this->name = this->prefix + " " + this->name;
+		if (this->suffix != "")
+			this->name += + " " + this->suffix;
+	}
 	return;
 }
 
@@ -132,7 +130,7 @@ void CWeapon::getBaseStats() {  // int lvl
 	std::ifstream subTypeFile;
 	std::string path("../lists/weapon/");
 	if (!this->rarity.compare("legendary")) {
-		path += "legendary/" + this->type + "/stats/" + this->sType;
+		path += "legendary/" + this->type + this->sType + "stats";
 	}
 	else {
 		path += "stats/" + this->type + "/" + this->sType;
