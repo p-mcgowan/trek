@@ -3,10 +3,9 @@
 int main() {
 	std::string dummy;
 	while (true) {
-		std::cout << "GENERATING WEAPON" << std::endl << "===============================================" << std::endl;
+		std::cout << "======================" << std::endl;
 		CWeapon wep;
-		std::cout << "===============================================" << std::endl;
-		std::cout	<< "type " << wep.getType() << std::endl
+		std::cout	/*<< "type " << wep.getType() << std::endl
 					<< "sType " << wep.getSType() << std::endl
 					<< "prefix " << wep.getPrefix() << std::endl
 					<< "suffix " << wep.getSuffix() << std::endl
@@ -30,9 +29,25 @@ int main() {
 					for (int i = 0; i < 20; i++) {
 						if (wep.getStats(i) != 0)
 							std::cout << "  Slot " << i << ", name " << indexToStat[i] << " , value " << wep.getStats(i) << std::endl;
+					}*/
+					<< wep.getName() << std::endl
+					<< wep.getRarity() << " tier " << wep.getTier() << " " << wep.getSType() << " <" << wep.getType() << ">" << std::endl << std::endl
+					<< "crit:      " << wep.getCrit() << std::endl
+					<< "shots:     " << wep.getShots() << std::endl
+					<< "maxdmg:    " << wep.getMaxdmg() << std::endl
+					<< "dmg:       " << wep.getDmg() << std::endl
+					//<< "ammoType " << wep.getAmmoType() << std::endl
+					<< "mupgrades: " << wep.getMupgrades() << std::endl
+					<< "nupgrades: " << wep.getNupgrades() << std::endl << std::endl;
+					//<< "*upgrades " << wep.*upgrades << std::endl
+					for (int i = 0; i < 20; i++) {
+						if (wep.getStats(i) != 0) {
+							if (wep.getStats(i) > 0)
+								std::cout << "+";
+							std::cout << wep.getStats(i) << " " << indexToStat[i] << std::endl;
+						}
 					}
 		std::cin >> dummy;
-
 	}
 				//<< "id " << wep.getId() << std::endl;
 	return 1;

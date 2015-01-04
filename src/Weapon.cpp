@@ -9,9 +9,9 @@
 
 CWeapon::CWeapon() {  // params - lvl, raremult...
     std::string path("../lists/weapon/names/");
-    this->type = getRandomStringFromFile("../lists/weapon/names/type");
+    this->type = getRandomTypeFromFile("../lists/weapon/names/type");
     path += this->type;
-    this->sType = getRandomStringFromFile(path);
+    this->sType = getRandomTypeFromFile(path);
     this->setRarity();
     this->setStats();
     return;
@@ -117,7 +117,6 @@ std::string CWeapon::getStatsLine(std::string path, std::string toFind) {
 	}
 	std::getline(statsFile, statsLine);
 	statsFile.close();
-	std::cout << "stats: " << statsLine << std::endl;
 	return statsLine;
 }
 
