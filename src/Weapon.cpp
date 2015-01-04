@@ -8,9 +8,9 @@
  class CWeapon;
 
 CWeapon::CWeapon() {  // params - lvl, raremult...
-    std::string path("../lists/weapon/names/");
     this->type = getRandomTypeFromFile("../lists/weapon/names/type");
-    path += this->type;
+    std::string path("../lists/weapon/names/" + this->type);
+    std::cout << "main: path - " << path << ", type - " << this->type << std::endl;
     this->sType = getRandomTypeFromFile(path);
     this->setRarity();
     this->setStats();
@@ -89,7 +89,6 @@ void CWeapon::setStats() {
 		this->name += getRandomStringFromFile(path);
 		this->prefix = "";
 		this->suffix = "";
-		path = "../lists/weapon/legendary/" + this->type + "/" + this->sType + "/stats";
 		this->processStatsLine(getStatsLine(path, this->name));
 	}
 	if(this->rarity.compare("legendary")) {
@@ -115,13 +114,13 @@ std::string CWeapon::getStatsLine(std::string path, std::string toFind) {
 	}
 	std::string statsLine, t;
 	std::getline(statsFile, statsLine);
-	std::cout << toFind << ":" << statsLine << std::endl;
+	statsLine.erase(std::remove(statsLine.begin(), statsLine.end(), '\r'), statsLine.end());
+	statsLine.erase(std::remove(statsLine.begin(), statsLine.end(), '\n'), statsLine.end());
 	while (statsLine.compare(toFind)) {
-		std::cin >> t;
 		std::getline(statsFile, statsLine);
-		std::cout << statsLine << std::endl;
 		std::getline(statsFile, statsLine);
-		std::cout << statsLine << std::endl;
+		statsLine.erase(std::remove(statsLine.begin(), statsLine.end(), '\r'), statsLine.end());
+		statsLine.erase(std::remove(statsLine.begin(), statsLine.end(), '\n'), statsLine.end());
 	}
 	std::getline(statsFile, statsLine);
 	std::cout << statsLine << std::endl;
