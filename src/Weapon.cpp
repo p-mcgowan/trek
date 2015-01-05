@@ -201,6 +201,12 @@ void CWeapon::setBaseStats() {  // int lvl
   this->desc = str;
   std::getline(subTypeFile, str);
   this->ammoType = str;
+  std::getline(subTypeFile, str);
+  this->rlvl = std::stoi(str);
+  std::getline(subTypeFile, str);
+  this->rclout = std::stoi(str);
+  std::getline(subTypeFile, str);
+  this->rsocial = std::stoi(str);
   subTypeFile.close();
   this->tier = mupgrades - 1;
   this->nupgrades = rndm(0, this->mupgrades);

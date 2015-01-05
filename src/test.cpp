@@ -41,6 +41,9 @@ int main() {
     << "crit:      " << wep.getCrit() << std::endl
     << "mupgrades: " << wep.getMupgrades() << std::endl
     << "nupgrades: " << wep.getNupgrades() << std::endl
+    << "rlvl:      " << wep.getRlvl() << std::endl
+    << "rclout:    " << wep.getRclout() << std::endl
+    << "rsocial:   " << wep.getRsocial() << std::endl
     << std::endl;
     //<< "*upgrades " << wep.*upgrades << std::endl
     for (int i = 0; i < 20; i++) {
