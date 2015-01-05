@@ -2,18 +2,21 @@
 
 int global[10] = {0};
 
-void test (std::initializer_list <std::string, int> tmp) {
-  for (auto i : tmp)
-    global[statToIndex[tmp[i]]] = tmp[i];
+void test (std::initializer_list <int> tmp) {
+  int i = 0;
+  for (auto j : tmp) {
+    global[i] = j;
+    i++;
+  }
 }
 
 
 int main() {
 
   test({1, 2, 3, 4});
-  for(auto i : global)
-    std::cout << global[i];
-  return;
+  for (auto i : global)
+    std::cout << i << " ";
+  return 1;
 
   while (true) {
     for (int i = 0; i < 10; i++) {

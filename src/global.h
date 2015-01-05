@@ -3,8 +3,7 @@
 #include <map>
 #include <algorithm>  // std::count - fileUtils.h
 #ifndef MSWINDOWS
-extern "C"
-{
+extern "C" {
   #include "getch.h"
 }
 #else
