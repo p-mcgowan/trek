@@ -69,7 +69,7 @@ CWeapon::CWeapon() {  // params - lvl, raremult...
  * Applies a random rarity to a weapon
  */
 void CWeapon::setRarity() {  // int mult) {
-  int i = rndm(0, 1000);
+  int i = rndm(0, 1000) + COMMONTHRESH/2;
   if (i <= COMMONTHRESH)
     this->rarity = "common";
   else if (i <= UNCOMMONTHRESH)

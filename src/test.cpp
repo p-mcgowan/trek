@@ -30,6 +30,7 @@ int main() {
       if (wep.getStats(i) != 0)
         std::cout << "  Slot " << i << ", name " << indexToStat[i] << " , value " << wep.getStats(i) << std::endl;
     }*/
+    << "+=========+=========+=========+=========+=========+=========+=========+========+"
     << wep.getName() << std::endl
     << wep.getRarity() << " tier " << wep.getTier() << " " << wep.getSType() 
     << " <" << wep.getType() << ">" << std::endl
@@ -53,7 +54,9 @@ int main() {
         std::cout << wep.getStats(i) << " " << indexToStat[i] << std::endl;
       }
     }
-    getch();
+    std::cout << "+=========+=========+=========+=========+=========+=========+=========+========+" << std::endl << std::endl;
+    if(getch() == 'q')
+        return 1;
   }
         //<< "id " << wep.getId() << std::endl;
   return 1;
