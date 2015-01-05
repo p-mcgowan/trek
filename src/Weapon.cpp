@@ -186,27 +186,17 @@ void CWeapon::setBaseStats() {  // int lvl
   if (!subTypeFile.is_open()) {
     LOGERR("setBaseStats: Error opening file for reading: " << path, 1);
   }
-  std::string str;
-  std::getline(subTypeFile, str);
-  this->dmg = std::stoi(str);
-  std::getline(subTypeFile, str);
-  this->maxdmg = std::stoi(str);
-  std::getline(subTypeFile, str);
-  this->shots = std::stoi(str);
-  std::getline(subTypeFile, str);
-  this->crit = std::stof(str);
-  std::getline(subTypeFile, str);
-  this->mupgrades = std::stoi(str);
-  std::getline(subTypeFile, str);
-  this->desc = str;
-  std::getline(subTypeFile, str);
-  this->ammoType = str;
-  std::getline(subTypeFile, str);
-  this->rlvl = std::stoi(str);
-  std::getline(subTypeFile, str);
-  this->rclout = std::stoi(str);
-  std::getline(subTypeFile, str);
-  this->rsocial = std::stoi(str);
+  subTypeFile >> this->dmg;
+  subTypeFile >> this->maxdmg;
+  subTypeFile >> this->shots;
+  subTypeFile >> this->crit;
+  subTypeFile >> this->mupgrades;
+  std::getline(subTypeFile, this->desc);  // clear out newline
+  std::getline(subTypeFile, this->desc);
+  subTypeFile >> this->ammoType;
+  subTypeFile >> this->rlvl;
+  subTypeFile >> this->rclout;
+  subTypeFile >> this->rsocial;
   subTypeFile.close();
   this->tier = mupgrades - 1;
   this->nupgrades = rndm(0, this->mupgrades);
