@@ -10,12 +10,37 @@
 CWeapon::CWeapon() {  // params - lvl, raremult...
   this->type = getRandomStringFromFile("../lists/weapon/names/type", false);
   std::string path("../lists/weapon/names/" + this->type);
-  //LOGD("main: path - " << path << ", type - " << this->type);
   this->sType = getRandomStringFromFile(path, false);
   this->setRarity();
   this->setStats();
   return;
 }
+
+/*CWeapon::CWeapon(  // custom weapon
+    std::string type = "",
+    std::string sType = "",
+    std::string prefix = "",
+    std::string suffix = "",
+    std::string name = "",
+    std::string desc = "",
+    int lvl = 0,
+    int tier = 0,
+    float crit = 0,
+    int shots = 0,
+    int maxdmg = 0,
+    int dmg = 0,
+    std::string ammoType,
+    int mupgrades = 0,
+    int nupgrades = 0,
+    int *upgrades = 0,
+    std::string rarity = "",
+    int rlvl = 0,
+    int rclout = 0,
+    int rsocial = 0,
+    int stats[20] = {0};
+    ) {  
+  return;
+}*/
 
 /* CWeapon::setRarity 
  * 
@@ -105,25 +130,19 @@ void CWeapon::setStats() {
  * returns the corresponding line of stat bonuses after it
  */
 std::string CWeapon::getStatsLine(std::string path, std::string toFind) {
-  std::ifstream statsFile(path);//.c_str());
+  std::ifstream statsFile(path);
   if (!statsFile.is_open()) {
     LOGERR("getStatsLine: Error opening file for reading: " << path, 1);
   }
   std::string statsLine, t;
   std::getline(statsFile, statsLine);
   statsLine = trimCRLF(statsLine);
-  //LOGD("statsLine: " << statsLine << " toFind: " << toFind);
-  //LOGDN("key:"); std::cin >> t;
   while (statsLine.compare(toFind)) {
     std::getline(statsFile, statsLine);
     std::getline(statsFile, statsLine);
     statsLine = trimCRLF(statsLine);
-    //LOGD("statsLine: " << statsLine << " toFind: " << toFind);
-    //LOGDN("key:"); std::cin >> t;
   }
   std::getline(statsFile, statsLine);
-  //LOGD("statsLine: " << statsLine << " toFind: " << toFind);
-  //LOGDN("key:"); std::cin >> t;
   statsFile.close();
   return trimCRLF(statsLine);
 }
@@ -141,7 +160,7 @@ void CWeapon::setBaseStats() {  // int lvl
   else {
     path += "stats/" + this->type + "/" + this->sType;
   }
-  std::ifstream subTypeFile(path);//.c_str());
+  std::ifstream subTypeFile(path);
   if (!subTypeFile.is_open()) {
     LOGERR("setBaseStats: Error opening file for reading: " << path, 1);
   }

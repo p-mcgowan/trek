@@ -47,29 +47,28 @@
 class CWeapon {
 
   private:
-    std::string type;
-    std::string sType;
-    std::string prefix;
-    std::string suffix;
-    std::string name;
-    std::string desc;  // weapon writup
-    int lvl;
-    int tier;
+    std::string type = "";
+    std::string sType = "";
+    std::string prefix = "";
+    std::string suffix = "";
+    std::string name = "";
+    std::string desc = "";  // weapon writup
+    int lvl = 0;
+    int tier = 0;
       // base stats (lvl + rarity mult)
-    float crit;
-    int shots;  // hits per turn
-    int maxdmg;
-    int dmg;
+    float crit = 0;
+    int shots = 0;  // hits per turn
+    int maxdmg = 0;
+    int dmg = 0;
     std::string ammoType;  // 
-    int mupgrades;  // max # sockets
-    int nupgrades;  // actual # sockets
-    int *upgrades;  // sockets holding upgrade id
-    std::string rarity;  // 0-1000
-    int rlvl;  // lvl req
-    int rclout;  // combat subskill req;
-    int rsocial;
+    int mupgrades = 0;  // max # sockets
+    int nupgrades = 0;  // actual # sockets
+    int *upgrades = 0;  // sockets holding upgrade id
+    std::string rarity = "";  // 0-1000
+    int rlvl = 0;  // lvl req
+    int rclout = 0;  // combat subskill req;
+    int rsocial = 0;
     int stats[20] = {0};  // other buffs from upgrades?
-    int *id;  // may not use?
 
   public:
     CWeapon();

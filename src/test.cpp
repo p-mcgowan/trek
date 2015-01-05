@@ -1,6 +1,20 @@
 #include "Weapon.cpp"
 
+int global[10] = {0};
+
+void test (std::initializer_list <int> tmp) {
+  for (auto i : tmp)
+    global[i] = tmp[i];
+}
+
+
 int main() {
+
+  test({1, 2, 3, 4});
+  for(auto i : global)
+    std::cout << global[i];
+  return;
+
   while (true) {
     for (int i = 0; i < 10; i++) {
       std::cout << "======================" << std::endl;
@@ -50,7 +64,6 @@ int main() {
       }
     }
     getch();
-
   }
         //<< "id " << wep.getId() << std::endl;
   return 1;
