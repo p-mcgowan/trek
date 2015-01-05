@@ -192,6 +192,7 @@ void CWeapon::setBaseStats() {  // int lvl
   subTypeFile >> this->crit;
   subTypeFile >> this->mupgrades;
   std::getline(subTypeFile, this->desc);
+  std::getline(subTypeFile, this->desc);
   subTypeFile >> this->ammoType;
   subTypeFile.close();
   this->tier = mupgrades - 1;

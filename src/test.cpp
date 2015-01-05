@@ -37,7 +37,7 @@ int main() {
     << "shots:     " << wep.getShots() << std::endl
     << "maxdmg:    " << wep.getMaxdmg() << std::endl
     << "dmg:       " << wep.getDmg() << std::endl
-    //<< "ammoType " << wep.getAmmoType() << std::endl
+    << "ammoType " << wep.getAmmoType() << std::endl
     << "mupgrades: " << wep.getMupgrades() << std::endl
     << "nupgrades: " << wep.getNupgrades() << std::endl << std::endl;
     //<< "*upgrades " << wep.*upgrades << std::endl
