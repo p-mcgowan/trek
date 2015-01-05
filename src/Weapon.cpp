@@ -37,7 +37,7 @@ CWeapon::CWeapon() {  // params - lvl, raremult...
     int rlvl = 0,
     int rclout = 0,
     int rsocial = 0,
-    int stats[];
+    std::initializer_list <std::string> stats;
     ) {
     this->type = type;
     this->sType = sType;
@@ -59,7 +59,8 @@ CWeapon::CWeapon() {  // params - lvl, raremult...
     this->rlvl = rlvl;
     this->rclout = rclout;
     this->rsocial = rsocial;
-    this->stats = stats;
+    for (auto i : stats)
+      stats[modtoIndex[i]] = std::stoi(++i);
   return;
 }*/
 
@@ -68,7 +69,7 @@ CWeapon::CWeapon() {  // params - lvl, raremult...
  * Applies a random rarity to a weapon
  */
 void CWeapon::setRarity() {  // int mult) {
-  int i = rndm(0, 1000) + COMMONTHRESH;
+  int i = rndm(0, 1000);
   if (i <= COMMONTHRESH)
     this->rarity = "common";
   else if (i <= UNCOMMONTHRESH)
