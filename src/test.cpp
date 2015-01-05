@@ -2,9 +2,9 @@
 
 int global[10] = {0};
 
-void test (std::initializer_list <int> tmp) {
+void test (std::initializer_list <std::string, int> tmp) {
   for (auto i : tmp)
-    global[i] = tmp[i];
+    global[statToIndex[tmp[i]]] = tmp[i];
 }
 
 

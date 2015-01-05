@@ -37,8 +37,29 @@ CWeapon::CWeapon() {  // params - lvl, raremult...
     int rlvl = 0,
     int rclout = 0,
     int rsocial = 0,
-    int stats[20] = {0};
-    ) {  
+    int stats[];
+    ) {
+    this->type = type;
+    this->sType = sType;
+    this->prefix = prefix;
+    this->suffix = suffix;
+    this->name = name;
+    this->desc = desc;
+    this->lvl = lvl;
+    this->tier = tier;
+    this->crit = crit;
+    this->shots = shots;
+    this->maxdmg = maxdmg;
+    this->dmg = dmg;
+    this->ammoType = ammoType;
+    this->mupgrades = mupgrades;
+    this->nupgrades = nupgrades;
+    this->*upgrades = *upgrades;
+    this->rarity = rarity;
+    this->rlvl = rlvl;
+    this->rclout = rclout;
+    this->rsocial = rsocial;
+    this->stats = stats;
   return;
 }*/
 
