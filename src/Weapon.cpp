@@ -186,14 +186,21 @@ void CWeapon::setBaseStats() {  // int lvl
   if (!subTypeFile.is_open()) {
     LOGERR("setBaseStats: Error opening file for reading: " << path, 1);
   }
-  subTypeFile >> this->dmg;
-  subTypeFile >> this->maxdmg;
-  subTypeFile >> this->shots;
-  subTypeFile >> this->crit;
-  subTypeFile >> this->mupgrades;
-  std::getline(subTypeFile, this->desc);
-  std::getline(subTypeFile, this->desc);
-  subTypeFile >> this->ammoType;
+  std::string str;
+  std::getline(subTypeFile, str);
+  this->dmg = std::stoi(str);
+  std::getline(subTypeFile, str);
+  this->maxdmg = std::stoi(str);
+  std::getline(subTypeFile, str);
+  this->shots = std::stoi(str);
+  std::getline(subTypeFile, str);
+  this->crit = std::stof(str);
+  std::getline(subTypeFile, str);
+  this->mupgrades = std::stoi(str);
+  std::getline(subTypeFile, str);
+  this->desc = str;
+  std::getline(subTypeFile, str);
+  this->ammoType = str;
   subTypeFile.close();
   this->tier = mupgrades - 1;
   this->nupgrades = rndm(0, this->mupgrades);
@@ -215,7 +222,6 @@ void CWeapon::processStatsLine(std::string statsLine) {
 
     statsName = statsLine.substr(0, pos);
     statsLine.erase(0, pos + delimiter.length());
-    LOGD("parsing: " << statsName << " - " << statsValue);
     applyStats(statsName, std::stoi(statsValue));
   }
   return;

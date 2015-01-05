@@ -31,15 +31,17 @@ int main() {
         std::cout << "  Slot " << i << ", name " << indexToStat[i] << " , value " << wep.getStats(i) << std::endl;
     }*/
     << wep.getName() << std::endl
-    << wep.getRarity() << " tier " << wep.getTier() << " " << wep.getSType() << " <" << wep.getType() << ">" 
+    << wep.getRarity() << " tier " << wep.getTier() << " " << wep.getSType() 
+    << " <" << wep.getType() << ">" << std::endl
     << wep.getDesc() << std::endl << std::endl
-    << "crit:      " << wep.getCrit() << std::endl
-    << "shots:     " << wep.getShots() << std::endl
-    << "maxdmg:    " << wep.getMaxdmg() << std::endl
     << "dmg:       " << wep.getDmg() << std::endl
-    << "ammoType " << wep.getAmmoType() << std::endl
+    << "maxdmg:    " << wep.getMaxdmg() << std::endl
+    << "ammoType:  " << wep.getAmmoType() << std::endl
+    << "shots:     " << wep.getShots() << std::endl
+    << "crit:      " << wep.getCrit() << std::endl
     << "mupgrades: " << wep.getMupgrades() << std::endl
-    << "nupgrades: " << wep.getNupgrades() << std::endl << std::endl;
+    << "nupgrades: " << wep.getNupgrades() << std::endl
+    << std::endl;
     //<< "*upgrades " << wep.*upgrades << std::endl
     for (int i = 0; i < 20; i++) {
       if (wep.getStats(i) != 0) {
