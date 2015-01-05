@@ -192,6 +192,7 @@ void CWeapon::setBaseStats() {  // int lvl
   subTypeFile >> this->crit;
   subTypeFile >> this->mupgrades;
   std::getline(subTypeFile, this->desc);
+  subTypeFile >> this->ammoType;
   subTypeFile.close();
   this->tier = mupgrades - 1;
   this->nupgrades = rndm(0, this->mupgrades);
@@ -200,7 +201,7 @@ void CWeapon::setBaseStats() {  // int lvl
 
 /* CWeapon::processStatsLine
  *
- * Reads valur, this->name pairs from string and passes them to processing
+ * Reads value, this->name pairs from string and passes them to processing
  */
 void CWeapon::processStatsLine(std::string statsLine) {
   statsLine = trimCRLF(statsLine);
@@ -220,7 +221,8 @@ void CWeapon::processStatsLine(std::string statsLine) {
 }
 
 /* CWeapon::applyStats
- * 
+ *
+ * Decodes a <string, int> pair and applies it to the weapon
  */
 int CWeapon::applyStats(std::string statsName, int statsValue) {
   switch(statToIndex[statsName]) {
