@@ -64,7 +64,7 @@ class CWeapon {
     std::string ammoType;  // 
     int mupgrades = 0;  // max # sockets
     int nupgrades = 0;  // actual # sockets
-    int *upgrades = 0;  // sockets holding upgrade id - <key, value> pair instead?
+    std::vector<std::pair<std::string, int>> upgrades;  // STAT, value
     std::string rarity = "";  // common, uncommon, rare, unique, epic, legendary
     int rlvl = 0;  // lvl req
     int rclout = 0;  // combat subskill req;

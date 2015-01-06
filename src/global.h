@@ -2,6 +2,7 @@
 #include <fstream>
 #include <map>
 #include <algorithm>  // std::count - fileUtils.h
+#include <vector>
 #ifndef MSWINDOWS
 extern "C" {
   #include "getch.h"
