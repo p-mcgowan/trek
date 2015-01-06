@@ -11,7 +11,7 @@
  *
  *  Creates a random generated weapon
  */
-CWeapon::CWeapon() {  // params - lvl, raremult...
+CWeapon::CWeapon() {  // params - lvl, raremult... - laser type energy cost
   this->type = getRandomStringFromFile("../lists/weapon/names/type", false);
   std::string path("../lists/weapon/names/" + this->type);
   this->sType = getRandomStringFromFile(path, false);
@@ -25,7 +25,32 @@ CWeapon::CWeapon() {  // params - lvl, raremult...
  *  Creates a unique generated weapon from file
  */
 /*CWeapon::CWeapon(std::string name) {  // unique
-  std::ifstream uniques("../lists/uniques");
+  std::ifstream uniques("../lists/weapon/unique");
+  if (!uniques.is_open()) {
+    LOGERR("uniques: Error opening file for reading: ../lists/weapon/unique", 1);
+  }
+  // find name
+  this->rarity = "unique";
+  this->prefix = "";
+  this->suffix = "";
+  uniques >> type;
+  uniques >> sType;
+  uniques >> prefix;
+  uniques >> suffix;
+  uniques >> name;
+  uniques >> desc;
+  uniquies >> lvl;
+  uniquies >> tier;
+  uniquies >> crit;
+  uniquies >> shots;
+  uniquies >> maxdmg;
+  uniquies >> dmg;
+  uniquies >> ammoType;
+  uniquies >> nupgrades;
+  //uniquies >> *upgrades;
+  uniquies >> rlvl;
+  uniquies >> rclout;
+  uniquies >> rsocial;
   processStatsLine(getStatsLine(UNIQUES_FILE, name));
   return;
 }*/
@@ -35,27 +60,27 @@ CWeapon::CWeapon() {  // params - lvl, raremult...
  *  Creates a fully customized weapon
  */
 /*CWeapon::CWeapon(  // custom weapon
-  std::string type = "",
-  std::string sType = "",
-  std::string prefix = "",
-  std::string suffix = "",
-  std::string name = "",
-  std::string desc = "",
-  int lvl = 0,
-  int tier = 0,
-  float crit = 0,
-  int shots = 0,
-  int maxdmg = 0,
-  int dmg = 0,
+  std::string type,
+  std::string sType,
+  std::string prefix,
+  std::string suffix,
+  std::string name,
+  std::string desc,
+  int lvl,
+  int tier,
+  float crit,
+  int shots,
+  int maxdmg,
+  int dmg,
   std::string ammoType,
-  int mupgrades = 0,
-  int nupgrades = 0,
-  int *upgrades = 0,
-  std::string rarity = "",
-  int rlvl = 0,
-  int rclout = 0,
-  int rsocial = 0,
-  std::initializer_list <std::string> stats;
+  int mupgrades,
+  int nupgrades,
+  int *upgrades,
+  std::string rarity,
+  int rlvl,
+  int rclout,
+  int rsocial,
+  std::initializer_list <std::string> stats
   ) {
   this->type = type;
   this->sType = sType;

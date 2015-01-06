@@ -1,34 +1,12 @@
+this is a test for stuff
 Timmy's Peashooter
-
+balllistic 
 Captain Black's Hand Cannon
 
-Sergical Laser
+Surgical Laser
 
 
-#define PILOT     0
-#define COMBAT    1
-#define SCIENCE   2
-#define SOCIAL    3
-#define CLOUT     4
-#define LEADERSHIP  5
-#define REKNOWN   6
-#define MECHAPT   7
-#define ABILITY   8
-#define INTUITION   9
-#define INTELECT  10
-#define TECHAPT   11
-#define INNOVATION  12
-#define CHARISMA  13
-#define COMMERCE  14
-#define DEXTERITY   15
-#define DMG     16
-#define CRIT    17
-#define SHOTS   18
-#define MAXDMG    19
-#define MAXUPGRADES 20
-#define LVLREQ    21
-#define CLOUTREQ  22
-#define SOCIALREQ 23
+PILOT 0 COMBAT 1 SCIENCE 2 SOCIAL 3 CLOUT 4 LEADERSHIP 5 REKNOWN 6 MECHAPT 7 ABILITY 8 INTUITION 9 INTELECT 10 TECHAPT 11 INNOVATION 12 CHARISMA 13 COMMERCE 14 DEXTERITY 15 DMG 16 CRIT 17 SHOTS 18 MAXDMG 19 MAXUPGRADES 20 LVLREQ 21 CLOUTREQ 22 SOCIALREQ 23 
 
 type
 sType

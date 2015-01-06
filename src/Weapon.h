@@ -36,6 +36,7 @@
 // Prefix and suffix list file locations
 #define PREFIX_FILE "../lists/weapon/prefix"
 #define SUFFIX_FILE "../lists/weapon/suffix"
+#define UNIQUES_FILE "../lists/weapon/unique"
 
 // Thresholds for rarities [0-1000]
 #define COMMONTHRESH 750
@@ -64,7 +65,7 @@ class CWeapon {
     int mupgrades = 0;  // max # sockets
     int nupgrades = 0;  // actual # sockets
     int *upgrades = 0;  // sockets holding upgrade id - <key, value> pair instead?
-    std::string rarity = "";  // 0-1000
+    std::string rarity = "";  // common, uncommon, rare, unique, epic, legendary
     int rlvl = 0;  // lvl req
     int rclout = 0;  // combat subskill req;
     int rsocial = 0;
@@ -72,6 +73,29 @@ class CWeapon {
 
   public:
     CWeapon();
+    CWeapon(std::string name);  // unique from file
+    CWeapon(  // Fully custom, from file or called from uniqeu
+      std::string type,
+      std::string sType,
+      std::string prefix,
+      std::string suffix,
+      std::string name,
+      std::string desc,
+      int lvl,
+      int tier,
+      float crit,
+      int shots,
+      int maxdmg,
+      int dmg,
+      std::string ammoType,
+      int mupgrades,
+      int nupgrades,
+      int *upgrades,
+      std::string rarity,
+      int rlvl,
+      int rclout,
+      int rsocial,
+      std::initializer_list <std::string> stats);
     std::string getType() {return type;}
     std::string getSType() {return sType;}
     std::string getPrefix() {return prefix;}

@@ -2,7 +2,6 @@
 
 int main() {
   while (true) {
-    
     CWeapon wep;
     std::cout
     /*<< "type " << wep.getType() << std::endl
