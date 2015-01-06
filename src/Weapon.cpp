@@ -284,8 +284,7 @@ int CWeapon::applyStats(std::string statsName, int statsValue) {
       this->maxdmg += statsValue;
       break;
     case MAXUPGRADES:
-      if (nupgrades + statsValue <= mupgrades)
-        mupgrades += statsValue;
+      this->mupgrades += statsValue;
       break;
     case LVLREQ:
       this->rlvl += statsValue;
