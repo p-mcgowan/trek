@@ -1,6 +1,20 @@
 #include "Weapon.cpp"
 
 int main() {
+  /*std::string c;
+  for (int i = 0; i < 100; i++) {
+    c = "\033[1;" + std::to_string(i) + 'm';
+    std::cout << c << i << "\033[1;0m" << " ";
+  }
+  std::cout << std::endl;
+  for (int i = 0; i < 100; i++) {
+    c = "\033[7;" + std::to_string(i) + 'm';
+    std::cout << c << i << "\033[1;0m" << " ";
+  }
+  int t; std::cin >> t;*/
+  std::string c = "\033[1;m";
+  std::string b = "\033[7;" + std::to_string(bg) + 'm';
+  std::cout << "\033[1;m"; << "\033[7;m";
   while (true) {
     CWeapon wep;
     std::cout
