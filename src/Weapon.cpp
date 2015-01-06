@@ -7,6 +7,10 @@
 
  class CWeapon;
 
+/*  Default constructor
+ *
+ *  Creates a random generated weapon
+ */
 CWeapon::CWeapon() {  // params - lvl, raremult...
   this->type = getRandomStringFromFile("../lists/weapon/names/type", false);
   std::string path("../lists/weapon/names/" + this->type);
@@ -16,51 +20,65 @@ CWeapon::CWeapon() {  // params - lvl, raremult...
   return;
 }
 
+/*  Unique constructor
+ *
+ *  Creates a unique generated weapon from file
+ */
+/*CWeapon::CWeapon(std::string name) {  // unique
+  std::ifstream uniques("../lists/uniques");
+  processStatsLine(getStatsLine(UNIQUES_FILE, name));
+  return;
+}*/
+
+/*  Custom constructor
+ *
+ *  Creates a fully customized weapon
+ */
 /*CWeapon::CWeapon(  // custom weapon
-    std::string type = "",
-    std::string sType = "",
-    std::string prefix = "",
-    std::string suffix = "",
-    std::string name = "",
-    std::string desc = "",
-    int lvl = 0,
-    int tier = 0,
-    float crit = 0,
-    int shots = 0,
-    int maxdmg = 0,
-    int dmg = 0,
-    std::string ammoType,
-    int mupgrades = 0,
-    int nupgrades = 0,
-    int *upgrades = 0,
-    std::string rarity = "",
-    int rlvl = 0,
-    int rclout = 0,
-    int rsocial = 0,
-    std::initializer_list <std::string> stats;
-    ) {
-    this->type = type;
-    this->sType = sType;
-    this->prefix = prefix;
-    this->suffix = suffix;
-    this->name = name;
-    this->desc = desc;
-    this->lvl = lvl;
-    this->tier = tier;
-    this->crit = crit;
-    this->shots = shots;
-    this->maxdmg = maxdmg;
-    this->dmg = dmg;
-    this->ammoType = ammoType;
-    this->mupgrades = mupgrades;
-    this->nupgrades = nupgrades;
-    this->*upgrades = *upgrades;
-    this->rarity = rarity;
-    this->rlvl = rlvl;
-    this->rclout = rclout;
-    this->rsocial = rsocial;
-    for (auto i : stats)
-      stats[modtoIndex[i]] = std::stoi(++i);
+  std::string type = "",
+  std::string sType = "",
+  std::string prefix = "",
+  std::string suffix = "",
+  std::string name = "",
+  std::string desc = "",
+  int lvl = 0,
+  int tier = 0,
+  float crit = 0,
+  int shots = 0,
+  int maxdmg = 0,
+  int dmg = 0,
+  std::string ammoType,
+  int mupgrades = 0,
+  int nupgrades = 0,
+  int *upgrades = 0,
+  std::string rarity = "",
+  int rlvl = 0,
+  int rclout = 0,
+  int rsocial = 0,
+  std::initializer_list <std::string> stats;
+  ) {
+  this->type = type;
+  this->sType = sType;
+  this->prefix = prefix;
+  this->suffix = suffix;
+  this->name = name;
+  this->desc = desc;
+  this->lvl = lvl;
+  this->tier = tier;
+  this->crit = crit;
+  this->shots = shots;
+  this->maxdmg = maxdmg;
+  this->dmg = dmg;
+  this->ammoType = ammoType;
+  this->mupgrades = mupgrades;
+  this->nupgrades = nupgrades;
+  this->*upgrades = *upgrades;
+  this->rarity = rarity;
+  this->rlvl = rlvl;
+  this->rclout = rclout;
+  this->rsocial = rsocial;
+  for (auto i : stats)
+    stats[modtoIndex[i]] = std::stoi(++i);
   return;
 }*/
 
