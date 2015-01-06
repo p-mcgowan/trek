@@ -7,7 +7,7 @@
 
  class CWeapon;
 
-/*  Default constructor
+/*  Default weapon
  *
  *  Creates a random generated weapon
  */
@@ -20,7 +20,7 @@ CWeapon::CWeapon() {  // params - lvl, raremult...
   return;
 }
 
-/*  Unique constructor
+/*  Unique weapon
  *
  *  Creates a unique generated weapon from file
  */
@@ -30,7 +30,7 @@ CWeapon::CWeapon() {  // params - lvl, raremult...
   return;
 }*/
 
-/*  Custom constructor
+/*  Custom weapon
  *
  *  Creates a fully customized weapon
  */
