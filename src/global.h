@@ -4,11 +4,15 @@
 #include <algorithm>  // std::count - fileUtils.h
 #include <vector>
 #ifndef MSWINDOWS
-extern "C" {
-  #include "getch.h"
-}
+  extern "C" {
+    #include "getch.h"
+  }
+  #include "conOut_nix.h"
 #else
-#include <conio.h>
+  extern "C" {
+    #include <conio.h>
+    #include "conOut_win.h"
+  }
 #endif
 
 #define LOGDN(m) do {if(debug) {std::cout << m;}} while(0)
