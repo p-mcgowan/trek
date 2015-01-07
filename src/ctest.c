@@ -1,15 +1,7 @@
-/*Escape code Use
-\x1b[2J Clears the console
-\x1bn;mH or \x1bn;mf  Moves the cursor to row n, column m. The values are 1-based, and default to 1 (top left corner) if omitted
-\x1b?25l  Hides the cursor (Note: the last character is lowercase ‘L')
-\x1b?25h  Shows the cursor.
-\x1b[;km  Where k is the colour (text colours are from 30 to 37 and background colours are from 40 to 47). For the colour codes, see Table 2.
-\x1b[5m Blinks slowly
-\x1b[6m Blinks rapidly*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-  // General Utility
+// General Utility
 #define CLEAR "\x1b[2J"
 #define SET11 "\x1b[1;1f"  // Set the Cursor at 1,1
 // Text Modification
@@ -53,50 +45,77 @@
 #define BGC_IMAGENTA "\x1b[45;1m"
 #define BGC_ICYAN "\x1b[46;1m"
 #define BGC_IWHITE "\x1b[47;1m"
+
+#define MYBLUE 34
+#define MYWHITE 37
+
 // General Utility Functions
-void cagxy(unsigned int x, unsigned int y) {  // Clear and Goto X,Y
+void cagxy(unsigned int x, unsigned int y); // Clear and Goto X,Y
+void clrscr(); // Clear the Screen
+char getch();
+void gotox(unsigned int x);
+void gotoxy(unsigned int x, unsigned int y);
+void nocursor();
+void reset_video();
+void showcursor();
+void textcolor(char *color);
+void textbackground(char color[11]);
+void setCB(int c, int b);
+void clrsc(int c, int b);
+void clrs();
+// Clear and Goto X,Y
+void cagxy(unsigned int x, unsigned int y) {
   printf("%s\x1b[%d;%df", CLEAR, y, x);
 }
-void clrscr() {  // Clear the Screen
+ // Clear the Screen
+void clrscr() {
   printf("%s",CLEAR);
 }
 void gotox(unsigned int x) {
-printf("\x1b[%dG", x);
+  printf("\x1b[%dG", x);
 }
 void gotoxy(unsigned int x, unsigned int y) {
-printf("\x1b[%d;%df", y, x);
+  printf("\x1b[%d;%df", y, x);
 }
 void nocursor() {
-printf("\x1b[?25l");
+  printf("\x1b[?25l");
 }
 void reset_video() {
-printf("\x1b[0m");
+  printf("\x1b[0m");
 }
 void showcursor() {
-printf("\x1b[?25h");
+  printf("\x1b[?25h");
 }
 void textcolor(char *color) {
-printf("%s",color);
+  printf("%s",color);
 }
 void textbackground(char color[11]) {
-char col[11];
-strcpy(col,color);
-col[2]='4'; // The given color will be fg color. Replace '3' with '4'
-printf("%s",col);
+  char col[11];
+  strcpy(col,color);
+  col[2]='4'; // The given color will be fg color. Replace '3' with '4'.
+  printf("%s",col);
 }
-
-/*
+void setCB(int c, int b) {
+  //#define WHITE "\x1b[37m"
+  //#define BLUE "\x1b[34m"
+  char back[10] = {'\\', 'x', '4', 'b', '[', (char)(b / 10 + '0'), (char)(b % 10 + '0'), 'm'};
+  char text[10] = {'\\', 'x', '1', 'b', '[', (char)(b / 10 + '0'), (char)(b % 10 + '0'), 'm'};
+  printf("%s", text);  // white text
+  printf("%s", back);  // blue back
+}
+void clrsc(int c, int b) {
+  setCB(c, b);
+  clrs();
+}
+void clrs() {
+  printf("\x1b[2J");
+}
 int main() {
-textbackground(BLUE);
-textcolor(WHITE);
-clrscr();
-printf("Hello, World!\n");
-getch();
-return 0;
+  //textbackground(BLUE);
+  //textcolor(WHITE);
+  //clrscr();
+  clrsc(MYWHITE, MYBLUE);
+  gotoxy(1,1);
+  printf("Hello, World!\n");
+  return 1;
 }
-See how short test.c is compared to Code 2!
-Now, to compile this code,
-1)    Keep both conio.c and conio.h in the same directory where test.c exists.
-2)    Compile using the following command:
-gcc test.c conio.c -o test
-*/
