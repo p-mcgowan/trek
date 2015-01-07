@@ -12,8 +12,8 @@
  *  Creates a random generated weapon
  */
 CWeapon::CWeapon() {  // params - lvl, raremult... - laser type energy cost
-  this->type = getRandomStringFromFile("../lists/weapon/names/type", false);
-  std::string path("../lists/weapon/names/" + this->type);
+  this->type = getRandomStringFromFile(RELATIVE_LISTS + "/weapon/names/type", false);
+  std::string path(RELATIVE_LISTS + "/weapon/names/" + this->type);
   this->sType = getRandomStringFromFile(path, false);
   this->setRarity();
   this->setStats();
@@ -24,8 +24,9 @@ CWeapon::CWeapon() {  // params - lvl, raremult... - laser type energy cost
  *
  *  Creates a unique generated weapon from file
  */
-/*CWeapon::CWeapon(std::string name) {  // unique
-  std::ifstream uniques("../lists/weapon/unique");
+CWeapon::CWeapon(std::string name) {  // unique - same structure as legendary
+  std::ifstream uniques;
+  uniques.open(RELATIVE_LISTS + "/weapon/unique/" + name);
   if (!uniques.is_open()) {
     LOGERR("uniques: Error opening file for reading: ../lists/weapon/unique", 1);
   }
@@ -53,7 +54,7 @@ CWeapon::CWeapon() {  // params - lvl, raremult... - laser type energy cost
   uniquies >> rsocial;
   processStatsLine(getStatsLine(UNIQUES_FILE, name));
   return;
-}*/
+}
 
 /*  Custom weapon
  *
@@ -171,8 +172,13 @@ void CWeapon::setStats() {
     this->processStatsLine(getStatsLine(SUFFIX_FILE, this->suffix));
     this->processStatsLine(getStatsLine(PREFIX_FILE, this->prefix));
   }
+  else if (!this->rarity.compare("unique")) {
+    this->prefix = "";
+    this->suffix = "";
+
+  }
   else {
-    std::string path("../lists/weapon/legendary/");
+    std::string path(RELATIVE_LISTS + "weapon/legendary/");
     path += this->type + "/" + this->sType + "/names";
     this->name = getRandomStringFromFile(path);
     this->prefix = "";
@@ -218,9 +224,12 @@ std::string CWeapon::getStatsLine(std::string path, std::string toFind) {
  * this->type/sub this->type
  */
 void CWeapon::setBaseStats() {  // int lvl
-  std::string path("../lists/weapon/");
+  std::string path(RELATIVE_LISTS + "weapon/");
   if (!this->rarity.compare("legendary")) {
     path += "legendary/" + this->type + "/" + this->sType + "/stats";
+  }
+  else if (!this->rarity.compare("unique")) {
+    path += "stats/" + this->type + "/" + this->sType;
   }
   else {
     path += "stats/" + this->type + "/" + this->sType;

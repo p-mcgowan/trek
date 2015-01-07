@@ -33,10 +33,11 @@
 #define SOCIALREQ 23
 
 
-// Prefix and suffix list file locations
-#define PREFIX_FILE "../lists/weapon/prefix"
-#define SUFFIX_FILE "../lists/weapon/suffix"
-#define UNIQUES_FILE "../lists/weapon/unique"
+// Stat file locations
+#define RELATIVE_LISTS ".."
+#define PREFIX_FILE RELATIVE_LISTS"/weapon/prefix"
+#define SUFFIX_FILE RELATIVE_LISTS"/weapon/suffix"
+#define UNIQUES_FILE RELATIVE_LISTS"/weapon/unique"
 
 // Thresholds for rarities [0-1000]
 #define COMMONTHRESH 750
