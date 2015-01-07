@@ -1,15 +1,6 @@
 #include "Weapon.cpp"
 
 int main() {
-  cursor();
-  clrsc(WHITE, BLUE);
-  //std::cout << "\033[0;31m";
-  //std::cout << "\033[0;44m";
-  // textbackground(BLUE);
-  // textcolor(WHITE);
-  // clrscr();
-  std::cout << "hello world";
-  getch();
   while (true) {
     CWeapon wep;
     std::cout
