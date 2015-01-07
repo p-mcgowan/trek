@@ -8,8 +8,14 @@ http://www.dreamincode.net/code/snippet921.htm
 #include <windows.h>
 #include <stdio.h>
 
-//define colours
-
+#define BLACK 30
+#define RED 31
+#define GREEN 32
+#define YELLOW 33
+#define BLUE 34
+#define MAGENTA 35
+#define CYAN 36
+#define WHITE 37
 
 //This will clear the console while setting the forground and
 //  background colors.
@@ -21,8 +27,8 @@ void clrsc(int ForgC, int BackC) {
   CONSOLE_SCREEN_BUFFER_INFO csbi;
   SetConsoleTextAttribute(hStdOut, wColor);
   if(GetConsoleScreenBufferInfo(hStdOut, &csbi)) {
-    FillConsoleOutputCharacter(hStdOut, (TCHAR) 32, csbi.dwSize.X *   csbi.dwSize.Y, coord, &count);
-    FillConsoleOutputAttribute(hStdOut, csbi.wAttributes, csbi.  dwSize.X * csbi.dwSize.Y, coord, &count );
+    FillConsoleOutputCharacter(hStdOut, (TCHAR) 32, csbi.dwSize.X * csbi.dwSize.Y, coord, &count);
+    FillConsoleOutputAttribute(hStdOut, csbi.wAttributes, csbi.dwSize.X * csbi.dwSize.Y, coord, &count);
     SetConsoleCursorPosition(hStdOut, coord);
   }
   return;
@@ -35,9 +41,9 @@ void clrs() {
   DWORD count;
   CONSOLE_SCREEN_BUFFER_INFO csbi;
   if(GetConsoleScreenBufferInfo(hStdOut, &csbi)) {
-     FillConsoleOutputCharacter(hStdOut, (TCHAR) 32, csbi.dwSize.X * csbi.dwSize.Y, coord, &count);
-     FillConsoleOutputAttribute(hStdOut, csbi.wAttributes, csbi.dwSize.X * csbi.dwSize.Y, coord, &count );
-     SetConsoleCursorPosition(hStdOut, coord);
+    FillConsoleOutputCharacter(hStdOut, (TCHAR) 32, csbi.dwSize.X * csbi.dwSize.Y, coord, &count);
+    FillConsoleOutputAttribute(hStdOut, csbi.wAttributes, csbi.dwSize.X * csbi.dwSize.Y, coord, &count);
+    SetConsoleCursorPosition(hStdOut, coord);
   }
   return;
 }
@@ -62,9 +68,8 @@ void setC(int ForgC) {
 }
 
 //This will set the forground and background color for printing in a console window.
-void setCB(int ForgC, int BackC)
-{
-  WORD wColor = ((BackC & 0x0F) << 4) + (ForgC & 0x0F);;
+void setCB(int ForgC, int BackC) {
+  WORD wColor = ((BackC & 0x0F) << 4) + (ForgC & 0x0F);
   SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), wColor);
   return;
 }

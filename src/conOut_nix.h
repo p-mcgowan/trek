@@ -16,9 +16,6 @@ void gotoxy(unsigned int x, unsigned int y){
 void setC(int c) {
   std::cout << "\033[0;" + std::to_string(c) + "m";
 }
-void setB(int c) {
-  std::cout << "\033[0;" + std::to_string(c + 10) + "m";
-}
 void setCB(int c, int b) {
   std::cout << "\033[0;" + std::to_string(c) + "m" << "\033[0;" + std::to_string(b + 10) + "m";
 }
@@ -28,4 +25,5 @@ void clrsc(int c, int b) {
 }
 void cursor() {
   std::cout << "\033[?25l";
+  // \033?25h 
 }
