@@ -1,12 +1,10 @@
 #include "Weapon.cpp"
-extern "C" {
-  #include "conio.h"
-}
 
 int main() {
-  SCAB(BLUE, WHITE);
-  ClearConsole();
-
+  cursor();
+  clrsc(WHITE, BLUE);
+  //std::cout << "\033[0;31m";
+  //std::cout << "\033[0;44m";
   // textbackground(BLUE);
   // textcolor(WHITE);
   // clrscr();
@@ -35,7 +33,7 @@ int main() {
     << "rlvl " << wep.getRlvl() << std::endl
     << "rclout " << wep.getRclout() << std::endl
     << "rsocial " << wep.getRsocial() << std::endl
-    << "mods: " <<std::endl;
+    << "mods: " << std::endl;
     for (int i = 0; i < 20; i++) {
       if (wep.getStats(i) != 0)
         std::cout << "  Slot " << i << ", name " << indexToStat[i] << " , value " << wep.getStats(i) << std::endl;
