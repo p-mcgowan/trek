@@ -38,7 +38,7 @@ CWeapon::CWeapon(std::string uniqueName) {  // unique
  *
  *  Creates a fully customized weapon
  */
-/*CWeapon::CWeapon(  // custom weapon
+/*CWeapon::CWeapon(  // custom weapon, crafting?
   std::string type,
   std::string sType,
   std::string prefix,
@@ -310,4 +310,12 @@ int CWeapon::applyStats(std::string statsName, int statsValue) {
       break;
   }
   return 0;
+}
+
+/* CWeapon::applyUpgrades
+ * 
+ * Adds stats to a weapon from STAT, VALUE pair
+ */
+void CWeapon::applyUpgrade(std::pair<std::string, int> statPair) {
+  applyStats(std::get<0>(statPair), std::get<1>(statPair));
 }

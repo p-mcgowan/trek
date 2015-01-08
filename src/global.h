@@ -4,7 +4,7 @@
 #include <algorithm>  // std::count - fileUtils.h
 #include <vector>
 #include <string>
-#ifndef MSWINDOWS
+#ifndef WIN32
   extern "C" {
     #include "getch.h"
   }

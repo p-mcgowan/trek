@@ -116,7 +116,7 @@ class CWeapon {
     std::string getAmmoType() {return ammoType;}
     int getMupgrades() {return mupgrades;}
     int getNupgrades() {return nupgrades;}
-    //int *getUpgrades() {return upgrades;}
+    std::vector<std::pair<std::string, int>> getUpgrades();
     std::string getRarity() {return rarity;}
     int getRlvl() {return rlvl;}
     int getRclout() {return rclout;}
@@ -128,7 +128,9 @@ class CWeapon {
     std::string getStatsLine(std::string path, std::string toFind);
     void setBaseStats();
     void processStatsLine(std::string modLine);
-    int applyStats(std::string modName, int modValue);
+    int applyStats(std::string statsName, int statsValue);
+
+    void applyUpgrade(std::pair<std::string, int> statPair);
 
  };
 

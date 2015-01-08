@@ -2,7 +2,11 @@
 
 int main() {
   while (true) {
-    CWeapon *wep = new CWeapon("");
+    CWeapon *wep = new CWeapon();
+    std::pair<std::string, int> tmp;
+    std::get<0>(tmp) = "DMG";
+    std::get<1>(tmp) = 500;
+    wep->applyUpgrade(tmp);
     std::cout
     /*<< "type " << wep->getType() << std::endl
     << "sType " << wep->getSType() << std::endl
