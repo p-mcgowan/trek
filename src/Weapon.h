@@ -34,10 +34,14 @@
 
 
 // Stat file locations
-#define RELATIVE_LISTS ".."
-#define PREFIX_FILE RELATIVE_LISTS"/weapon/prefix"
-#define SUFFIX_FILE RELATIVE_LISTS"/weapon/suffix"
-#define UNIQUES_FILE RELATIVE_LISTS"/weapon/unique"
+#define RELATIVE_LISTS "../lists/"
+#define WNAMES_FILE RELATIVE_LISTS"weapon/names/"
+#define WTYPE_FILE WNAMES_FILE"type"
+#define WPREFIX_FILE RELATIVE_LISTS"weapon/prefix"
+#define WSUFFIX_FILE RELATIVE_LISTS"weapon/suffix"
+#define WUNIQUES_FILE RELATIVE_LISTS"weapon/uniques/"
+#define WUNIQUENAMES_FILE RELATIVE_LISTS"weapon/uniques/names"
+#define WLEGENDARY_FILE RELATIVE_LISTS"weapon/legendary/"
 
 // Thresholds for rarities [0-1000]
 #define COMMONTHRESH 750
@@ -74,7 +78,7 @@ class CWeapon {
 
   public:
     CWeapon();
-    CWeapon(std::string name);  // unique from file
+    CWeapon(std::string uniqueName);  // unique from file
     CWeapon(  // Fully custom, from file or called from uniqeu
       std::string type,
       std::string sType,

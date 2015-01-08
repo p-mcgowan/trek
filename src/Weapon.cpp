@@ -12,8 +12,8 @@
  *  Creates a random generated weapon
  */
 CWeapon::CWeapon() {  // params - lvl, raremult... - laser type energy cost
-  this->type = getRandomStringFromFile(RELATIVE_LISTS + "/weapon/names/type", false);
-  std::string path(RELATIVE_LISTS + "/weapon/names/" + this->type);
+  this->type = getRandomStringFromFile(WTYPE_FILE, false);
+  std::string path = WNAMES_FILE + this->type;
   this->sType = getRandomStringFromFile(path, false);
   this->setRarity();
   this->setStats();
@@ -24,35 +24,13 @@ CWeapon::CWeapon() {  // params - lvl, raremult... - laser type energy cost
  *
  *  Creates a unique generated weapon from file
  */
-CWeapon::CWeapon(std::string name) {  // unique - same structure as legendary
-  std::ifstream uniques;
-  uniques.open(RELATIVE_LISTS + "/weapon/unique/" + name);
-  if (!uniques.is_open()) {
-    LOGERR("uniques: Error opening file for reading: ../lists/weapon/unique", 1);
-  }
-  // find name
+CWeapon::CWeapon(std::string uniqueName) {  // unique
   this->rarity = "unique";
-  this->prefix = "";
-  this->suffix = "";
-  uniques >> type;
-  uniques >> sType;
-  uniques >> prefix;
-  uniques >> suffix;
-  uniques >> name;
-  uniques >> desc;
-  uniquies >> lvl;
-  uniquies >> tier;
-  uniquies >> crit;
-  uniquies >> shots;
-  uniquies >> maxdmg;
-  uniquies >> dmg;
-  uniquies >> ammoType;
-  uniquies >> nupgrades;
-  //uniquies >> *upgrades;
-  uniquies >> rlvl;
-  uniquies >> rclout;
-  uniquies >> rsocial;
-  processStatsLine(getStatsLine(UNIQUES_FILE, name));
+  if (uniqueName == "") // random unique
+    this->name = getRandomStringFromFile(WUNIQUENAMES_FILE, false);
+  else
+    this->name = uniqueName;
+  this->setStats();
   return;
 }
 
@@ -113,7 +91,7 @@ CWeapon::CWeapon(std::string name) {  // unique - same structure as legendary
  * Applies a random rarity to a weapon
  */
 void CWeapon::setRarity() {  // int mult) {
-  int i = rndm(0, 1000) + COMMONTHRESH/2;
+  int i = rndm(0, 1000);//S + COMMONTHRESH/2;
   if (i <= COMMONTHRESH)
     this->rarity = "common";
   else if (i <= UNCOMMONTHRESH)
@@ -134,58 +112,64 @@ void CWeapon::setRarity() {  // int mult) {
 void CWeapon::setStats() {
   std::string path, statsLine;
   this->setBaseStats();
-  if (!this->rarity.compare("common")) {
+  if (this->rarity == "common") {
     this->prefix = "";
     this->suffix = "";
   }
-  else if (!this->rarity.compare("uncommon")) {
+  else if (this->rarity == "uncommon") {
     if (rndm(0, 1)) {
       this->suffix = "";
-      this->prefix = getRandomStringFromFile(PREFIX_FILE);
-      this->processStatsLine(getStatsLine(PREFIX_FILE, this->prefix));
-    }else {
+      this->prefix = getRandomStringFromFile(WPREFIX_FILE);
+      this->processStatsLine(getStatsLine(WPREFIX_FILE, this->prefix));
+    } else {
       this->prefix = "";
-      this->suffix = getRandomStringFromFile(SUFFIX_FILE);
-      this->processStatsLine(getStatsLine(SUFFIX_FILE, this->suffix));
+      this->suffix = getRandomStringFromFile(WSUFFIX_FILE);
+      this->processStatsLine(getStatsLine(WSUFFIX_FILE, this->suffix));
     }
   }
-  else if (!this->rarity.compare("rare")) {
-    this->prefix = getRandomStringFromFile(PREFIX_FILE);
-    this->suffix = getRandomStringFromFile(SUFFIX_FILE);
-    this->processStatsLine(getStatsLine(SUFFIX_FILE, this->suffix));
-    this->processStatsLine(getStatsLine(PREFIX_FILE, this->prefix));
+  else if (this->rarity == "rare") {
+    this->prefix = getRandomStringFromFile(WPREFIX_FILE);
+    this->suffix = getRandomStringFromFile(WSUFFIX_FILE);
+    this->processStatsLine(getStatsLine(WSUFFIX_FILE, this->suffix));
+    this->processStatsLine(getStatsLine(WPREFIX_FILE, this->prefix));
   }
-  else if (!this->rarity.compare("epic")) {
+  else if (this->rarity == "epic") {
     int mods = rndm(4, 6);
     for(int i = 0; i < mods; i++) {
       if (rndm(0, 1)) {
-        this->prefix = getRandomStringFromFile(PREFIX_FILE);
-        this->processStatsLine(getStatsLine(PREFIX_FILE, this->prefix));
+        this->prefix = getRandomStringFromFile(WPREFIX_FILE);
+        this->processStatsLine(getStatsLine(WPREFIX_FILE, this->prefix));
       }
       else {
-        this->suffix = getRandomStringFromFile(SUFFIX_FILE);
-        this->processStatsLine(getStatsLine(SUFFIX_FILE, this->suffix));
+        this->suffix = getRandomStringFromFile(WSUFFIX_FILE);
+        processStatsLine(getStatsLine(WSUFFIX_FILE, this->suffix));
       }
     }
-    this->prefix = getRandomStringFromFile(PREFIX_FILE);
-    this->suffix = getRandomStringFromFile(SUFFIX_FILE);
-    this->processStatsLine(getStatsLine(SUFFIX_FILE, this->suffix));
-    this->processStatsLine(getStatsLine(PREFIX_FILE, this->prefix));
+    this->prefix = getRandomStringFromFile(WPREFIX_FILE);
+    this->suffix = getRandomStringFromFile(WSUFFIX_FILE);
+    this->processStatsLine(getStatsLine(WSUFFIX_FILE, this->suffix));
+    this->processStatsLine(getStatsLine(WPREFIX_FILE, this->prefix));
   }
-  else if (!this->rarity.compare("unique")) {
+  else if (this->rarity == "unique") {
+    std::string path(WUNIQUES_FILE + this->name + "/stats");
+    std::ifstream uniqueStats(path);
+    if (!uniqueStats.is_open())
+      LOGERR("setStats: Error opening file for reading: \"" << path << "\"", 1);
+    std::string statsLine;
+    std::getline(uniqueStats, statsLine);
+    processStatsLine(statsLine);
     this->prefix = "";
     this->suffix = "";
-
   }
-  else {
-    std::string path(RELATIVE_LISTS + "weapon/legendary/");
+  else {  // legendary
+    std::string path(WLEGENDARY_FILE);
     path += this->type + "/" + this->sType + "/names";
     this->name = getRandomStringFromFile(path);
     this->prefix = "";
     this->suffix = "";
     this->processStatsLine(getStatsLine(path, this->name));
   }
-  if(this->rarity.compare("legendary")) {
+  if (this->rarity == "legendary") {
     name = this->sType;
     if (this->prefix != "")
       this->name = this->prefix + " " + this->name;
@@ -202,20 +186,19 @@ void CWeapon::setStats() {
  */
 std::string CWeapon::getStatsLine(std::string path, std::string toFind) {
   std::ifstream statsFile(path);
-  if (!statsFile.is_open()) {
+  if (!statsFile.is_open())
     LOGERR("getStatsLine: Error opening file for reading: " << path, 1);
-  }
-  std::string statsLine, t;
+  std::string statsLine;
   std::getline(statsFile, statsLine);
-  statsLine = trimCRLF(statsLine);
-  while (statsLine.compare(toFind)) {
+  //statsLine = trimCRLF(statsLine);
+  while (statsLine != toFind) {
     std::getline(statsFile, statsLine);
     std::getline(statsFile, statsLine);
-    statsLine = trimCRLF(statsLine);
+    //statsLine = trimCRLF(statsLine);
   }
   std::getline(statsFile, statsLine);
   statsFile.close();
-  return trimCRLF(statsLine);
+  return statsLine;//trimCRLF(statsLine);
 }
 
 /* CWeapon::setBaseStats
@@ -224,20 +207,19 @@ std::string CWeapon::getStatsLine(std::string path, std::string toFind) {
  * this->type/sub this->type
  */
 void CWeapon::setBaseStats() {  // int lvl
-  std::string path(RELATIVE_LISTS + "weapon/");
-  if (!this->rarity.compare("legendary")) {
+  std::string path(RELATIVE_LISTS"weapon/");
+  if (this->rarity == "legendary") {
     path += "legendary/" + this->type + "/" + this->sType + "/stats";
   }
-  else if (!this->rarity.compare("unique")) {
-    path += "stats/" + this->type + "/" + this->sType;
+  else if (this->rarity == "unique") {
+    path += "uniques/" + this->name + "/basestats";
   }
   else {
     path += "stats/" + this->type + "/" + this->sType;
   }
   std::ifstream subTypeFile(path);
-  if (!subTypeFile.is_open()) {
+  if (!subTypeFile.is_open())
     LOGERR("setBaseStats: Error opening file for reading: " << path, 1);
-  }
   subTypeFile >> this->dmg;
   subTypeFile >> this->maxdmg;
   subTypeFile >> this->shots;
@@ -260,7 +242,7 @@ void CWeapon::setBaseStats() {  // int lvl
  * Reads value, this->name pairs from string and passes them to processing
  */
 void CWeapon::processStatsLine(std::string statsLine) {
-  statsLine = trimCRLF(statsLine);
+  //statsLine = trimCRLF(statsLine);
   std::string statsName, statsValue, delimiter = " ";
   size_t pos = 0;
   while ((pos = statsLine.find(delimiter)) != std::string::npos) {

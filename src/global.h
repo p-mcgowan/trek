@@ -19,7 +19,7 @@
 #define LOGDN(m) do {if(debug) {std::cout << m;}} while(0)
 #define LOGD(m) do {if(debug) {std::cout << m << std::endl;}} while(0)
 #define LOGW(m) do {std::cout << m << std::endl;} while(0)
-#define LOGERR(m, n) std::cout << m << std::endl; exit (n);
+#define LOGERR(m, n) do {std::cout << m << std::endl; exit (n);} while(0)
 
 bool seeded = false;
 bool debug = true;
@@ -33,7 +33,7 @@ int rndm(int low, int high) {
 }
 
 std::string trimCRLF(std::string s) {
-  s.erase(std::remove(s.begin(), s.end(), '\r'), s.end());
-  s.erase(std::remove(s.begin(), s.end(), '\n'), s.end());
+  //s.erase(std::remove(s.begin(), s.end(), '\r'), s.end());
+  //s.erase(std::remove(s.begin(), s.end(), '\n'), s.end());
   return s;
 }
