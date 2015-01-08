@@ -265,6 +265,7 @@ int CWeapon::applyStats(std::string statsName, int statsValue) {
   switch(statToIndex[statsName]) {
     case DMG:
       this->dmg += statsValue;
+      break;
     case CRIT:
       this->crit += statsValue;
       break;
@@ -305,7 +306,7 @@ int CWeapon::applyStats(std::string statsName, int statsValue) {
       this->stats[statToIndex[statsName]] += statsValue;
       break;
     default:
-      LOGW("unmatched stats pair" << statsName << " => " << statToIndex[statsName]);
+      LOGW("WARNING: Unmatched stats pair" << statsName << " => " << statToIndex[statsName]);
       return 1;
       break;
   }
@@ -314,8 +315,17 @@ int CWeapon::applyStats(std::string statsName, int statsValue) {
 
 /* CWeapon::applyUpgrades
  * 
- * Adds stats to a weapon from STAT, VALUE pair
+ * Calls applyStats to add stats to a weapon given a STAT, VALUE pair
  */
 void CWeapon::applyUpgrade(std::pair<std::string, int> statPair) {
   applyStats(std::get<0>(statPair), std::get<1>(statPair));
+  this->upgrades.push_back(statPair);
 }
+
+/*
+print upgrades:
+std::vector<std::pair<std::string,int>> test = wep->getUpgrades();
+for(std::vector<std::pair<std::string, int>>::iterator it = test.begin(); it != test.end(); ++it) {
+    std::cout << it->first << it->second << std::endl;
+}
+*/

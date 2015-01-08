@@ -116,7 +116,7 @@ class CWeapon {
     std::string getAmmoType() {return ammoType;}
     int getMupgrades() {return mupgrades;}
     int getNupgrades() {return nupgrades;}
-    std::vector<std::pair<std::string, int>> getUpgrades();
+    std::vector<std::pair<std::string, int>> getUpgrades() {return upgrades;}
     std::string getRarity() {return rarity;}
     int getRlvl() {return rlvl;}
     int getRclout() {return rclout;}

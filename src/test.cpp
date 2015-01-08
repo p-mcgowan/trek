@@ -7,6 +7,12 @@ int main() {
     std::get<0>(tmp) = "DMG";
     std::get<1>(tmp) = 500;
     wep->applyUpgrade(tmp);
+    wep->applyUpgrade(tmp);
+    std::cout << "upgrades:" << std::endl;
+    std::vector<std::pair<std::string,int>> test = wep->getUpgrades();
+    for(std::vector<std::pair<std::string, int>>::iterator it = test.begin(); it != test.end(); ++it) {
+        std::cout << it->first << it->second << std::endl;
+    }
     std::cout
     /*<< "type " << wep->getType() << std::endl
     << "sType " << wep->getSType() << std::endl
@@ -49,7 +55,6 @@ int main() {
     << "rclout:    " << wep->getRclout() << std::endl
     << "rsocial:   " << wep->getRsocial() << std::endl
     << std::endl;
-    //<< "*upgrades " << wep->*upgrades << std::endl
     for (int i = 0; i < 20; i++) {
       if (wep->getStats(i) != 0) {
         if (wep->getStats(i) > 0)
