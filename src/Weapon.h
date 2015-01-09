@@ -69,12 +69,12 @@ class CWeapon {
     std::string ammoType;  // 
     int mupgrades = 0;  // max # sockets
     int nupgrades = 0;  // actual # sockets
-    std::vector<std::pair<std::string, int>> upgrades;  // STAT, value
+    std::vector<std::pair<std::string,int>> upgrades;  // STAT, value
     std::string rarity = "";  // common, uncommon, rare, unique, epic, legendary
     int rlvl = 0;  // lvl req
     int rclout = 0;  // combat subskill req;
     int rsocial = 0;
-    std::vector<std::pair<std::string, int>> stats;
+    std::vector<std::pair<std::string,int>> stats;
     //std::vector<std::pair<std::string, int>> stat;  // other buffs from upgrades?
 
   public:
@@ -96,12 +96,12 @@ class CWeapon {
       std::string ammoType,
       int mupgrades,
       int nupgrades,
-      int *upgrades,
+      std::vector<std::pair<std::string,int>> upgrades,
       std::string rarity,
       int rlvl,
       int rclout,
       int rsocial,
-      std::initializer_list <std::string> stats);
+      std::vector<std::pair<std::string,int>> stats);
     std::string getType() {return type;}
     std::string getSType() {return sType;}
     std::string getPrefix() {return prefix;}
@@ -117,12 +117,12 @@ class CWeapon {
     std::string getAmmoType() {return ammoType;}
     int getMupgrades() {return mupgrades;}
     int getNupgrades() {return nupgrades;}
-    std::vector<std::pair<std::string, int>> getUpgrades() {return upgrades;}
+    std::vector<std::pair<std::string,int>> getUpgrades() {return upgrades;}
     std::string getRarity() {return rarity;}
     int getRlvl() {return rlvl;}
     int getRclout() {return rclout;}
     int getRsocial() {return rsocial;}
-    int getStats(std::string stat);
+    std::vector<std::pair<std::string,int>> getStats(std::string statID);
 
     void setRarity();
     void setStats();

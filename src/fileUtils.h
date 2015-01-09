@@ -10,6 +10,9 @@ int countLinesInFile(std::string path){//opens and closes file @path
   return nLines;
 }
 
+
+/*
+*/
 std::string getRandomStringFromFile(std::string path, bool mode = true) {
   std::string str;
   int j, lines = countLinesInFile(path);

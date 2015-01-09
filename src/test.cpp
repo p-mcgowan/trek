@@ -3,8 +3,10 @@
 int main() {
   while (true) {
     CWeapon *wep = new CWeapon();
+    int t;
     for (int i = 0; i < rndm(0, 4); i++) {
-        wep->applyUpgrade({indexToStat[rndm(0,23)], rndm(1, 10)});
+      t = (rndm(0,3) == 0)? -1 : 1;
+      wep->applyUpgrade({indexToStat[rndm(0,23)], t*rndm(1, 10)});
     }
     LOGD("+=========+=========+=========+=========+=========+=========+=========+========+");
     LOGD(wep->getName());
@@ -24,12 +26,14 @@ int main() {
     LOGD(std::endl << "Upgrades:");
     std::vector<std::pair<std::string,int>> test = wep->getUpgrades();
     for(std::vector<std::pair<std::string, int>>::iterator it = test.begin(); it != test.end(); ++it)
-        LOGD(it->first << " " << it->second);
+      LOGD(it->first << " " << it->second);
     LOGD(std::endl << "Stats:");
-    std::cout << getStats("");
+    test = wep->getStats("");
+    for(std::vector<std::pair<std::string, int>>::iterator it = test.begin(); it != test.end(); ++it)
+      LOGD(it->first << " " << it->second);
     std::cout << "+=========+=========+=========+=========+=========+=========+=========+========+" << std::endl << std::endl;
     if(getch() == 'q')
-        return 1;
+      return 1;
   }
   return 1;
 }
