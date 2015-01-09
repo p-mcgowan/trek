@@ -74,7 +74,8 @@ class CWeapon {
     int rlvl = 0;  // lvl req
     int rclout = 0;  // combat subskill req;
     int rsocial = 0;
-    int stats[20] = {0};  // other buffs from upgrades?
+    std::vector<std::pair<std::string, int>> stats;
+    //std::vector<std::pair<std::string, int>> stat;  // other buffs from upgrades?
 
   public:
     CWeapon();
@@ -121,16 +122,17 @@ class CWeapon {
     int getRlvl() {return rlvl;}
     int getRclout() {return rclout;}
     int getRsocial() {return rsocial;}
-    int getStats(int i) {return stats[i];}
+    int getStats(std::string stat);
 
     void setRarity();
     void setStats();
     std::string getStatsLine(std::string path, std::string toFind);
     void setBaseStats();
     void processStatsLine(std::string modLine);
-    int applyStats(std::string statsName, int statsValue);
+    void applyStats(std::string statsName, int statsValue);
 
     void applyUpgrade(std::pair<std::string, int> statPair);
+    void removeUpgrade(std::pair<std::string, int> statPair);
 
  };
 

@@ -3,69 +3,33 @@
 int main() {
   while (true) {
     CWeapon *wep = new CWeapon();
-    std::pair<std::string, int> tmp;
-    std::get<0>(tmp) = "DMG";
-    std::get<1>(tmp) = 500;
-    wep->applyUpgrade(tmp);
-    wep->applyUpgrade(tmp);
-    std::cout << "upgrades:" << std::endl;
+    for (int i = 0; i < rndm(0, 4); i++) {
+        wep->applyUpgrade({indexToStat[rndm(0,23)], rndm(1, 10)});
+    }
+    LOGD("+=========+=========+=========+=========+=========+=========+=========+========+");
+    LOGD(wep->getName());
+    LOGDN(wep->getRarity() << " tier " << wep->getTier() << " " << wep->getSType());
+    LOGD(" <" << wep->getType() << ">");
+    LOGD(wep->getDesc());
+    LOGD("dmg:       " << wep->getDmg());
+    LOGD("maxdmg:    " << wep->getMaxdmg());
+    LOGD("ammoType:  " << wep->getAmmoType());
+    LOGD("shots:     " << wep->getShots());
+    LOGD("crit:      " << wep->getCrit());
+    LOGD("mupgrades: " << wep->getMupgrades());
+    LOGD("nupgrades: " << wep->getNupgrades());
+    LOGD("rlvl:      " << wep->getRlvl());
+    LOGD("rclout:    " << wep->getRclout());
+    LOGD("rsocial:   " << wep->getRsocial());
+    LOGD(std::endl << "Upgrades:");
     std::vector<std::pair<std::string,int>> test = wep->getUpgrades();
-    for(std::vector<std::pair<std::string, int>>::iterator it = test.begin(); it != test.end(); ++it) {
-        std::cout << it->first << it->second << std::endl;
-    }
-    std::cout
-    /*<< "type " << wep->getType() << std::endl
-    << "sType " << wep->getSType() << std::endl
-    << "prefix " << wep->getPrefix() << std::endl
-    << "suffix " << wep->getSuffix() << std::endl
-    << "name " << wep->getName() << std::endl
-    << "desc " << wep->getDesc() << std::endl
-    //<< "lvl " << wep->getLvl() << std::endl
-    << "tier " << wep->getTier() << std::endl
-    << "crit " << wep->getCrit() << std::endl
-    << "shots " << wep->getShots() << std::endl
-    << "maxdmg " << wep->getMaxdmg() << std::endl
-    << "dmg " << wep->getDmg() << std::endl
-    //<< "ammoType " << wep->getAmmoType() << std::endl
-    << "mupgrades " << wep->getMupgrades() << std::endl
-    << "nupgrades " << wep->getNupgrades() << std::endl
-    //<< "*upgrades " << wep->*upgrades << std::endl
-    << "rarity " << wep->getRarity() << std::endl
-    << "rlvl " << wep->getRlvl() << std::endl
-    << "rclout " << wep->getRclout() << std::endl
-    << "rsocial " << wep->getRsocial() << std::endl
-    << "mods: " << std::endl;
-    for (int i = 0; i < 20; i++) {
-      if (wep->getStats(i) != 0)
-        std::cout << "  Slot " << i << ", name " << indexToStat[i] << " , value " << wep->getStats(i) << std::endl;
-    }*/
-    << "+=========+=========+=========+=========+=========+=========+=========+========+"
-    << wep->getName() << std::endl
-    << wep->getRarity() << " tier " << wep->getTier() << " " << wep->getSType() 
-    << " <" << wep->getType() << ">" << std::endl
-    << wep->getDesc() << std::endl << std::endl
-    << "dmg:       " << wep->getDmg() << std::endl
-    << "maxdmg:    " << wep->getMaxdmg() << std::endl
-    << "ammoType:  " << wep->getAmmoType() << std::endl
-    << "shots:     " << wep->getShots() << std::endl
-    << "crit:      " << wep->getCrit() << std::endl
-    << "mupgrades: " << wep->getMupgrades() << std::endl
-    << "nupgrades: " << wep->getNupgrades() << std::endl
-    << "rlvl:      " << wep->getRlvl() << std::endl
-    << "rclout:    " << wep->getRclout() << std::endl
-    << "rsocial:   " << wep->getRsocial() << std::endl
-    << std::endl;
-    for (int i = 0; i < 20; i++) {
-      if (wep->getStats(i) != 0) {
-        if (wep->getStats(i) > 0)
-          std::cout << "+";
-        std::cout << wep->getStats(i) << " " << indexToStat[i] << std::endl;
-      }
-    }
+    for(std::vector<std::pair<std::string, int>>::iterator it = test.begin(); it != test.end(); ++it)
+        LOGD(it->first << " " << it->second);
+    LOGD(std::endl << "Stats:");
+    std::cout << getStats("");
     std::cout << "+=========+=========+=========+=========+=========+=========+=========+========+" << std::endl << std::endl;
     if(getch() == 'q')
         return 1;
   }
-        //<< "id " << wep->getId() << std::endl;
   return 1;
 }

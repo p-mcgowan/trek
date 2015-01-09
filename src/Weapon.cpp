@@ -169,7 +169,7 @@ void CWeapon::setStats() {
     this->suffix = "";
     this->processStatsLine(getStatsLine(path, this->name));
   }
-  if (this->rarity == "legendary") {
+  if (this->rarity != "legendary") {
     name = this->sType;
     if (this->prefix != "")
       this->name = this->prefix + " " + this->name;
@@ -257,11 +257,33 @@ void CWeapon::processStatsLine(std::string statsLine) {
   return;
 }
 
+/* CWeapon::getStats
+ * 
+ * Returns the value of the stat passed in, or all stats if "" passed in
+ */
+ float getStats(std::string statID) {
+  if (statID != "") {
+    return 0;
+  }
+  return 0;
+ }
+
 /* CWeapon::applyStats
  *
  * Decodes a <string, int> pair and applies it to the weapon
  */
-int CWeapon::applyStats(std::string statsName, int statsValue) {
+void CWeapon::applyStats(std::string statsName, int statsValue) {
+  //if (statToIndex[statsName])
+  if (statToIndex.find(statsName) == statToIndex.end()) {
+    LOGW("Unmatched stat: " << statsName);
+    return;
+  }
+  std::vector<std::pair<std::string, int>>::iterator it = this->stats.find(statsName);
+  if (it != stats.end()) {
+    it->second += statsValue;
+  } else {  
+    this->stats.push_back({statsName, statsValue});
+  }
   switch(statToIndex[statsName]) {
     case DMG:
       this->dmg += statsValue;
@@ -303,14 +325,23 @@ int CWeapon::applyStats(std::string statsName, int statsValue) {
     case CHARISMA:
     case COMMERCE:
     case DEXTERITY:
-      this->stats[statToIndex[statsName]] += statsValue;
+    //std::vector<std::pair<std::string,int>> test = wep->getUpgrades();
+    //for(std::vector<std::pair<std::string, int>>::iterator it = test.begin(); it != test.end(); ++it)
+        //std::cout << it->first << " " << it->second << std::endl;
+      /* // this should all be handled above
+      std::vector<std::pair<std::string, int>>::iterator it = this->stats.find(statsName);
+      if (it != stats.end()) {
+        it->second += statsValue;
+      } else {  
+        this->stats.push_back({statsName, statsValue});
+      }
       break;
     default:
       LOGW("WARNING: Unmatched stats pair" << statsName << " => " << statToIndex[statsName]);
-      return 1;
+      return;*/
       break;
   }
-  return 0;
+  return;
 }
 
 /* CWeapon::applyUpgrades
@@ -320,6 +351,20 @@ int CWeapon::applyStats(std::string statsName, int statsValue) {
 void CWeapon::applyUpgrade(std::pair<std::string, int> statPair) {
   applyStats(std::get<0>(statPair), std::get<1>(statPair));
   this->upgrades.push_back(statPair);
+}
+
+/* CWeapon::removeUpgrade
+ *
+ * Removes the upgrade denoted my STAT, VALUE pair if it exists
+ */
+void CWeapon::removeUpgrade(std::pair<std::string, int> statPair) {
+  for (std::vector<std::pair<std::string,int>>::iterator it = this->upgrades.begin(); it != this->upgrades.end(); ++it) {
+    if (*it == statPair) {
+      this->upgrades.erase(it);
+      applyStats(std::get<0>(statPair), -std::get<1>(statPair));
+      return;
+    }
+  }
 }
 
 /*
