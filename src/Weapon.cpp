@@ -15,8 +15,8 @@ CWeapon::CWeapon() {  // params - lvl, raremult... - laser type energy cost
   this->type = getRandomStringFromFile(WTYPE_FILE, false);
   std::string path = WNAMES_FILE + this->type;
   this->sType = getRandomStringFromFile(path, false);
-  this->setRarity();
-  this->setStats();
+  setRarity();
+  setStats();
   return;
 }
 
@@ -31,7 +31,7 @@ CWeapon::CWeapon(std::string uniqueName) {  // unique
     this->name = getRandomStringFromFile(WUNIQUENAMES_FILE, false);
   else
     this->name = uniqueName;
-  this->setStats();
+  setStats();
   return;
 }
 
@@ -40,7 +40,7 @@ CWeapon::CWeapon(std::string uniqueName) {  // unique
  *
  *  Creates a fully customized weapon
  */
-/*CWeapon::CWeapon(  // custom weapon, crafting?
+/*CWeapon::CWeapon(  // custom weapon, crafting? -- CHANGE ORDER (see .h)
   std::string type,
   std::string sType,
   std::string prefix,
@@ -114,7 +114,7 @@ void CWeapon::setRarity() {  // int mult) {
  */
 void CWeapon::setStats() {
   std::string path, statsLine;
-  this->setBaseStats();
+  setBaseStats();
   if (this->rarity == "common") {
     this->prefix = "";
     this->suffix = "";
@@ -123,25 +123,25 @@ void CWeapon::setStats() {
     if (rndm(0, 1)) {
       this->suffix = "";
       this->prefix = getRandomStringFromFile(WPREFIX_FILE);
-      this->processStatsLine(getStatsLine(WPREFIX_FILE, this->prefix));
+      processStatsLine(getStatsLine(WPREFIX_FILE, this->prefix));
     } else {
       this->prefix = "";
       this->suffix = getRandomStringFromFile(WSUFFIX_FILE);
-      this->processStatsLine(getStatsLine(WSUFFIX_FILE, this->suffix));
+      processStatsLine(getStatsLine(WSUFFIX_FILE, this->suffix));
     }
   }
   else if (this->rarity == "rare") {
     this->prefix = getRandomStringFromFile(WPREFIX_FILE);
     this->suffix = getRandomStringFromFile(WSUFFIX_FILE);
-    this->processStatsLine(getStatsLine(WSUFFIX_FILE, this->suffix));
-    this->processStatsLine(getStatsLine(WPREFIX_FILE, this->prefix));
+    processStatsLine(getStatsLine(WSUFFIX_FILE, this->suffix));
+    processStatsLine(getStatsLine(WPREFIX_FILE, this->prefix));
   }
   else if (this->rarity == "epic") {
     int mods = rndm(4, 6);
     for(int i = 0; i < mods; i++) {
       if (rndm(0, 1)) {
         this->prefix = getRandomStringFromFile(WPREFIX_FILE);
-        this->processStatsLine(getStatsLine(WPREFIX_FILE, this->prefix));
+        processStatsLine(getStatsLine(WPREFIX_FILE, this->prefix));
       }
       else {
         this->suffix = getRandomStringFromFile(WSUFFIX_FILE);
@@ -150,8 +150,8 @@ void CWeapon::setStats() {
     }
     this->prefix = getRandomStringFromFile(WPREFIX_FILE);
     this->suffix = getRandomStringFromFile(WSUFFIX_FILE);
-    this->processStatsLine(getStatsLine(WSUFFIX_FILE, this->suffix));
-    this->processStatsLine(getStatsLine(WPREFIX_FILE, this->prefix));
+    processStatsLine(getStatsLine(WSUFFIX_FILE, this->suffix));
+    processStatsLine(getStatsLine(WPREFIX_FILE, this->prefix));
   }
   else if (this->rarity == "unique") {
     std::string path(WUNIQUES_FILE + this->name + "/stats");
@@ -170,7 +170,7 @@ void CWeapon::setStats() {
     this->name = getRandomStringFromFile(path);
     this->prefix = "";
     this->suffix = "";
-    this->processStatsLine(getStatsLine(path, this->name));
+    processStatsLine(getStatsLine(path, this->name));
   }
   if (this->rarity != "legendary") {
     name = this->sType;
@@ -264,24 +264,11 @@ void CWeapon::processStatsLine(std::string statsLine) {
 }
 
 
-/* CWeapon::getStats
- * 
- * Returns the value of the stat passed in, or all stats if "" passed in
- */
- std::vector<std::pair<std::string,int>> CWeapon::getStats(std::string statID) {
-  //std::vector<std::pair<std::string,int>> tmp = {"", 0};
-  if (statID != "") {
-    return this->stats;
-  }
-  return this->stats;
- }
-
-
 /* CWeapon::applyStats
  *
  * Decodes a <string, int> pair and applies it to the weapon
  */
-void CWeapon::applyStats(std::string statsName, int statsValue) {
+void CWeapon::applyStats(std::string statsName, std::string statsValue) {
   if (statToIndex.find(statsName) == statToIndex.end()) {
     LOGW("Unmatched stat: " << statsName);
     return;
@@ -336,7 +323,7 @@ void CWeapon::applyStats(std::string statsName, int statsValue) {
     case INNOVATION:
     case CHARISMA:
     case COMMERCE:
-    case DEXTERITY:
+    case DEXTERITY:  // armour piercing
       break;
   }
   return;
@@ -358,7 +345,7 @@ void CWeapon::applyUpgrade(std::pair<std::string, int> statPair) {
  * Removes the upgrade denoted my STAT, VALUE pair if it exists
  */
 void CWeapon::removeUpgrade(std::pair<std::string, int> statPair) {
-  for (std::vector<std::pair<std::string,int>>::iterator it = this->upgrades.begin(); it != this->upgrades.end(); ++it) {
+  for (std::vector<std::pair<std::string, int>>::iterator it = this->upgrades.begin(); it != this->upgrades.end(); ++it) {
     if (*it == statPair) {
       this->upgrades.erase(it);
       applyStats(std::get<0>(statPair), -std::get<1>(statPair));
@@ -368,10 +355,17 @@ void CWeapon::removeUpgrade(std::pair<std::string, int> statPair) {
 }
 
 
-/*
-print upgrades:
-std::vector<std::pair<std::string,int>> test = wep->getUpgrades();
-for(std::vector<std::pair<std::string, int>>::iterator it = test.begin(); it != test.end(); ++it) {
-    std::cout << it->first << it->second << std::endl;
-}
-*/
+/* CWeapon::getStats
+ * 
+ * Returns the value of the stat passed in, or all stats if "" passed in
+ *
+ std::pair<std::string, int> CWeapon::getStats(std::string statID) {
+  if (statID != "") {
+    for(std::vector<std::pair<std::string, int>>::iterator it = this->stats.begin(); it != this->stats.end(); ++it) {
+      if (it->first == statID)
+        return {it->first, it->second};
+    }
+  }
+  return this->stats;
+ }*/
+

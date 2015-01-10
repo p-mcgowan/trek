@@ -1,4 +1,5 @@
 #include "Weapon.cpp"
+//#include "CMultiContainer.cpp"
 
 int main() {
   while (true) {
@@ -28,7 +29,7 @@ int main() {
     for(std::vector<std::pair<std::string, int>>::iterator it = test.begin(); it != test.end(); ++it)
       LOGD(it->first << " " << it->second);
     LOGD(std::endl << "Stats:");
-    test = wep->getStats("");
+    test = wep->getStats();
     for(std::vector<std::pair<std::string, int>>::iterator it = test.begin(); it != test.end(); ++it)
       LOGD(it->first << " " << it->second);
     std::cout << "+=========+=========+=========+=========+=========+=========+=========+========+" << std::endl << std::endl;

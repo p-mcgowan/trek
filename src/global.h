@@ -32,8 +32,8 @@ int rndm(int low, int high) {
   return low + (rand() % (int)(high - low));
 }
 
-std::string trimCRLF(std::string s) {
-  //s.erase(std::remove(s.begin(), s.end(), '\r'), s.end());
-  //s.erase(std::remove(s.begin(), s.end(), '\n'), s.end());
+/*std::string trimCRLF(std::string s) {
+  s.erase(std::remove(s.begin(), s.end(), '\r'), s.end());
+  s.erase(std::remove(s.begin(), s.end(), '\n'), s.end());
   return s;
-}
+}*/
