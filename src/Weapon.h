@@ -192,3 +192,30 @@ class CWeapon {
   {22, "CLOUTREQ"},
   {23, "SOCIALREQ"}
 };
+
+std::map<std::string, std::string> statToDataType = {
+  {"PILOT", "int"},
+  {"COMBAT", "int"},
+  {"SCIENCE", "int"},
+  {"SOCIAL", "int"},
+  {"CLOUT", "int"},
+  {"LEADERSHIP", "int"},
+  {"REKNOWN", "int"},
+  {"MECHAPT", "int"},
+  {"ABILITY", "int"},
+  {"INTUITION", "int"},
+  {"INTELECT", "int"},
+  {"TECHAPT", "int"},
+  {"INNOVATION", "int"},
+  {"CHARISMA", "int"},
+  {"COMMERCE", "int"},
+  {"DEXTERITY", "int"},
+  {"DMG", "int"},
+  {"CRIT", "float"},
+  {"SHOTS", "int"},
+  {"MAXDMG", "int"},
+  {"MAXUPGRADES", "int"},
+  {"LVLREQ", "int"},
+  {"CLOUTREQ", "int"},
+  {"SOCIALREQ", "int"}
+};
