@@ -71,8 +71,8 @@ class CWeapon {
     int rlvl = 0;  // lvl req
     int rclout = 0;  // combat subskill req;
     int rsocial = 0;
-    std::vector<std::pair<std::string, int>> upgrades;  // STAT, value
-    std::vector<std::pair<std::string, int>> stats;
+    std::vector<std::pair<std::string, std::string>> upgrades;  // STAT, value
+    std::vector<std::pair<std::string, std::string>> stats;
 
   public:
     CWeapon();
@@ -94,11 +94,11 @@ class CWeapon {
       int dmg,
       int mupgrades,
       int nupgrades,
-      std::vector<std::pair<std::string, int>> upgrades,
+      std::vector<std::pair<std::string, std::string>> upgrades,
       int rlvl,
       int rclout,
       int rsocial,
-      std::vector<std::pair<std::string, int>> stats);
+      std::vector<std::pair<std::string, std::string>> stats);
 
     // Getters
     std::string getType() {return type;}
@@ -120,8 +120,9 @@ class CWeapon {
     int getRlvl() {return rlvl;}
     int getRclout() {return rclout;}
     int getRsocial() {return rsocial;}
-    std::vector<std::pair<std::string, int>> getStats() {return stats;}
-    std::vector<std::pair<std::string, int>> getUpgrades() {return upgrades;}
+    std::vector<std::pair<std::string, std::string>> getStats() {return stats;}
+    std::vector<std::pair<std::string, std::string>> getUpgrades() {return upgrades;}
+		//std::string getStat(std::string);
 
     // Setters
     void setRarity();
