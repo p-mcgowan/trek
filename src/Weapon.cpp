@@ -273,19 +273,10 @@ void CWeapon::applyStats(std::string statsName, std::string statsValue) {
     LOGW("Unmatched stat: " << statsName);
     return;
   }
-  bool statExistsInVector = false;
-  for(std::vector<std::pair<std::string, int>>::iterator it = this->stats.begin(); it != this->stats.end(); ++it) {
-    if (it->first == statsName) {
-      it->second += statsValue;
-      statExistsInVector = true;
-      break;
-    }
-  }
-  if (!statExistsInVector)
-    stats.push_back({statsName, statsValue});
   switch(statToIndex[statsName]) {
     case DMG:
       this->dmg += statsValue;
+      updateStatsVector(statsName, std::stoi(statsValue));
       break;
     case CRIT:
       this->crit += statsValue;
@@ -369,3 +360,30 @@ void CWeapon::removeUpgrade(std::pair<std::string, int> statPair) {
   return this->stats;
  }*/
 
+
+/*
+ */
+void CWeapon::updateStatsVector(std::string statsName, float statsValue) {
+  for(std::vector<std::pair<std::string, int>>::iterator it = this->stats.begin(); it != this->stats.end(); ++it) {
+    if (it->first == statsName) {
+      it->second += statsValue;
+      return;
+    }
+  }
+  stats.push_back({statsName, statsValue});
+  return;
+}
+
+
+/*
+ */
+void CWeapon::updateStatsVector(std::string statsName, int statsValue) {
+  for(std::vector<std::pair<std::string, int>>::iterator it = this->stats.begin(); it != this->stats.end(); ++it) {
+    if (it->first == statsName) {
+      it->second += statsValue;
+      return;
+    }
+  }
+  stats.push_back({statsName, statsValue});
+  return;
+}
