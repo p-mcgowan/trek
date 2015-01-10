@@ -275,29 +275,28 @@ void CWeapon::applyStats(std::string statsName, std::string statsValue) {
   }
   switch(statToIndex[statsName]) {
     case DMG:
-      this->dmg += statsValue;
-      updateStatsVector(statsName, std::stoi(statsValue));
+      this->dmg += std::stoi(statsValue);
       break;
     case CRIT:
-      this->crit += statsValue;
+      this->crit += std::stof(statsValue);
       break;
     case SHOTS:
-      this->shots += statsValue;
+      this->shots += std::stoi(statsValue);
       break;
     case MAXDMG:
-      this->maxdmg += statsValue;
+      this->maxdmg += std::stoi(statsValue);
       break;
     case MAXUPGRADES:
-      this->mupgrades += statsValue;
+      this->mupgrades += std::stoi(statsValue);
       break;
     case LVLREQ:
-      this->rlvl += statsValue;
+      this->rlvl += std::stoi(statsValue);
       break;
     case CLOUTREQ:
-      this->rclout += statsValue;
+      this->rclout += std::stoi(statsValue);
       break;
     case SOCIALREQ:
-      this->rsocial += statsValue;
+      this->rsocial += std::stoi(statsValue);
       break;
     case PILOT:
     case COMBAT:
@@ -315,8 +314,10 @@ void CWeapon::applyStats(std::string statsName, std::string statsValue) {
     case CHARISMA:
     case COMMERCE:
     case DEXTERITY:  // armour piercing
+		  
       break;
   }
+  updateStatsVector(statsName, statsValue);
   return;
 }
 
