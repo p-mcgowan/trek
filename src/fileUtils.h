@@ -30,5 +30,5 @@ std::string getRandomStringFromFile(std::string path, bool mode = true) {
       getline(file, str);
   }
   file.close();
-  return trimCRLF(str);
+  return str;
 }

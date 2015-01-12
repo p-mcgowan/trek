@@ -6,8 +6,8 @@ int main() {
     CWeapon *wep = new CWeapon();
     int t;
     for (int i = 0; i < rndm(0, 4); i++) {
-      t = (rndm(0,3) == 0)? -1 : 1;
-      wep->applyUpgrade({indexToStat[rndm(0,23)], t*rndm(1, 10)});
+      t = (rndm(0,5) == 0)? -1 : 1;
+      wep->applyUpgrade({indexToStat[rndm(0,23)], std::to_string(t*rndm(1, 10))});
     }
     LOGD("+=========+=========+=========+=========+=========+=========+=========+========+");
     LOGD(wep->getName());
@@ -25,12 +25,12 @@ int main() {
     LOGD("rclout:    " << wep->getRclout());
     LOGD("rsocial:   " << wep->getRsocial());
     LOGD(std::endl << "Upgrades:");
-    std::vector<std::pair<std::string,int>> test = wep->getUpgrades();
-    for(std::vector<std::pair<std::string, int>>::iterator it = test.begin(); it != test.end(); ++it)
+    std::vector<std::pair<std::string, std::string>> test = wep->getUpgrades();
+    for(std::vector<std::pair<std::string, std::string>>::iterator it = test.begin(); it != test.end(); ++it)
       LOGD(it->first << " " << it->second);
     LOGD(std::endl << "Stats:");
     test = wep->getStats();
-    for(std::vector<std::pair<std::string, int>>::iterator it = test.begin(); it != test.end(); ++it)
+    for(std::vector<std::pair<std::string, std::string>>::iterator it = test.begin(); it != test.end(); ++it)
       LOGD(it->first << " " << it->second);
     std::cout << "+=========+=========+=========+=========+=========+=========+=========+========+" << std::endl << std::endl;
     if(getch() == 'q')

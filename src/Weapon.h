@@ -132,9 +132,10 @@ class CWeapon {
     void processStatsLine(std::string modLine);
 
     // Manipulators
-    void applyStats(std::string statsName, int statsValue);
-    void applyUpgrade(std::pair<std::string, int> statPair);
-    void removeUpgrade(std::pair<std::string, int> statPair);
+    void applyStats(std::string statsName, std::string statsValue);
+    void applyUpgrade(std::pair<std::string, std::string> statPair);
+    void removeUpgrade(std::pair<std::string, std::string> statPair);
+    void updateStatsVector(std::string statsName, std::string statsValue);
  };
 
 /* Map strings from mod files to array indeces
