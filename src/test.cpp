@@ -28,6 +28,16 @@ int main() {
     std::vector<std::pair<std::string, std::string>> test = wep->getUpgrades();
     for(std::vector<std::pair<std::string, std::string>>::iterator it = test.begin(); it != test.end(); ++it)
       LOGD(it->first << " " << it->second);
+    std::string name = "", val = "";
+    std::cout << "Enter upgrade to remove: "; std::cin >> name >> val;
+    if (name != "no") {
+      LOGD(std::endl << "Upgrades:");
+      wep->removeUpgrade({name, val});
+      test = wep->getUpgrades();
+      for(std::vector<std::pair<std::string, std::string>>::iterator it = test.begin(); it != test.end(); ++it)
+        LOGD(it->first << " " << it->second);
+      getch();
+    }
     LOGD(std::endl << "Stats:");
     test = wep->getStats();
     for(std::vector<std::pair<std::string, std::string>>::iterator it = test.begin(); it != test.end(); ++it)

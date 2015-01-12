@@ -366,7 +366,6 @@ void CWeapon::updateStatsVector(std::string statsName, std::string statsValue) {
   if (statToDataType[statsName] == "int") {
     for(std::vector<std::pair<std::string, std::string>>::iterator it = this->stats.begin(); it != this->stats.end(); ++it) {
       if (it->first == statsName) {
-        LOGD(statToDataType[statsName] << " int " << it->first << " " << it->second << " " << std::stoi(statsValue));
         it->second = std::to_string(std::stoi(it->second) + std::stoi(statsValue));
         if (it->second == "0")
           this->stats.erase(it);
@@ -376,9 +375,8 @@ void CWeapon::updateStatsVector(std::string statsName, std::string statsValue) {
   } else if (statToDataType[statsName] == "float") {
     for(std::vector<std::pair<std::string, std::string>>::iterator it = this->stats.begin(); it != this->stats.end(); ++it) {
       if (it->first == statsName) {
-        LOGD(statToDataType[statsName] << " float " << it->first << " " << it->second << " " << std::stof(statsValue));
         it->second = std::to_string(std::stof(it->second) + std::stof(statsValue));
-        if (it->second == "0")
+        if (std::stof(it->second) % MIN_FLOAT == 0)
           this->stats.erase(it);
         break;
       }
@@ -386,7 +384,6 @@ void CWeapon::updateStatsVector(std::string statsName, std::string statsValue) {
   } else if (statToDataType[statsName] == "string") {
     for(std::vector<std::pair<std::string, std::string>>::iterator it = this->stats.begin(); it != this->stats.end(); ++it) {
       if (it->first == statsName) {
-        LOGD(statToDataType[statsName] << " string: " << it->first << " " << it->second);
         it->second += statsValue;
         if (it->second == "0")
           this->stats.erase(it);

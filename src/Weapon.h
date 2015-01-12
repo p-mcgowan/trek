@@ -49,6 +49,9 @@
 #define RARETHRESH 983
 #define EPICTHRESH 994
 
+// Misc constants
+#define MIN_FLOAT 0.01  // Used to handle rounding errors when removing CRIT stats from lists
+
 class CWeapon {
 
   private:
