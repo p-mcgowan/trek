@@ -344,8 +344,10 @@ void CWeapon::applyUpgrade(std::pair<std::string, std::string> statPair) {
  * Removes the upgrade denoted my STAT, VALUE pair if it exists
  */
 void CWeapon::removeUpgrade(std::pair<std::string, std::string> statPair) {
+  LOGD("--" << std::get<0>(statPair) << " : " << std::get<1>(statPair));
   for (std::vector<std::pair<std::string, std::string>>::iterator it = this->upgrades.begin(); it != this->upgrades.end(); ++it) {
     if (*it == statPair) {
+      LOGD("found: " << statToDataType[std::get<0>(statPair)]);
       if (statToDataType[std::get<0>(statPair)] == "int")
         applyStats(std::get<0>(statPair), std::to_string(-std::stoi(std::get<1>(statPair))));
       else if (statToDataType[std::get<0>(statPair)] == "float")
@@ -366,6 +368,8 @@ void CWeapon::updateStatsVector(std::string statsName, std::string statsValue) {
   if (statToDataType[statsName] == "int") {
     for(std::vector<std::pair<std::string, std::string>>::iterator it = this->stats.begin(); it != this->stats.end(); ++it) {
       if (it->first == statsName) {
+        LOGD(it->second << " : " << std::stoi(it->second) << " : " << statsValue << " : " << std::stoi(statsValue) << " : " <<
+          std::to_string(std::stoi(it->second) + std::stoi(statsValue)));
         it->second = std::to_string(std::stoi(it->second) + std::stoi(statsValue));
         if (it->second == "0")
           this->stats.erase(it);
@@ -376,7 +380,7 @@ void CWeapon::updateStatsVector(std::string statsName, std::string statsValue) {
     for(std::vector<std::pair<std::string, std::string>>::iterator it = this->stats.begin(); it != this->stats.end(); ++it) {
       if (it->first == statsName) {
         it->second = std::to_string(std::stof(it->second) + std::stof(statsValue));
-        if (std::stof(it->second) % MIN_FLOAT == 0)
+        if ((int)(std::stof(it->second)*100) == 0)
           this->stats.erase(it);
         break;
       }
