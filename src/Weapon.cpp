@@ -93,8 +93,8 @@ CWeapon::CWeapon(std::string uniqueName) {  // unique
  * Applies a random rarity to a weapon
  */
 void CWeapon::setRarity() {  // int mult) {
-  this->rarity = "epic"; return;
-  int i = rndm(0, 1000);//S + COMMONTHRESH/2;
+  this->rarity = "rare"; return;
+  int i = rndm(0, 1000);
   if (i <= COMMONTHRESH)
     this->rarity = "common";
   else if (i <= UNCOMMONTHRESH)
@@ -344,10 +344,10 @@ void CWeapon::applyUpgrade(std::pair<std::string, std::string> statPair) {
  * Removes the upgrade denoted my STAT, VALUE pair if it exists
  */
 void CWeapon::removeUpgrade(std::pair<std::string, std::string> statPair) {
-  LOGD("--" << std::get<0>(statPair) << " : " << std::get<1>(statPair));
+  LOGD(std::get<0>(statPair) << " " << std::get<1>(statPair));
   for (std::vector<std::pair<std::string, std::string>>::iterator it = this->upgrades.begin(); it != this->upgrades.end(); ++it) {
     if (*it == statPair) {
-      LOGD("found: " << statToDataType[std::get<0>(statPair)]);
+      LOGD("found upgrade to remove");
       if (statToDataType[std::get<0>(statPair)] == "int")
         applyStats(std::get<0>(statPair), std::to_string(-std::stoi(std::get<1>(statPair))));
       else if (statToDataType[std::get<0>(statPair)] == "float")
@@ -365,14 +365,17 @@ void CWeapon::removeUpgrade(std::pair<std::string, std::string> statPair) {
 /* CWeapon::updateStatsVector
  */
 void CWeapon::updateStatsVector(std::string statsName, std::string statsValue) {
+  bool deleted = false;
   if (statToDataType[statsName] == "int") {
     for(std::vector<std::pair<std::string, std::string>>::iterator it = this->stats.begin(); it != this->stats.end(); ++it) {
       if (it->first == statsName) {
-        LOGD(it->second << " : " << std::stoi(it->second) << " : " << statsValue << " : " << std::stoi(statsValue) << " : " <<
-          std::to_string(std::stoi(it->second) + std::stoi(statsValue)));
+        LOGD("is pre: " << it->second << " calc: " << std::to_string(std::stoi(it->second) + std::stoi(statsValue)));
         it->second = std::to_string(std::stoi(it->second) + std::stoi(statsValue));
-        if (it->second == "0")
+        LOGD("is post: " << it->second);
+        if (it->second == "0") {
+          deleted = true;
           this->stats.erase(it);
+        }
         break;
       }
     }
@@ -380,8 +383,10 @@ void CWeapon::updateStatsVector(std::string statsName, std::string statsValue) {
     for(std::vector<std::pair<std::string, std::string>>::iterator it = this->stats.begin(); it != this->stats.end(); ++it) {
       if (it->first == statsName) {
         it->second = std::to_string(std::stof(it->second) + std::stof(statsValue));
-        if ((int)(std::stof(it->second)*100) == 0)
+        if ((int)(std::stof(it->second)*100) == 0) {
+          deleted = true;
           this->stats.erase(it);
+        }
         break;
       }
     }
@@ -389,8 +394,10 @@ void CWeapon::updateStatsVector(std::string statsName, std::string statsValue) {
     for(std::vector<std::pair<std::string, std::string>>::iterator it = this->stats.begin(); it != this->stats.end(); ++it) {
       if (it->first == statsName) {
         it->second += statsValue;
-        if (it->second == "0")
+        if (it->second == "0") {
+          deleted = true;
           this->stats.erase(it);
+        }
         break;
       }
     }
@@ -398,6 +405,7 @@ void CWeapon::updateStatsVector(std::string statsName, std::string statsValue) {
     LOGW("updateStatsVector: unmatched statToDataType " << statsName);
     return;
   }
-  stats.push_back({statsName, statsValue});
+  if (!deleted)
+    stats.push_back({statsName, statsValue});
   return;
 }
