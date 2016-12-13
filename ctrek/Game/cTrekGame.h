@@ -1,62 +1,53 @@
-#define SHIP_TYPE hudStats[19]
-void game(void);
-void initialize(int whichArray);
-char moveInput(void);
-void clean (void);
-//void location();
-void move(char toWhere);
-void printMap(int whichMap,int playerScanning);
-int randomNumber(int max);
-void systemObjects(void);
-void choiceMenu(int debug);
-void HUD(int x);
-void findPlayer(void);
-void securityStatus(void);
-void null(void);
-//void clearArrays();
-void charColour(int arrayValue,int playerScanning,int arraySlot);
-void planetMenu(void);
-void shipyardMenu(void);
-void commerceMenu(void);
-void outfitterMenu(void);
-void barMenu(void);
-void planetHUD(void);
-void initStats(int debug);
-void initCommerce(void);
-void initOutfit(void);
-void prefix(int arrayValue,char unit);
-void shipClass(int shipType);
-void initShips(void);
-void printShip(int ship);
-int checkCapacity(int slot,int value,int ship);
-void enemyMovement(void);
-void shipInfo(int ship);
-int resaleValue(void);
-int rangeCheck(int player,int scans);
-int rangeScan(int playerScanning, int arraySlot);
-void fire(int playerFiring);
-void damageReport(int damage,int player);
-void hudColours(int currentHud,int maxHud);
-int initEnemy(int died);
-int clearCom(int startX);
-void shipDestroyed(void);
-void divertPower(int quantity);
-void loot(void);
-void seed(void);
-void lootPrint(int number);
-void printLog(void);
-void firetorpedo(void);
-void scan(int player,int ship,int scan);
-void printDealArrow(int price,int lastBuy,int buyOrSell);
-int preGameMenu(void);
-int cargoLeft(void);
-void printBuySell(char buySell,char commodity,int quantity,int costProfit,int shipCost);
-int gunCount(void);
-void skillsHUD(int x,int page);
-void clearHUD(int x);
-void achievementsMenu(void);
-void gamblingMenu(void);
-void hitAnim(int playerHit);
-void printProgressBar(int skillSlot);
-void debugMenu(void);
-int gunRange(int totalGuns,int gunsInRange);
+#define BUFFER_MEDIUM 1024
+
+#define HUD_LINE          "+--------------------------------------------------+"
+#define HUD_WIDTH         51
+#define HUD_HELM_HEIGHT   6
+#define HUD_STATUS_HEIGHT 8
+#define HUD_CARGO_HEIGHT  8
+#define HUD_SYSTEM_HEIGHT 5
+#define HUD_COM_HEIGHT    5
+
+#define COM_WIDTH                  60
+#define COM_HEIGHT                 5
+#define COM_BELOW_MAP              1, 30
+#define COM_BELOW_MAP_START        2, 31
+#define COM_BELOW_PLANET_HUD       1, 30
+#define COM_BELOW_PLANET_HUD_START 2, 31
+#define HUD_MINIMAL_START          2, 25
+#define PLANET_MENU_HEADER         3, 3
+#define PLANET_MENU_START          3, 5
+
+#define SCAN_TARGET_NONE   0
+#define SCAN_TARGET_PLAYER 1
+#define SCAN_TARGET_ENEMY  2
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <math.h>
+#include <time.h>
+#include <string.h>
+#include <stdarg.h>  // va_arg
+#include <dirent.h>  // directory
+
+unsigned int lastSeed;
+
+#include "getch.h" // getch (conio.h, unistd.h)
+#include "con_c_nix.h"
+#include "externs.h"
+#include "libs.h"
+#include "upgrades.h"
+#include "weapons.h"
+
+#include "ship.h"
+#include "player.h"
+
+#include "menu.h"
+
+#include "planet.h"
+#include "system.h"
+
+#include "drawable.h"
+#include "utils.h"
+
