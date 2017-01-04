@@ -311,26 +311,15 @@ void healthBars() {
   Debug.log(DEBUG_DEFAULT, "void healthBars()");
   int i, x = 47, y = 22;
   int height = 19;
-
   if (HS_SHIP_TYPE == SHIP_ESCAPE_POD) {
     return;
   }
-  
-  int pctShield = 0;
-  if (CAP_SHIELD != 0 && HS_SHIELD != 0) {
-    pctShield = Math.max(100 * HS_SHIELD / CAP_SHIELD, 100 / height + 1);
-  }
-  int pctHull = 0;
-  if (CAP_HULL != 0 && HS_HULL != 0) {
-    pctHull = Math.max(100 * HS_HULL / CAP_HULL, 100 / height + 1);
-  }
-  int pctEnergy = 0;
-  if (CAP_ENERGY != 0 && HS_ENERGY != 0) {
-    pctEnergy = Math.max(100 * HS_ENERGY / CAP_ENERGY, 100 / height + 1);
-  }
+  int pctShield = (CAP_SHIELD == 0 || HS_SHIELD == 0) ? 0 : Math.max(100 * HS_SHIELD / CAP_SHIELD, 100 / height + 1);
+  int pctHull = (CAP_HULL == 0 || HS_HULL == 0) ? 0 : Math.max(100 * HS_HULL / CAP_HULL, 100 / height + 1);
+  int pctEnergy = (CAP_ENERGY == 0 || HS_ENERGY == 0) ? 0 : Math.max(100 * HS_ENERGY / CAP_ENERGY, 100 / height + 1);
 
   for (i = 0; i < height; i++) {
-    printAt(x, y - i, "%-15s", " ");
+    printAt(x, y - i, "      ");
   }
   const char* s = (pctHull <= 20) ? STR_COL_RED_BG : STR_COL_GREEN_BG;
   for (i = 0; i < height; i++) {
@@ -354,35 +343,6 @@ void healthBars() {
       break;
     }
   }
-
-  // Enemy bars
-  if (HS_SHIP_TYPE > 2) {
-    int *enCap = EN_SHIP->capacity;
-    int pctEnemyShield = 0;
-    if (enCap[CAP_I_SHIELD] != 0 && EN_SHIELD != 0) {
-      pctEnemyShield = Math.max(100 * EN_SHIELD / enCap[CAP_I_SHIELD], 100 / height + 1);
-    }
-    int pctEnemyHull = 0;
-    if (enCap[CAP_I_HULL] != 0 && EN_HULL != 0) {
-      pctEnemyHull = Math.max(100 * EN_HULL / enCap[CAP_I_HULL], 100 / height + 1);
-    }
-
-    for (i = 0; i < height; i++) {
-      if ((pctEnemyHull * height) / 100 > i) {
-        printAt(x + 7, y - i, "%s ", STR_COL_RED_BG);
-      } else {
-        break;
-      }
-    }
-    for (i = 0; i < height; i++) {
-      if ((pctEnemyShield * height) / 100 > i) {
-        printAt(x + 9, y - i, "%s ", STR_COL_RED_BG);
-      } else {
-        break;
-      }
-    }
-  }
-
   printf(STR_COL_RESET);
 }
 

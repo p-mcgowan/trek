@@ -18,6 +18,10 @@
 #define PLANET_MENU_HEADER         3, 3
 #define PLANET_MENU_START          3, 5
 
+#define SCAN_TARGET_NONE   0
+#define SCAN_TARGET_PLAYER 1
+#define SCAN_TARGET_ENEMY  2
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
@@ -43,7 +47,6 @@ unsigned int lastSeed;
 
 #include "planet.h"
 #include "system.h"
-#include "galaxy.h"
 
 #include "drawable.h"
 #include "utils.h"

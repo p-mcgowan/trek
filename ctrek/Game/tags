@@ -1,0 +1,546 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ACHIEVE_DISTANCE	player.h	/^#define ACHIEVE_DISTANCE /;"	d
+ACHIEVE_I_DISTANCE	player.h	/^#define ACHIEVE_I_DISTANCE /;"	d
+ACHIEVE_I_KILLS	player.h	/^#define ACHIEVE_I_KILLS /;"	d
+ACHIEVE_I_PLANETS	player.h	/^#define ACHIEVE_I_PLANETS /;"	d
+ACHIEVE_I_SHIPS	player.h	/^#define ACHIEVE_I_SHIPS /;"	d
+ACHIEVE_I_SIZE	player.h	/^#define ACHIEVE_I_SIZE /;"	d
+ACHIEVE_I_SYSTEMS	player.h	/^#define ACHIEVE_I_SYSTEMS /;"	d
+ACHIEVE_I_WEAPONS	player.h	/^#define ACHIEVE_I_WEAPONS /;"	d
+ACHIEVE_KILLS	player.h	/^#define ACHIEVE_KILLS /;"	d
+ACHIEVE_PLANETS	player.h	/^#define ACHIEVE_PLANETS /;"	d
+ACHIEVE_SHIPS	player.h	/^#define ACHIEVE_SHIPS /;"	d
+ACHIEVE_SYSTEMS	player.h	/^#define ACHIEVE_SYSTEMS /;"	d
+ACHIEVE_WEAPONS	player.h	/^#define ACHIEVE_WEAPONS /;"	d
+BLACK	con_c_nix_cpp.h	/^#define BLACK /;"	d
+BLUE	con_c_nix_cpp.h	/^#define BLUE /;"	d
+BUFFER_MEDIUM	cTrekGame.h	/^#define BUFFER_MEDIUM /;"	d
+BUY	planet.h	/^#define BUY /;"	d
+CAP_AVG	player.h	/^#define CAP_AVG /;"	d
+CAP_AVGDUTERIUM	commodities.h	/^#define CAP_AVGDUTERIUM /;"	d
+CAP_AVGDUTERIUM	player.h	/^#define CAP_AVGDUTERIUM /;"	d
+CAP_AVGLATINUM	commodities.h	/^#define CAP_AVGLATINUM /;"	d
+CAP_AVGLATINUM	player.h	/^#define CAP_AVGLATINUM /;"	d
+CAP_AVGPLASMA	commodities.h	/^#define CAP_AVGPLASMA /;"	d
+CAP_AVGPLASMA	player.h	/^#define CAP_AVGPLASMA /;"	d
+CAP_AVGURANIUM	commodities.h	/^#define CAP_AVGURANIUM /;"	d
+CAP_AVGURANIUM	player.h	/^#define CAP_AVGURANIUM /;"	d
+CAP_AVGWATER	commodities.h	/^#define CAP_AVGWATER /;"	d
+CAP_AVGWATER	player.h	/^#define CAP_AVGWATER /;"	d
+CAP_CARGO	ship.h	/^#define CAP_CARGO /;"	d
+CAP_ENERGY	ship.h	/^#define CAP_ENERGY /;"	d
+CAP_HARDPOINT	ship.h	/^#define CAP_HARDPOINT /;"	d
+CAP_HULL	ship.h	/^#define CAP_HULL /;"	d
+CAP_I_CARGO	ship.h	/^#define CAP_I_CARGO /;"	d
+CAP_I_ENERGY	ship.h	/^#define CAP_I_ENERGY /;"	d
+CAP_I_HARDPOINT	ship.h	/^#define CAP_I_HARDPOINT /;"	d
+CAP_I_HULL	ship.h	/^#define CAP_I_HULL /;"	d
+CAP_I_SHIELD	ship.h	/^#define CAP_I_SHIELD /;"	d
+CAP_I_SIZE	ship.h	/^#define CAP_I_SIZE /;"	d
+CAP_I_TORP	ship.h	/^#define CAP_I_TORP /;"	d
+CAP_SHIELD	ship.h	/^#define CAP_SHIELD /;"	d
+CAP_TORP	ship.h	/^#define CAP_TORP /;"	d
+COL_BLACK	con_c_nix.h	/^#define COL_BLACK /;"	d
+COL_BLACK_BG	con_c_nix.h	/^#define COL_BLACK_BG /;"	d
+COL_BLUE	con_c_nix.h	/^#define COL_BLUE /;"	d
+COL_BLUE_BG	con_c_nix.h	/^#define COL_BLUE_BG /;"	d
+COL_CYAN	con_c_nix.h	/^#define COL_CYAN /;"	d
+COL_CYAN_BG	con_c_nix.h	/^#define COL_CYAN_BG /;"	d
+COL_GREEN	con_c_nix.h	/^#define COL_GREEN /;"	d
+COL_GREEN_BG	con_c_nix.h	/^#define COL_GREEN_BG /;"	d
+COL_GREY	con_c_nix.h	/^#define COL_GREY /;"	d
+COL_GREY_BG	con_c_nix.h	/^#define COL_GREY_BG /;"	d
+COL_MAGENTA	con_c_nix.h	/^#define COL_MAGENTA /;"	d
+COL_MAGENTA_BG	con_c_nix.h	/^#define COL_MAGENTA_BG /;"	d
+COL_RED	con_c_nix.h	/^#define COL_RED /;"	d
+COL_RED_BG	con_c_nix.h	/^#define COL_RED_BG /;"	d
+COL_WHITE	con_c_nix.h	/^#define COL_WHITE /;"	d
+COL_WHITE_BG	con_c_nix.h	/^#define COL_WHITE_BG /;"	d
+COL_YELLOW	con_c_nix.h	/^#define COL_YELLOW /;"	d
+COL_YELLOW_BG	con_c_nix.h	/^#define COL_YELLOW_BG /;"	d
+COMMODITIES_I_SIZE	ship.h	/^#define COMMODITIES_I_SIZE /;"	d
+COMMODITY_DUTERIUM	player.h	/^#define COMMODITY_DUTERIUM /;"	d
+COMMODITY_ENERGY	player.h	/^#define COMMODITY_ENERGY /;"	d
+COMMODITY_HULL	player.h	/^#define COMMODITY_HULL /;"	d
+COMMODITY_LATINUM	player.h	/^#define COMMODITY_LATINUM /;"	d
+COMMODITY_PLASMA	player.h	/^#define COMMODITY_PLASMA /;"	d
+COMMODITY_SHIELD	player.h	/^#define COMMODITY_SHIELD /;"	d
+COMMODITY_SHIP_TYPE	player.h	/^#define COMMODITY_SHIP_TYPE /;"	d
+COMMODITY_TORPEDOS	player.h	/^#define COMMODITY_TORPEDOS /;"	d
+COMMODITY_URANIUM	player.h	/^#define COMMODITY_URANIUM /;"	d
+COMMODITY_WATER	player.h	/^#define COMMODITY_WATER /;"	d
+COMMODITY_WEAPONS	player.h	/^#define COMMODITY_WEAPONS /;"	d
+COM_BELOW_MAP	cTrekGame.h	/^#define COM_BELOW_MAP /;"	d
+COM_BELOW_MAP_START	cTrekGame.h	/^#define COM_BELOW_MAP_START /;"	d
+COM_BELOW_PLANET_HUD	cTrekGame.h	/^#define COM_BELOW_PLANET_HUD /;"	d
+COM_BELOW_PLANET_HUD_START	cTrekGame.h	/^#define COM_BELOW_PLANET_HUD_START /;"	d
+COM_HEIGHT	cTrekGame.h	/^#define COM_HEIGHT /;"	d
+COM_WIDTH	cTrekGame.h	/^#define COM_WIDTH /;"	d
+CYAN	con_c_nix_cpp.h	/^#define CYAN /;"	d
+Commodity	commodities.h	/^typedef struct Commodity {$/;"	s
+DEBUG	libs.h	/^typedef struct DEBUG {$/;"	s
+DEBUG	libs.h	/^} DEBUG;$/;"	t	typeref:struct:DEBUG
+DEBUG_DEFAULT	libs.h	/^#define DEBUG_DEFAULT /;"	d
+DEBUG_LOG_HIGH	libs.h	/^#define DEBUG_LOG_HIGH /;"	d
+DEBUG_LOG_LOW	libs.h	/^#define DEBUG_LOG_LOW /;"	d
+DEBUG_LOG_MEDIUM	libs.h	/^#define DEBUG_LOG_MEDIUM /;"	d
+DEBUG_LOG_NONE	libs.h	/^#define DEBUG_LOG_NONE /;"	d
+Debug	libs.h	/^static DEBUG Debug;$/;"	v	typeref:typename:DEBUG
+ENEMY	player.h	/^#define ENEMY /;"	d
+EN_HULL	player.h	/^#define EN_HULL /;"	d
+EN_IN_RANGE	player.h	/^#define EN_IN_RANGE /;"	d
+EN_NWEAPONS	player.h	/^#define EN_NWEAPONS /;"	d
+EN_POS	player.h	/^#define EN_POS /;"	d
+EN_SHIELD	player.h	/^#define EN_SHIELD /;"	d
+EN_SHIP	player.h	/^#define EN_SHIP /;"	d
+EN_SHIP_TYPE	player.h	/^#define EN_SHIP_TYPE /;"	d
+EN_SYS_X	player.h	/^#define EN_SYS_X /;"	d
+EN_SYS_Y	player.h	/^#define EN_SYS_Y /;"	d
+EN_TILE	player.h	/^#define EN_TILE /;"	d
+EN_WEAPON1	player.h	/^#define EN_WEAPON1 /;"	d
+EN_WEAPON2	player.h	/^#define EN_WEAPON2 /;"	d
+EN_WEAPON3	player.h	/^#define EN_WEAPON3 /;"	d
+EN_WEAPON4	player.h	/^#define EN_WEAPON4 /;"	d
+EN_WEAPON5	player.h	/^#define EN_WEAPON5 /;"	d
+EN_WEAPONS	player.h	/^#define EN_WEAPONS /;"	d
+GREEN	con_c_nix_cpp.h	/^#define GREEN /;"	d
+HS_ACHIEV	player.h	/^#define HS_ACHIEV /;"	d
+HS_CARGO	player.h	/^#define HS_CARGO /;"	d
+HS_CREDITS	player.h	/^#define HS_CREDITS /;"	d
+HS_DATE	player.h	/^#define HS_DATE /;"	d
+HS_DEPLETION	player.h	/^#define HS_DEPLETION /;"	d
+HS_DUTERIUM	player.h	/^#define HS_DUTERIUM /;"	d
+HS_ENERGY	player.h	/^#define HS_ENERGY /;"	d
+HS_GAL_X	player.h	/^#define HS_GAL_X /;"	d
+HS_GAL_Y	player.h	/^#define HS_GAL_Y /;"	d
+HS_HULL	player.h	/^#define HS_HULL /;"	d
+HS_IN_RANGE	player.h	/^#define HS_IN_RANGE /;"	d
+HS_I_UP_CARGO	upgrades.h	/^#define HS_I_UP_CARGO /;"	d
+HS_I_UP_DMG	upgrades.h	/^#define HS_I_UP_DMG /;"	d
+HS_I_UP_ENGINE	upgrades.h	/^#define HS_I_UP_ENGINE /;"	d
+HS_I_UP_HULL	upgrades.h	/^#define HS_I_UP_HULL /;"	d
+HS_I_UP_RANGE	upgrades.h	/^#define HS_I_UP_RANGE /;"	d
+HS_I_UP_SHIELD	upgrades.h	/^#define HS_I_UP_SHIELD /;"	d
+HS_I_UP_TORP	upgrades.h	/^#define HS_I_UP_TORP /;"	d
+HS_LASTBUY	player.h	/^#define HS_LASTBUY /;"	d
+HS_LATINUM	player.h	/^#define HS_LATINUM /;"	d
+HS_NWEAPONS	player.h	/^#define HS_NWEAPONS /;"	d
+HS_PASSENGERS	player.h	/^#define HS_PASSENGERS /;"	d
+HS_PLANETS	system.h	/^#define HS_PLANETS /;"	d
+HS_PLASMA	player.h	/^#define HS_PLASMA /;"	d
+HS_POS	player.h	/^#define HS_POS /;"	d
+HS_SECURITY	player.h	/^#define HS_SECURITY /;"	d
+HS_SHIELD	player.h	/^#define HS_SHIELD /;"	d
+HS_SHIP	player.h	/^#define HS_SHIP /;"	d
+HS_SHIP_TYPE	player.h	/^#define HS_SHIP_TYPE /;"	d
+HS_SKILLS	player.h	/^#define HS_SKILLS /;"	d
+HS_STELLAR	system.h	/^#define HS_STELLAR /;"	d
+HS_SYS_X	player.h	/^#define HS_SYS_X /;"	d
+HS_SYS_Y	player.h	/^#define HS_SYS_Y /;"	d
+HS_TORPEDOS	player.h	/^#define HS_TORPEDOS /;"	d
+HS_UP_CARGO	player.h	/^#define HS_UP_CARGO /;"	d
+HS_UP_DMG	player.h	/^#define HS_UP_DMG /;"	d
+HS_UP_ENGINE	player.h	/^#define HS_UP_ENGINE /;"	d
+HS_UP_HULL	player.h	/^#define HS_UP_HULL /;"	d
+HS_UP_RANGE	player.h	/^#define HS_UP_RANGE /;"	d
+HS_UP_SHIELD	player.h	/^#define HS_UP_SHIELD /;"	d
+HS_UP_TORP	player.h	/^#define HS_UP_TORP /;"	d
+HS_URANIUM	player.h	/^#define HS_URANIUM /;"	d
+HS_WATER	player.h	/^#define HS_WATER /;"	d
+HS_WEAPON1	player.h	/^#define HS_WEAPON1 /;"	d
+HS_WEAPON2	player.h	/^#define HS_WEAPON2 /;"	d
+HS_WEAPON3	player.h	/^#define HS_WEAPON3 /;"	d
+HS_WEAPON4	player.h	/^#define HS_WEAPON4 /;"	d
+HS_WEAPON5	player.h	/^#define HS_WEAPON5 /;"	d
+HS_WEAPONS	player.h	/^#define HS_WEAPONS /;"	d
+HUD	drawable.h	/^void HUD(int startX, int startY) {$/;"	f	typeref:typename:void
+HUD_CARGO_HEIGHT	cTrekGame.h	/^#define HUD_CARGO_HEIGHT /;"	d
+HUD_COM_HEIGHT	cTrekGame.h	/^#define HUD_COM_HEIGHT /;"	d
+HUD_HELM_HEIGHT	cTrekGame.h	/^#define HUD_HELM_HEIGHT /;"	d
+HUD_LINE	cTrekGame.h	/^#define HUD_LINE /;"	d
+HUD_MINIMAL_START	cTrekGame.h	/^#define HUD_MINIMAL_START /;"	d
+HUD_STATUS_HEIGHT	cTrekGame.h	/^#define HUD_STATUS_HEIGHT /;"	d
+HUD_SYSTEM_HEIGHT	cTrekGame.h	/^#define HUD_SYSTEM_HEIGHT /;"	d
+HUD_WIDTH	cTrekGame.h	/^#define HUD_WIDTH /;"	d
+KEY_ATTACK	player.h	/^#define KEY_ATTACK /;"	d
+KEY_DEBUG	player.h	/^#define KEY_DEBUG /;"	d
+KEY_DIVERT	player.h	/^#define KEY_DIVERT /;"	d
+KEY_DOWN	player.h	/^#define KEY_DOWN /;"	d
+KEY_ENEMY_MOVE	player.h	/^#define KEY_ENEMY_MOVE /;"	d
+KEY_HELP	player.h	/^#define KEY_HELP /;"	d
+KEY_HUDSTAT	player.h	/^#define KEY_HUDSTAT /;"	d
+KEY_LEFT	player.h	/^#define KEY_LEFT /;"	d
+KEY_RANGE	player.h	/^#define KEY_RANGE /;"	d
+KEY_RETURN	player.h	/^#define KEY_RETURN /;"	d
+KEY_RIGHT	player.h	/^#define KEY_RIGHT /;"	d
+KEY_SCAN	player.h	/^#define KEY_SCAN /;"	d
+KEY_SCANS	player.h	/^#define KEY_SCANS /;"	d
+KEY_SKILLS	player.h	/^#define KEY_SKILLS /;"	d
+KEY_SKILLS_ARRAY	player.h	/^#define KEY_SKILLS_ARRAY /;"	d
+KEY_STATS	player.h	/^#define KEY_STATS /;"	d
+KEY_TAKE_DMG	player.h	/^#define KEY_TAKE_DMG /;"	d
+KEY_TEST	player.h	/^#define KEY_TEST /;"	d
+KEY_TORPEDO	player.h	/^#define KEY_TORPEDO /;"	d
+KEY_UP	player.h	/^#define KEY_UP /;"	d
+KEY_WARP_DOWN	player.h	/^#define KEY_WARP_DOWN /;"	d
+KEY_WARP_LEFT	player.h	/^#define KEY_WARP_LEFT /;"	d
+KEY_WARP_RIGHT	player.h	/^#define KEY_WARP_RIGHT /;"	d
+KEY_WARP_UP	player.h	/^#define KEY_WARP_UP /;"	d
+LASTBUY_DUTERIUM	player.h	/^#define LASTBUY_DUTERIUM /;"	d
+LASTBUY_I_SIZE	ship.h	/^#define LASTBUY_I_SIZE /;"	d
+LASTBUY_LATINUM	player.h	/^#define LASTBUY_LATINUM /;"	d
+LASTBUY_PLASMA	player.h	/^#define LASTBUY_PLASMA /;"	d
+LASTBUY_URANIUM	player.h	/^#define LASTBUY_URANIUM /;"	d
+LASTBUY_WATER	player.h	/^#define LASTBUY_WATER /;"	d
+MAGENTA	con_c_nix_cpp.h	/^#define MAGENTA /;"	d
+MATH	libs.h	/^typedef struct MATH {$/;"	s
+MATH	libs.h	/^} MATH;$/;"	t	typeref:struct:MATH
+MENU_I_SIZE	planet.h	/^#define MENU_I_SIZE /;"	d
+Math	libs.h	/^static MATH Math;$/;"	v	typeref:typename:MATH
+Menu	menu.h	/^  Menu() {$/;"	f	struct:Menu
+Menu	menu.h	/^  Menu(int sx, int sy) {$/;"	f	struct:Menu
+Menu	menu.h	/^typedef struct Menu {$/;"	s
+Menu	menu.h	/^} Menu;$/;"	t	typeref:struct:Menu
+Menu	tmp.h	/^typedef struct Menu {$/;"	s
+NONE	player.h	/^#define NONE /;"	d
+OPTION_LENGTH	menu.h	/^#define OPTION_LENGTH /;"	d
+OPTION_LENGTH	tmp.h	/^#define OPTION_LENGTH /;"	d
+PLANET_MAX	system.h	/^#define PLANET_MAX /;"	d
+PLANET_MENU_HEADER	cTrekGame.h	/^#define PLANET_MENU_HEADER /;"	d
+PLANET_MENU_START	cTrekGame.h	/^#define PLANET_MENU_START /;"	d
+PLAYER	player.h	/^#define PLAYER /;"	d
+Planet	planet.h	/^typedef struct Planet {$/;"	s
+Planet	planet.h	/^} Planet;$/;"	t	typeref:struct:Planet
+Player	player.h	/^typedef struct Player {$/;"	s
+Player	player.h	/^} Player;$/;"	t	typeref:struct:Player
+RED	con_c_nix_cpp.h	/^#define RED /;"	d
+SECURITY_INRANGE	player.h	/^#define SECURITY_INRANGE /;"	d
+SECURITY_SAFE	player.h	/^#define SECURITY_SAFE /;"	d
+SECURITY_UNSAFE	player.h	/^#define SECURITY_UNSAFE /;"	d
+SELL	planet.h	/^#define SELL /;"	d
+SHIP_DERELICT_DESTROYER	ship.h	/^#define SHIP_DERELICT_DESTROYER /;"	d
+SHIP_DESTROYER	ship.h	/^#define SHIP_DESTROYER /;"	d
+SHIP_ESCAPE_POD	ship.h	/^#define SHIP_ESCAPE_POD /;"	d
+SKILLS_I_SIZE	player.h	/^#define SKILLS_I_SIZE /;"	d
+STR_COL_BLACK	con_c_nix.h	/^#define STR_COL_BLACK /;"	d
+STR_COL_BLACK_BG	con_c_nix.h	/^#define STR_COL_BLACK_BG /;"	d
+STR_COL_BLUE	con_c_nix.h	/^#define STR_COL_BLUE /;"	d
+STR_COL_BLUE_BG	con_c_nix.h	/^#define STR_COL_BLUE_BG /;"	d
+STR_COL_CYAN	con_c_nix.h	/^#define STR_COL_CYAN /;"	d
+STR_COL_CYAN_BG	con_c_nix.h	/^#define STR_COL_CYAN_BG /;"	d
+STR_COL_GREEN	con_c_nix.h	/^#define STR_COL_GREEN /;"	d
+STR_COL_GREEN_BG	con_c_nix.h	/^#define STR_COL_GREEN_BG /;"	d
+STR_COL_GREY	con_c_nix.h	/^#define STR_COL_GREY /;"	d
+STR_COL_GREY_BG	con_c_nix.h	/^#define STR_COL_GREY_BG /;"	d
+STR_COL_INVERT	con_c_nix.h	/^#define STR_COL_INVERT /;"	d
+STR_COL_MAGENTA	con_c_nix.h	/^#define STR_COL_MAGENTA /;"	d
+STR_COL_MAGENTA_BG	con_c_nix.h	/^#define STR_COL_MAGENTA_BG /;"	d
+STR_COL_RED	con_c_nix.h	/^#define STR_COL_RED /;"	d
+STR_COL_RED_BG	con_c_nix.h	/^#define STR_COL_RED_BG /;"	d
+STR_COL_RESET	con_c_nix.h	/^#define STR_COL_RESET /;"	d
+STR_COL_WHITE	con_c_nix.h	/^#define STR_COL_WHITE /;"	d
+STR_COL_WHITE_BG	con_c_nix.h	/^#define STR_COL_WHITE_BG /;"	d
+STR_COL_YELLOW	con_c_nix.h	/^#define STR_COL_YELLOW /;"	d
+STR_COL_YELLOW_BG	con_c_nix.h	/^#define STR_COL_YELLOW_BG /;"	d
+SYSTEM_SIZE	system.h	/^#define SYSTEM_SIZE /;"	d
+Ship	ship.h	/^typedef struct Ship {$/;"	s
+Ship	ship.h	/^} Ship;$/;"	t	typeref:struct:Ship
+System	system.h	/^typedef struct System {$/;"	s
+System	system.h	/^} System;$/;"	t	typeref:struct:System
+TILE_DERELICT1	system.h	/^#define TILE_DERELICT1 /;"	d
+TILE_DERELICT2	system.h	/^#define TILE_DERELICT2 /;"	d
+TILE_DERELICT3	system.h	/^#define TILE_DERELICT3 /;"	d
+TILE_DERELICT4	system.h	/^#define TILE_DERELICT4 /;"	d
+TILE_DERELICT5	system.h	/^#define TILE_DERELICT5 /;"	d
+TILE_EMPTY	system.h	/^#define TILE_EMPTY /;"	d
+TILE_ENEMY1	system.h	/^#define TILE_ENEMY1 /;"	d
+TILE_ENEMY2	system.h	/^#define TILE_ENEMY2 /;"	d
+TILE_ENEMY3	system.h	/^#define TILE_ENEMY3 /;"	d
+TILE_ENEMY4	system.h	/^#define TILE_ENEMY4 /;"	d
+TILE_ENEMY5	system.h	/^#define TILE_ENEMY5 /;"	d
+TILE_PLANET	system.h	/^#define TILE_PLANET /;"	d
+TILE_PLAYER	system.h	/^#define TILE_PLAYER /;"	d
+UPGRADES	upgrades.h	/^static const Upgrade UPGRADES[7] = {$/;"	v	typeref:typename:const Upgrade[7]
+UPGRADES_I_SIZE	ship.h	/^#define UPGRADES_I_SIZE /;"	d
+UPGRADE_CARGO	upgrades.h	/^#define UPGRADE_CARGO /;"	d
+UPGRADE_DMG	upgrades.h	/^#define UPGRADE_DMG /;"	d
+UPGRADE_ENGINE	upgrades.h	/^#define UPGRADE_ENGINE /;"	d
+UPGRADE_HULL	upgrades.h	/^#define UPGRADE_HULL /;"	d
+UPGRADE_RANGE	upgrades.h	/^#define UPGRADE_RANGE /;"	d
+UPGRADE_SHIELD	upgrades.h	/^#define UPGRADE_SHIELD /;"	d
+UPGRADE_TORP	upgrades.h	/^#define UPGRADE_TORP /;"	d
+Upgrade	upgrades.h	/^  Upgrade($/;"	f	struct:Upgrade
+Upgrade	upgrades.h	/^typedef struct Upgrade {$/;"	s
+Upgrade	upgrades.h	/^} Upgrade;$/;"	t	typeref:struct:Upgrade
+WEAPONS	weapons.h	/^static const Weapon WEAPONS[3] = {$/;"	v	typeref:typename:const Weapon[3]
+WEAPONS_I_SIZE	ship.h	/^#define WEAPONS_I_SIZE /;"	d
+WHITE	con_c_nix_cpp.h	/^#define WHITE /;"	d
+Weapon	weapons.h	/^  Weapon(int pDmg, int pDep, int pRange, int pType, int pCompatibility,$/;"	f	struct:Weapon
+Weapon	weapons.h	/^typedef struct Weapon {$/;"	s
+Weapon	weapons.h	/^} Weapon;$/;"	t	typeref:struct:Weapon
+YELLOW	con_c_nix_cpp.h	/^#define YELLOW /;"	d
+_HS_I_DUTERIUM	player.h	/^#define _HS_I_DUTERIUM /;"	d
+_HS_I_LATINUM	player.h	/^#define _HS_I_LATINUM /;"	d
+_HS_I_PLASMA	player.h	/^#define _HS_I_PLASMA /;"	d
+_HS_I_URANIUM	player.h	/^#define _HS_I_URANIUM /;"	d
+_HS_I_WATER	player.h	/^#define _HS_I_WATER /;"	d
+_HS_I_WEAPON1	player.h	/^#define _HS_I_WEAPON1 /;"	d
+_HS_I_WEAPON2	player.h	/^#define _HS_I_WEAPON2 /;"	d
+_HS_I_WEAPON3	player.h	/^#define _HS_I_WEAPON3 /;"	d
+_HS_I_WEAPON4	player.h	/^#define _HS_I_WEAPON4 /;"	d
+_HS_I_WEAPON5	player.h	/^#define _HS_I_WEAPON5 /;"	d
+achieveColour	planet.h	/^  const char *achieveColour(int current, int target) {$/;"	f	struct:Planet	typeref:typename:const char *
+achievements	player.h	/^  int achievements[ACHIEVE_I_SIZE];$/;"	m	struct:Player	typeref:typename:int[]
+achievementsMenu	drawable.h	/^void achievementsMenu() {$/;"	f	typeref:typename:void
+achievementsMenu	planet.h	/^  void achievementsMenu() {$/;"	f	struct:Planet	typeref:typename:void
+addOption	menu.h	/^  int addOption(char *i) {$/;"	f	struct:Menu	typeref:typename:int
+addOption	menu.h	/^  int addOption(const char *format, ...) {$/;"	f	struct:Menu	typeref:typename:int
+applyPlayerDamageReduction	cTrekGame.cpp	/^int applyPlayerDamageReduction(int damage) {$/;"	f	typeref:typename:int
+avg	commodities.h	/^  int avg;$/;"	m	struct:Commodity	typeref:typename:int
+barMenus	planet.h	/^  void barMenus() {$/;"	f	struct:Planet	typeref:typename:void
+base	commodities.h	/^  int base;$/;"	m	struct:Commodity	typeref:typename:int
+buildCommerceMenu	planet.h	/^  void buildCommerceMenu() {$/;"	f	struct:Planet	typeref:typename:void
+buildOutfitterMenu	planet.h	/^  int buildOutfitterMenu() {$/;"	f	struct:Planet	typeref:typename:int
+buildShipMenu	planet.h	/^  int buildShipMenu() {$/;"	f	struct:Planet	typeref:typename:int
+buyMenu	planet.h	/^  Menu *buyMenu;$/;"	m	struct:Planet	typeref:typename:Menu *
+capacity	ship.h	/^  int capacity[CAP_I_SIZE];$/;"	m	struct:Ship	typeref:typename:int[]
+cargo	ship.h	/^  int cargo() {$/;"	f	struct:Ship	typeref:typename:int
+cargoLeft	ship.h	/^  int cargoLeft() {$/;"	f	struct:Ship	typeref:typename:int
+cargoLeft	utils.h	/^int cargoLeft() {$/;"	f	typeref:typename:int
+charColour	drawable.h	/^char* charColour(int mapTile, int scanTarget, int mapIndex) {$/;"	f	typeref:typename:char *
+checkCapacity	utils.h	/^int checkCapacity(int hudstat, int quantity, int ship) {$/;"	f	typeref:typename:int
+choiceMenu	cTrekGame.cpp	/^void choiceMenu(int debug) {$/;"	f	typeref:typename:void
+clean	cTrekGame.cpp	/^void clean () {$/;"	f	typeref:typename:void
+clearWeapons	ship.h	/^  void clearWeapons() {$/;"	f	struct:Ship	typeref:typename:void
+clrLine	con_c_nix.h	/^void clrLine() {$/;"	f	typeref:typename:void
+clrs	con_c_nix.h	/^void clrs() {$/;"	f	typeref:typename:void
+clrs	con_c_nix_cpp.h	/^void clrs() {$/;"	f	typeref:typename:void
+clrsCB	con_c_nix.h	/^void clrsCB(int c, int b) {$/;"	f	typeref:typename:void
+clrsCB	con_c_nix_cpp.h	/^void clrsCB(int c, int b) {$/;"	f	typeref:typename:void
+comLog	drawable.h	/^void comLog(int x, int y) {$/;"	f	typeref:typename:void
+commMenu	planet.h	/^  Menu *commMenu;$/;"	m	struct:Planet	typeref:typename:Menu *
+commerceArray	planet.h	/^  int commerceArray[MENU_I_SIZE];$/;"	m	struct:Planet	typeref:typename:int[]
+commerceMenu	planet.h	/^  void commerceMenu() {$/;"	f	struct:Planet	typeref:typename:void
+commodities	ship.h	/^  int commodities[COMMODITIES_I_SIZE];$/;"	m	struct:Ship	typeref:typename:int[]
+commodityAvg	player.h	/^int commodityAvg[LASTBUY_I_SIZE] = { 12, 35, 85, 425, 860 };$/;"	v	typeref:typename:int[]
+commodityLastBuy	player.h	/^  int commodityLastBuy[LASTBUY_I_SIZE];$/;"	m	struct:Player	typeref:typename:int[]
+commodityPreview	planet.h	/^  int commodityPreview(int x, int y, int buying) {$/;"	f	struct:Planet	typeref:typename:int
+compDesc	weapons.h	/^  const char* compDesc;$/;"	m	struct:Weapon	typeref:typename:const char *
+compatibility	upgrades.h	/^  int compatibility;$/;"	m	struct:Upgrade	typeref:typename:int
+compatibility	weapons.h	/^  int compatibility;$/;"	m	struct:Weapon	typeref:typename:int
+cost	upgrades.h	/^  int cost;$/;"	m	struct:Upgrade	typeref:typename:int
+credits	player.h	/^  int credits;$/;"	m	struct:Player	typeref:typename:int
+currentPlayer	player.h	/^struct Player *currentPlayer;$/;"	v	typeref:struct:Player *
+currentSystem	player.h	/^struct System *currentSystem;$/;"	v	typeref:struct:System *
+cursor	con_c_nix.h	/^void cursor(int toggle) {$/;"	f	typeref:typename:void
+cursor	con_c_nix_cpp.h	/^void cursor() {$/;"	f	typeref:typename:void
+damageReport	cTrekGame.cpp	/^void damageReport(int damage, int target) {$/;"	f	typeref:typename:void
+date	player.h	/^  int date;$/;"	m	struct:Player	typeref:typename:int
+debuggingMenu	cTrekGame.cpp	/^void debuggingMenu(char *s, int value) {$/;"	f	typeref:typename:void
+dep	weapons.h	/^  int dep;$/;"	m	struct:Weapon	typeref:typename:int
+depletion	ship.h	/^  int depletion;$/;"	m	struct:Ship	typeref:typename:int
+derelictAtTile	utils.h	/^int derelictAtTile(int coord) {$/;"	f	typeref:typename:int
+desc	weapons.h	/^  const char* desc;$/;"	m	struct:Weapon	typeref:typename:const char *
+description	upgrades.h	/^  const char* description;$/;"	m	struct:Upgrade	typeref:typename:const char *
+destroy	ship.h	/^  int destroy() {$/;"	f	struct:Ship	typeref:typename:int
+destroyEnemy	system.h	/^  static Player * destroyEnemy(Player *enemy) {$/;"	f	struct:System	typeref:typename:Player *
+destruct	menu.h	/^  void destruct() {$/;"	f	struct:Menu	typeref:typename:void
+destruct	tmp.h	/^  void destruct(int x, char *y) {$/;"	f	struct:Menu	typeref:typename:void
+divertPower	cTrekGame.cpp	/^void divertPower(int quantity) {$/;"	f	typeref:typename:void
+dmg	weapons.h	/^  int dmg;$/;"	m	struct:Weapon	typeref:typename:int
+dock	planet.h	/^  void dock() {$/;"	f	struct:Planet	typeref:typename:void
+drawWindow	drawable.h	/^void drawWindow(int x, int y, int w, int h) {$/;"	f	typeref:typename:void
+enabled	libs.h	/^  int enabled;$/;"	m	struct:DEBUG	typeref:typename:int
+enemy	system.h	/^  Player *enemy;$/;"	m	struct:System	typeref:typename:Player *
+enemyAtTile	utils.h	/^int enemyAtTile(int coord) {$/;"	f	typeref:typename:int
+enemyMovement	cTrekGame.cpp	/^void enemyMovement() {$/;"	f	typeref:typename:void
+energy	ship.h	/^  int energy;$/;"	m	struct:Ship	typeref:typename:int
+fExists	utils.h	/^inline int fExists(char *f) {$/;"	f	typeref:typename:int
+fire	cTrekGame.cpp	/^void fire(int playerFiring) {$/;"	f	typeref:typename:void
+firetorpedo	cTrekGame.cpp	/^void firetorpedo() {$/;"	f	typeref:typename:void
+galaxyX	player.h	/^  int galaxyX;$/;"	m	struct:Player	typeref:typename:int
+galaxyX	system.h	/^  int galaxyX;$/;"	m	struct:System	typeref:typename:int
+galaxyY	player.h	/^  int galaxyY;$/;"	m	struct:Player	typeref:typename:int
+galaxyY	system.h	/^  int galaxyY;$/;"	m	struct:System	typeref:typename:int
+gamblingMenu	planet.h	/^  void gamblingMenu() {$/;"	f	struct:Planet	typeref:typename:void
+generateSystem	cTrekGame.cpp	/^void generateSystem() {$/;"	f	typeref:typename:void
+getCoords	utils.h	/^char* getCoords() {$/;"	f	typeref:typename:char *
+getInput	menu.h	/^  int getInput() {$/;"	f	struct:Menu	typeref:typename:int
+getMapTile	utils.h	/^int getMapTile(int coord) {$/;"	f	typeref:typename:int
+getMenuCommodity	planet.h	/^  void getMenuCommodity(char *opt, int *price, int *index) {$/;"	f	struct:Planet	typeref:typename:void
+getPlanet	system.h	/^  Planet *getPlanet(int pos) {$/;"	f	struct:System	typeref:typename:Planet *
+getSelection	menu.h	/^  int getSelection() {$/;"	f	struct:Menu	typeref:typename:int
+getch	getch.h	/^int getch(void) {$/;"	f	typeref:typename:int
+getch	getch_new.h	/^int getch() { $/;"	f	typeref:typename:int
+getch_arrow	getch.h	/^int getch_arrow() {$/;"	f	typeref:typename:int
+getche	getch.h	/^int getche(void) {$/;"	f	typeref:typename:int
+gotoXY	con_c_nix.h	/^void gotoXY(unsigned int x, unsigned int y){$/;"	f	typeref:typename:void
+gotoxy	con_c_nix_cpp.h	/^void gotoxy(unsigned int x, unsigned int y){$/;"	f	typeref:typename:void
+gunRangeColour	drawable.h	/^const char* gunRangeColour(int totalGuns, int gunsInRange) {$/;"	f	typeref:typename:const char *
+healthBars	drawable.h	/^void healthBars() {$/;"	f	typeref:typename:void
+help	cTrekGame.cpp	/^void help() {$/;"	f	typeref:typename:void
+highlighted	menu.h	/^  int highlighted;$/;"	m	struct:Menu	typeref:typename:int
+highlighted	tmp.h	/^  int highlighted;$/;"	m	struct:Menu	typeref:typename:int
+hitAnim	cTrekGame.cpp	/^void hitAnim(int playerHit) {$/;"	f	typeref:typename:void
+hudColours	drawable.h	/^char* hudColours(int currentHud, int maxHud) {$/;"	f	typeref:typename:char *
+hudstat	upgrades.h	/^  int hudstat;$/;"	m	struct:Upgrade	typeref:typename:int
+hudstatToCapacity	utils.h	/^int hudstatToCapacity(int hudstat) {$/;"	f	typeref:typename:int
+hudstatToCommodity	utils.h	/^const char *hudstatToCommodity(int hudstat) {$/;"	f	typeref:typename:const char *
+hudstatToQuantity	utils.h	/^int *hudstatToQuantity(int hudstat) {$/;"	f	typeref:typename:int *
+hull	ship.h	/^  int hull;$/;"	m	struct:Ship	typeref:typename:int
+inRange	cTrekGame.cpp	/^int inRange(int playerScanniing, int mapIndex) {$/;"	f	typeref:typename:int
+indices	menu.h	/^  int *indices;$/;"	m	struct:Menu	typeref:typename:int *
+indices	tmp.h	/^  int *indices;$/;"	m	struct:Menu	typeref:typename:int *
+init	libs.h	/^  void init(const char *f, int level) {$/;"	f	struct:DEBUG	typeref:typename:void
+initCommerce	planet.h	/^  int initCommerce() {$/;"	f	struct:Planet	typeref:typename:int
+initEnemy	system.h	/^  int initEnemy(int died) {$/;"	f	struct:System	typeref:typename:int
+initOutfit	planet.h	/^  int initOutfit() {$/;"	f	struct:Planet	typeref:typename:int
+initShips	planet.h	/^  int initShips() {$/;"	f	struct:Planet	typeref:typename:int
+initialize	planet.h	/^  void initialize() {$/;"	f	struct:Planet	typeref:typename:void
+initialize	player.h	/^  void initialize(int shipType) {$/;"	f	struct:Player	typeref:typename:void
+initialize	system.h	/^  void initialize() {$/;"	f	struct:System	typeref:typename:void
+initialized	planet.h	/^  int initialized;$/;"	m	struct:Planet	typeref:typename:int
+initialized	system.h	/^  int initialized;$/;"	m	struct:System	typeref:typename:int
+isHighlighted	menu.h	/^  int isHighlighted(const char *searchStr) {$/;"	f	struct:Menu	typeref:typename:int
+kbhit	getch_new.h	/^int kbhit() { $/;"	f	typeref:typename:int
+lastSeed	cTrekGame.h	/^unsigned int lastSeed;$/;"	v	typeref:typename:unsigned int
+length	menu.h	/^  int length;$/;"	m	struct:Menu	typeref:typename:int
+length	tmp.h	/^  int length;$/;"	m	struct:Menu	typeref:typename:int
+load	menu.h	/^  static Menu *load(FILE *fp) {$/;"	f	struct:Menu	typeref:typename:Menu *
+load	planet.h	/^  static Planet *load(FILE *fp) {$/;"	f	struct:Planet	typeref:typename:Planet *
+load	player.h	/^  static Player *load() {$/;"	f	struct:Player	typeref:typename:Player *
+load	system.h	/^  static System *load(int x, int y) {$/;"	f	struct:System	typeref:typename:System *
+loadEnemy	player.h	/^  static Player *loadEnemy(FILE *fp) {$/;"	f	struct:Player	typeref:typename:Player *
+log	libs.h	/^  void log(int loglevel, const char *file, int line) {$/;"	f	struct:DEBUG	typeref:typename:void
+log	libs.h	/^  void log(int loglevel, const char *file, int line, char *s) {$/;"	f	struct:DEBUG	typeref:typename:void
+log	libs.h	/^  void log(int loglevel, const char *file, int line, const char *format, ...) {$/;"	f	struct:DEBUG	typeref:typename:void
+logLevel	libs.h	/^  int logLevel;$/;"	m	struct:DEBUG	typeref:typename:int
+loot	cTrekGame.cpp	/^void loot() {$/;"	f	typeref:typename:void
+main	cTrekGame.cpp	/^int main() {$/;"	f	typeref:typename:int
+main	to_string.h	/^ } int main() {$/;"	f	typeref:typename:int
+mainMenu	planet.h	/^  Menu *mainMenu;$/;"	m	struct:Planet	typeref:typename:Menu *
+map	system.h	/^  int map[SYSTEM_SIZE];$/;"	m	struct:System	typeref:typename:int[]
+max	libs.h	/^  int max(int a, int b) {$/;"	f	struct:MATH	typeref:typename:int
+max	upgrades.h	/^  int max;$/;"	m	struct:Upgrade	typeref:typename:int
+min	libs.h	/^  int min(int a, int b) {$/;"	f	struct:MATH	typeref:typename:int
+minimalHUD	drawable.h	/^void minimalHUD(int startX, int startY) {$/;"	f	typeref:typename:void
+move	cTrekGame.cpp	/^void move(char toWhere) { \/\/ move to com log$/;"	f	typeref:typename:void
+nGunsInRange	ship.h	/^  int nGunsInRange;$/;"	m	struct:Ship	typeref:typename:int
+nPlanets	system.h	/^  int nPlanets;$/;"	m	struct:System	typeref:typename:int
+name	planet.h	/^  char name[32];$/;"	m	struct:Planet	typeref:typename:char[32]
+name	upgrades.h	/^  const char* name;$/;"	m	struct:Upgrade	typeref:typename:const char *
+name	weapons.h	/^  const char* name;$/;"	m	struct:Weapon	typeref:typename:const char *
+newEnemy	player.h	/^  static Player *newEnemy(int type) {$/;"	f	struct:Player	typeref:typename:Player *
+newMenu	menu.h	/^  static Menu *newMenu(int sx, int sy) {$/;"	f	struct:Menu	typeref:typename:Menu *
+newPlanet	planet.h	/^  static Planet *newPlanet(int pos) {$/;"	f	struct:Planet	typeref:typename:Planet *
+newPlayer	player.h	/^  static Player *newPlayer() {$/;"	f	struct:Player	typeref:typename:Player *
+newShip	ship.h	/^  static Ship *newShip(int type) {$/;"	f	struct:Ship	typeref:typename:Ship *
+newSystem	system.h	/^  static System *newSystem(int x, int y) {$/;"	f	struct:System	typeref:typename:System *
+optionIndex	menu.h	/^  int optionIndex(const char *searchStr) {$/;"	f	struct:Menu	typeref:typename:int
+options	menu.h	/^  char **options;$/;"	m	struct:Menu	typeref:typename:char **
+options	tmp.h	/^  char **options;$/;"	m	struct:Menu	typeref:typename:char **
+orig_termios	getch_new.h	/^struct termios orig_termios;$/;"	v	typeref:struct:termios
+outfitArray	planet.h	/^  int outfitArray[MENU_I_SIZE];$/;"	m	struct:Planet	typeref:typename:int[]
+outfitMenu	planet.h	/^  Menu *outfitMenu;$/;"	m	struct:Planet	typeref:typename:Menu *
+outfitterMenu	planet.h	/^  void outfitterMenu() {$/;"	f	struct:Planet	typeref:typename:void
+pSystem	player.h	/^  int pSystem;$/;"	m	struct:Player	typeref:typename:int
+passengers	ship.h	/^  int passengers;$/;"	m	struct:Ship	typeref:typename:int
+percentile	utils.h	/^int percentile() {$/;"	f	typeref:typename:int
+planetHUD	planet.h	/^  void planetHUD() {$/;"	f	struct:Planet	typeref:typename:void
+planetWindow	planet.h	/^  void planetWindow() {$/;"	f	struct:Planet	typeref:typename:void
+planets	system.h	/^  Planet *planets[PLANET_MAX];$/;"	m	struct:System	typeref:typename:Planet * []
+pos	player.h	/^  int pos() {$/;"	f	struct:Player	typeref:typename:int
+position	planet.h	/^  int position;$/;"	m	struct:Planet	typeref:typename:int
+preGameMenu	cTrekGame.cpp	/^int preGameMenu() {$/;"	f	typeref:typename:int
+prefix	utils.h	/^char* prefix(int arrayValue, char unit) {$/;"	f	typeref:typename:char *
+printAchievementPage	planet.h	/^  void printAchievementPage(int page) {$/;"	f	struct:Planet	typeref:typename:void
+printAt	drawable.h	/^int printAt(int x, int y, const char *fmt, ...) {$/;"	f	typeref:typename:int
+printBuySell	utils.h	/^static char* printBuySell(char buySell, int commodity, int quantity, int costProfit, int shipCos/;"	f	typeref:typename:char *
+printDealArrow	planet.h	/^  const char* printDealArrow(int buySellPrice, int lastBuy, int buying) {$/;"	f	struct:Planet	typeref:typename:const char *
+printLinesAt	drawable.h	/^int printLinesAt(int x, int y, const char *str) {$/;"	f	typeref:typename:int
+printLogPage	planet.h	/^  void printLogPage(int page) {$/;"	f	struct:Planet	typeref:typename:void
+printMap	drawable.h	/^void printMap(int scanTarget) {$/;"	f	typeref:typename:void
+printProgressBar	drawable.h	/^void printProgressBar(int skillSlot) {$/;"	f	typeref:typename:void
+printShip	drawable.h	/^const char* printShip(int ship) {$/;"	f	typeref:typename:const char *
+printfLinesAt	drawable.h	/^int printfLinesAt(int x, int y, const char *fmt, ...) {$/;"	f	typeref:typename:int
+randomNumber	utils.h	/^int randomNumber(int max) {$/;"	f	typeref:typename:int
+range	commodities.h	/^  int range;$/;"	m	struct:Commodity	typeref:typename:int
+range	weapons.h	/^  int range;$/;"	m	struct:Weapon	typeref:typename:int
+rangeMap	drawable.h	/^void rangeMap(int scanner) {$/;"	f	typeref:typename:void
+rebuildCommerceMenus	planet.h	/^  void rebuildCommerceMenus() {$/;"	f	struct:Planet	typeref:typename:void
+repairMenu	planet.h	/^  Menu *repairMenu;$/;"	m	struct:Planet	typeref:typename:Menu *
+resaleValue	planet.h	/^  int resaleValue() { \/\/ torps???????!?!?!?$/;"	f	struct:Planet	typeref:typename:int
+reset_terminal_mode	getch_new.h	/^void reset_terminal_mode() { $/;"	f	typeref:typename:void
+round	libs.h	/^  float round(float value) {$/;"	f	struct:MATH	typeref:typename:float
+save	menu.h	/^  int save(FILE *fp) {$/;"	f	struct:Menu	typeref:typename:int
+save	planet.h	/^  int save(FILE *fp) {$/;"	f	struct:Planet	typeref:typename:int
+save	player.h	/^  int save() {$/;"	f	struct:Player	typeref:typename:int
+save	system.h	/^  int save() {$/;"	f	struct:System	typeref:typename:int
+saveEnemy	player.h	/^  int saveEnemy(FILE *fp) {$/;"	f	struct:Player	typeref:typename:int
+scan	cTrekGame.cpp	/^void scan(int scanTarget) {$/;"	f	typeref:typename:void
+security	player.h	/^  int security;$/;"	m	struct:Player	typeref:typename:int
+securityStatus	utils.h	/^const char* securityStatus() {$/;"	f	typeref:typename:const char *
+seed	utils.h	/^void seed() {$/;"	f	typeref:typename:void
+sellMenu	planet.h	/^  Menu *sellMenu;$/;"	m	struct:Planet	typeref:typename:Menu *
+setC	con_c_nix.h	/^void setC(int c) {$/;"	f	typeref:typename:void
+setC	con_c_nix_cpp.h	/^void setC(int c) {$/;"	f	typeref:typename:void
+setCB	con_c_nix.h	/^void setCB(int c, int b) {$/;"	f	typeref:typename:void
+setCB	con_c_nix_cpp.h	/^void setCB(int c, int b) {$/;"	f	typeref:typename:void
+setGalaxyPos	player.h	/^  int setGalaxyPos(int p) {$/;"	f	struct:Player	typeref:typename:int
+setGalaxyPos	player.h	/^  int setGalaxyPos(int x, int y) {$/;"	f	struct:Player	typeref:typename:int
+setPos	player.h	/^  int setPos(int p) {$/;"	f	struct:Player	typeref:typename:int
+setType	ship.h	/^  int setType(int type) {$/;"	f	struct:Ship	typeref:typename:int
+set_conio_terminal_mode	getch_new.h	/^void set_conio_terminal_mode() { $/;"	f	typeref:typename:void
+shield	ship.h	/^  int shield;$/;"	m	struct:Ship	typeref:typename:int
+ship	player.h	/^  Ship *ship;$/;"	m	struct:Player	typeref:typename:Ship *
+shipCapacity	ship.h	/^  static int shipCapacity(int shipType, int index) {$/;"	f	struct:Ship	typeref:typename:int
+shipClass	ship.h	/^  static const char* shipClass(int shipType) {$/;"	f	struct:Ship	typeref:typename:const char *
+shipDestroyed	cTrekGame.cpp	/^void shipDestroyed() {$/;"	f	typeref:typename:void
+shipInfo	planet.h	/^  void shipInfo(int ship) {$/;"	f	struct:Planet	typeref:typename:void
+shipMenu	planet.h	/^  Menu *shipMenu;$/;"	m	struct:Planet	typeref:typename:Menu *
+shipName	ship.h	/^  static const char* shipName(int shipType) {$/;"	f	struct:Ship	typeref:typename:const char *
+shipType	ship.h	/^  int shipType;$/;"	m	struct:Ship	typeref:typename:int
+shipsLog	planet.h	/^  void shipsLog() {$/;"	f	struct:Planet	typeref:typename:void
+shipyardArray	planet.h	/^  int shipyardArray[MENU_I_SIZE];$/;"	m	struct:Planet	typeref:typename:int[]
+shipyardMenu	planet.h	/^  void shipyardMenu() {$/;"	f	struct:Planet	typeref:typename:void
+skills	player.h	/^  int skills[SKILLS_I_SIZE];$/;"	m	struct:Player	typeref:typename:int[]
+skillsHUD	drawable.h	/^void skillsHUD(int x, int page) {$/;"	f	typeref:typename:void
+spawnEnemy	system.h	/^  int spawnEnemy(int edgeOfSpace) {$/;"	f	struct:System	typeref:typename:int
+startingSystem	system.h	/^  void startingSystem() {$/;"	f	struct:System	typeref:typename:void
+stellarObjects	system.h	/^  int stellarObjects;$/;"	m	struct:System	typeref:typename:int
+supplyMenu	planet.h	/^  Menu *supplyMenu;$/;"	m	struct:Planet	typeref:typename:Menu *
+systemX	player.h	/^  int systemX;$/;"	m	struct:Player	typeref:typename:int
+systemY	player.h	/^  int systemY;$/;"	m	struct:Player	typeref:typename:int
+test	cTrekGame.cpp	/^void test() {$/;"	f	typeref:typename:void
+tile	player.h	/^  int tile;$/;"	m	struct:Player	typeref:typename:int
+to_string	to_string.h	/^template <typename T> std::string to_string(T value) {$/;"	f	typeref:typename:std::string
+torpedos	ship.h	/^  int torpedos;$/;"	m	struct:Ship	typeref:typename:int
+tryToBuy	utils.h	/^int tryToBuy(int quantity, int price, int hudstat) {$/;"	f	typeref:typename:int
+tryToSell	utils.h	/^int tryToSell(int quantity, int price, int hudstat) {$/;"	f	typeref:typename:int
+type	weapons.h	/^  int type;$/;"	m	struct:Weapon	typeref:typename:int
+unload	menu.h	/^  static void unload(Menu *m) {$/;"	f	struct:Menu	typeref:typename:void
+unload	planet.h	/^  static void unload(Planet *p) {$/;"	f	struct:Planet	typeref:typename:void
+unload	player.h	/^  static void unload(Player *p) {$/;"	f	struct:Player	typeref:typename:void
+unload	system.h	/^  static void unload(System *s) {$/;"	f	struct:System	typeref:typename:void
+upgradeMenu	planet.h	/^  Menu *upgradeMenu;$/;"	m	struct:Planet	typeref:typename:Menu *
+upgrades	ship.h	/^  int upgrades[UPGRADES_I_SIZE];$/;"	m	struct:Ship	typeref:typename:int[]
+value	upgrades.h	/^  int value;$/;"	m	struct:Upgrade	typeref:typename:int
+weaponCount	ship.h	/^  int weaponCount() {$/;"	f	struct:Ship	typeref:typename:int
+weaponStatus	drawable.h	/^char* weaponStatus() {$/;"	f	typeref:typename:char *
+weapons	ship.h	/^  int weapons[WEAPONS_I_SIZE];$/;"	m	struct:Ship	typeref:typename:int[]
+weaponsCheck	cTrekGame.cpp	/^int weaponsCheck(int playerFiring) {$/;"	f	typeref:typename:int
+write	libs.h	/^  void write(char *s) {$/;"	f	struct:DEBUG	typeref:typename:void
+write	libs.h	/^  void write(const char *file, int line, char *s) {$/;"	f	struct:DEBUG	typeref:typename:void
+write	libs.h	/^  void write(const char *file, int line, const char *format, ...) {$/;"	f	struct:DEBUG	typeref:typename:void
+write	libs.h	/^  void write(const char *format, ...) {$/;"	f	struct:DEBUG	typeref:typename:void
+x	menu.h	/^  int x;$/;"	m	struct:Menu	typeref:typename:int
+x	tmp.h	/^  int x;$/;"	m	struct:Menu	typeref:typename:int
+y	menu.h	/^  int y;$/;"	m	struct:Menu	typeref:typename:int
+y	tmp.h	/^  int y;$/;"	m	struct:Menu	typeref:typename:int
+~Menu	menu.h	/^  ~Menu() {$/;"	f	struct:Menu
+~Menu	tmp.h	/^  ~Menu() {$/;"	f	struct:Menu

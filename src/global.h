@@ -1,3 +1,4 @@
+#define _GLIBCXX_USE_C99 1  // android termux hack
 #include <iostream>
 #include <fstream>
 #include <map>

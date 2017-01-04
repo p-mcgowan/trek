@@ -104,6 +104,18 @@ typedef struct DEBUG {
     va_end(args);
   }
 
+
+  void write(int loglevel, const char *file, int line, const char *format, ...) {
+    if (loglevel >= logLevel) {
+      char buf[BUFFER_MEDIUM] = {0};
+      va_list args;
+      va_start(args, format);
+      vsnprintf(buf, BUFFER_MEDIUM - 1, format, args);
+      fprintf(stderr, "%s:%d: %s", file, line, buf);
+      va_end(args);
+    }
+  }
+
 } DEBUG;
 
 static DEBUG Debug;
