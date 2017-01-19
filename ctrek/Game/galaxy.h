@@ -55,6 +55,7 @@ typedef struct Galaxy {
    */
   static int writeSystem() {
     Debug.log(DEBUG_DEFAULT, "static int Galaxy::writeSystem()");
+    // Galaxy *g = (Galaxy*)malloc(sizeof(Galaxy));
 
     return 0;
   }
