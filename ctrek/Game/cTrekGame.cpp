@@ -7,6 +7,7 @@
  * - universe map
  * - gamble menu
  * - commerce.h class for buy/sell menus
+ * - buy menu should show max cargo limit when showing ammt units you can buy
  */
 
 void test() {
