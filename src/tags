@@ -1,0 +1,870 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ABILITY	../src/Weapon.h	/^#define ABILITY /;"	d
+ABL	../ctrek/Equipment/defs.h	/^#define ABL /;"	d
+ACHIEVE_DISTANCE	../ctrek/Game/player.h	/^#define ACHIEVE_DISTANCE /;"	d
+ACHIEVE_I_DISTANCE	../ctrek/Game/player.h	/^#define ACHIEVE_I_DISTANCE /;"	d
+ACHIEVE_I_KILLS	../ctrek/Game/player.h	/^#define ACHIEVE_I_KILLS /;"	d
+ACHIEVE_I_PLANETS	../ctrek/Game/player.h	/^#define ACHIEVE_I_PLANETS /;"	d
+ACHIEVE_I_SHIPS	../ctrek/Game/player.h	/^#define ACHIEVE_I_SHIPS /;"	d
+ACHIEVE_I_SIZE	../ctrek/Game/player.h	/^#define ACHIEVE_I_SIZE /;"	d
+ACHIEVE_I_SYSTEMS	../ctrek/Game/player.h	/^#define ACHIEVE_I_SYSTEMS /;"	d
+ACHIEVE_I_WEAPONS	../ctrek/Game/player.h	/^#define ACHIEVE_I_WEAPONS /;"	d
+ACHIEVE_KILLS	../ctrek/Game/player.h	/^#define ACHIEVE_KILLS /;"	d
+ACHIEVE_PLANETS	../ctrek/Game/player.h	/^#define ACHIEVE_PLANETS /;"	d
+ACHIEVE_SHIPS	../ctrek/Game/player.h	/^#define ACHIEVE_SHIPS /;"	d
+ACHIEVE_SYSTEMS	../ctrek/Game/player.h	/^#define ACHIEVE_SYSTEMS /;"	d
+ACHIEVE_WEAPONS	../ctrek/Game/player.h	/^#define ACHIEVE_WEAPONS /;"	d
+BLACK	../ctrek/Game/con_c_nix_cpp.h	/^#define BLACK /;"	d
+BLACK	../src/conOut_nix.h	/^#define BLACK /;"	d
+BLACK	../src/conOut_win.h	/^#define BLACK /;"	d
+BLUE	../ctrek/Game/con_c_nix_cpp.h	/^#define BLUE /;"	d
+BLUE	../src/conOut_nix.h	/^#define BLUE /;"	d
+BLUE	../src/conOut_win.h	/^#define BLUE /;"	d
+BUFFER_MEDIUM	../ctrek/Game/cTrekGame.h	/^#define BUFFER_MEDIUM /;"	d
+BUY	../ctrek/Game/planet.h	/^#define BUY /;"	d
+CAP_AVG	../ctrek/Game/player.h	/^#define CAP_AVG /;"	d
+CAP_AVGDUTERIUM	../ctrek/Game/commodities.h	/^#define CAP_AVGDUTERIUM /;"	d
+CAP_AVGDUTERIUM	../ctrek/Game/player.h	/^#define CAP_AVGDUTERIUM /;"	d
+CAP_AVGLATINUM	../ctrek/Game/commodities.h	/^#define CAP_AVGLATINUM /;"	d
+CAP_AVGLATINUM	../ctrek/Game/player.h	/^#define CAP_AVGLATINUM /;"	d
+CAP_AVGPLASMA	../ctrek/Game/commodities.h	/^#define CAP_AVGPLASMA /;"	d
+CAP_AVGPLASMA	../ctrek/Game/player.h	/^#define CAP_AVGPLASMA /;"	d
+CAP_AVGURANIUM	../ctrek/Game/commodities.h	/^#define CAP_AVGURANIUM /;"	d
+CAP_AVGURANIUM	../ctrek/Game/player.h	/^#define CAP_AVGURANIUM /;"	d
+CAP_AVGWATER	../ctrek/Game/commodities.h	/^#define CAP_AVGWATER /;"	d
+CAP_AVGWATER	../ctrek/Game/player.h	/^#define CAP_AVGWATER /;"	d
+CAP_CARGO	../ctrek/Game/ship.h	/^#define CAP_CARGO /;"	d
+CAP_ENERGY	../ctrek/Game/ship.h	/^#define CAP_ENERGY /;"	d
+CAP_HARDPOINT	../ctrek/Game/ship.h	/^#define CAP_HARDPOINT /;"	d
+CAP_HULL	../ctrek/Game/ship.h	/^#define CAP_HULL /;"	d
+CAP_I_CARGO	../ctrek/Game/ship.h	/^#define CAP_I_CARGO /;"	d
+CAP_I_ENERGY	../ctrek/Game/ship.h	/^#define CAP_I_ENERGY /;"	d
+CAP_I_HARDPOINT	../ctrek/Game/ship.h	/^#define CAP_I_HARDPOINT /;"	d
+CAP_I_HULL	../ctrek/Game/ship.h	/^#define CAP_I_HULL /;"	d
+CAP_I_SHIELD	../ctrek/Game/ship.h	/^#define CAP_I_SHIELD /;"	d
+CAP_I_SIZE	../ctrek/Game/ship.h	/^#define CAP_I_SIZE /;"	d
+CAP_I_TORP	../ctrek/Game/ship.h	/^#define CAP_I_TORP /;"	d
+CAP_SHIELD	../ctrek/Game/ship.h	/^#define CAP_SHIELD /;"	d
+CAP_TORP	../ctrek/Game/ship.h	/^#define CAP_TORP /;"	d
+CHA	../ctrek/Equipment/defs.h	/^#define CHA /;"	d
+CHARISMA	../src/Weapon.h	/^#define CHARISMA /;"	d
+CLO	../ctrek/Equipment/defs.h	/^#define CLO /;"	d
+CLOUT	../src/Weapon.h	/^#define CLOUT /;"	d
+CLOUTREQ	../src/Weapon.h	/^#define CLOUTREQ /;"	d
+COL_BLACK	../ctrek/Game/con_c_nix.h	/^#define COL_BLACK /;"	d
+COL_BLACK_BG	../ctrek/Game/con_c_nix.h	/^#define COL_BLACK_BG /;"	d
+COL_BLUE	../ctrek/Game/con_c_nix.h	/^#define COL_BLUE /;"	d
+COL_BLUE_BG	../ctrek/Game/con_c_nix.h	/^#define COL_BLUE_BG /;"	d
+COL_CYAN	../ctrek/Game/con_c_nix.h	/^#define COL_CYAN /;"	d
+COL_CYAN_BG	../ctrek/Game/con_c_nix.h	/^#define COL_CYAN_BG /;"	d
+COL_GREEN	../ctrek/Game/con_c_nix.h	/^#define COL_GREEN /;"	d
+COL_GREEN_BG	../ctrek/Game/con_c_nix.h	/^#define COL_GREEN_BG /;"	d
+COL_GREY	../ctrek/Game/con_c_nix.h	/^#define COL_GREY /;"	d
+COL_GREY_BG	../ctrek/Game/con_c_nix.h	/^#define COL_GREY_BG /;"	d
+COL_MAGENTA	../ctrek/Game/con_c_nix.h	/^#define COL_MAGENTA /;"	d
+COL_MAGENTA_BG	../ctrek/Game/con_c_nix.h	/^#define COL_MAGENTA_BG /;"	d
+COL_RED	../ctrek/Game/con_c_nix.h	/^#define COL_RED /;"	d
+COL_RED_BG	../ctrek/Game/con_c_nix.h	/^#define COL_RED_BG /;"	d
+COL_WHITE	../ctrek/Game/con_c_nix.h	/^#define COL_WHITE /;"	d
+COL_WHITE_BG	../ctrek/Game/con_c_nix.h	/^#define COL_WHITE_BG /;"	d
+COL_YELLOW	../ctrek/Game/con_c_nix.h	/^#define COL_YELLOW /;"	d
+COL_YELLOW_BG	../ctrek/Game/con_c_nix.h	/^#define COL_YELLOW_BG /;"	d
+COM	../ctrek/Equipment/defs.h	/^#define COM /;"	d
+COMBAT	../src/Weapon.h	/^#define COMBAT /;"	d
+COMM	../ctrek/Equipment/defs.h	/^#define COMM /;"	d
+COMMERCE	../src/Weapon.h	/^#define COMMERCE /;"	d
+COMMODITIES_I_SIZE	../ctrek/Game/ship.h	/^#define COMMODITIES_I_SIZE /;"	d
+COMMODITY_DUTERIUM	../ctrek/Game/player.h	/^#define COMMODITY_DUTERIUM /;"	d
+COMMODITY_ENERGY	../ctrek/Game/player.h	/^#define COMMODITY_ENERGY /;"	d
+COMMODITY_HULL	../ctrek/Game/player.h	/^#define COMMODITY_HULL /;"	d
+COMMODITY_LATINUM	../ctrek/Game/player.h	/^#define COMMODITY_LATINUM /;"	d
+COMMODITY_PLASMA	../ctrek/Game/player.h	/^#define COMMODITY_PLASMA /;"	d
+COMMODITY_SHIELD	../ctrek/Game/player.h	/^#define COMMODITY_SHIELD /;"	d
+COMMODITY_SHIP_TYPE	../ctrek/Game/player.h	/^#define COMMODITY_SHIP_TYPE /;"	d
+COMMODITY_TORPEDOS	../ctrek/Game/player.h	/^#define COMMODITY_TORPEDOS /;"	d
+COMMODITY_URANIUM	../ctrek/Game/player.h	/^#define COMMODITY_URANIUM /;"	d
+COMMODITY_WATER	../ctrek/Game/player.h	/^#define COMMODITY_WATER /;"	d
+COMMODITY_WEAPONS	../ctrek/Game/player.h	/^#define COMMODITY_WEAPONS /;"	d
+COMMONTHRESH	../src/Weapon.h	/^#define COMMONTHRESH /;"	d
+COM_BELOW_MAP	../ctrek/Game/cTrekGame.h	/^#define COM_BELOW_MAP /;"	d
+COM_BELOW_MAP_START	../ctrek/Game/cTrekGame.h	/^#define COM_BELOW_MAP_START /;"	d
+COM_BELOW_PLANET_HUD	../ctrek/Game/cTrekGame.h	/^#define COM_BELOW_PLANET_HUD /;"	d
+COM_BELOW_PLANET_HUD_START	../ctrek/Game/cTrekGame.h	/^#define COM_BELOW_PLANET_HUD_START /;"	d
+COM_HEIGHT	../ctrek/Game/cTrekGame.h	/^#define COM_HEIGHT /;"	d
+COM_WIDTH	../ctrek/Game/cTrekGame.h	/^#define COM_WIDTH /;"	d
+CRIT	../src/Weapon.h	/^#define CRIT /;"	d
+CWeapon	../src/Weapon.cpp	/^CWeapon::CWeapon() {  \/\/ params - lvl, raremult... - laser type energy cost$/;"	f	class:CWeapon
+CWeapon	../src/Weapon.cpp	/^CWeapon::CWeapon(std::string uniqueName) {  \/\/ unique$/;"	f	class:CWeapon
+CWeapon	../src/Weapon.h	/^class CWeapon {$/;"	c
+CYAN	../ctrek/Game/con_c_nix_cpp.h	/^#define CYAN /;"	d
+CYAN	../src/conOut_nix.h	/^#define CYAN /;"	d
+CYAN	../src/conOut_win.h	/^#define CYAN /;"	d
+Commodity	../ctrek/Game/commodities.h	/^typedef struct Commodity {$/;"	s
+DEBUG	../ctrek/Game/libs.h	/^typedef struct DEBUG {$/;"	s
+DEBUG	../ctrek/Game/libs.h	/^} DEBUG;$/;"	t	typeref:struct:DEBUG
+DEBUG_DEFAULT	../ctrek/Game/libs.h	/^#define DEBUG_DEFAULT /;"	d
+DEBUG_LOG_HIGH	../ctrek/Game/libs.h	/^#define DEBUG_LOG_HIGH /;"	d
+DEBUG_LOG_LOW	../ctrek/Game/libs.h	/^#define DEBUG_LOG_LOW /;"	d
+DEBUG_LOG_MEDIUM	../ctrek/Game/libs.h	/^#define DEBUG_LOG_MEDIUM /;"	d
+DEBUG_LOG_NONE	../ctrek/Game/libs.h	/^#define DEBUG_LOG_NONE /;"	d
+DEX	../ctrek/Equipment/defs.h	/^#define DEX /;"	d
+DEXTERITY	../src/Weapon.h	/^#define DEXTERITY /;"	d
+DMG	../ctrek/Equipment/defs.h	/^#define DMG /;"	d
+DMG	../src/Weapon.h	/^#define DMG /;"	d
+Debug	../ctrek/Game/libs.h	/^static DEBUG Debug;$/;"	v	typeref:typename:DEBUG
+ENEMY	../ctrek/Game/player.h	/^#define ENEMY /;"	d
+EN_HULL	../ctrek/Game/player.h	/^#define EN_HULL /;"	d
+EN_IN_RANGE	../ctrek/Game/player.h	/^#define EN_IN_RANGE /;"	d
+EN_NWEAPONS	../ctrek/Game/player.h	/^#define EN_NWEAPONS /;"	d
+EN_POS	../ctrek/Game/player.h	/^#define EN_POS /;"	d
+EN_SHIELD	../ctrek/Game/player.h	/^#define EN_SHIELD /;"	d
+EN_SHIP	../ctrek/Game/player.h	/^#define EN_SHIP /;"	d
+EN_SHIP_TYPE	../ctrek/Game/player.h	/^#define EN_SHIP_TYPE /;"	d
+EN_SYS_X	../ctrek/Game/player.h	/^#define EN_SYS_X /;"	d
+EN_SYS_Y	../ctrek/Game/player.h	/^#define EN_SYS_Y /;"	d
+EN_TILE	../ctrek/Game/player.h	/^#define EN_TILE /;"	d
+EN_WEAPON1	../ctrek/Game/player.h	/^#define EN_WEAPON1 /;"	d
+EN_WEAPON2	../ctrek/Game/player.h	/^#define EN_WEAPON2 /;"	d
+EN_WEAPON3	../ctrek/Game/player.h	/^#define EN_WEAPON3 /;"	d
+EN_WEAPON4	../ctrek/Game/player.h	/^#define EN_WEAPON4 /;"	d
+EN_WEAPON5	../ctrek/Game/player.h	/^#define EN_WEAPON5 /;"	d
+EN_WEAPONS	../ctrek/Game/player.h	/^#define EN_WEAPONS /;"	d
+EPICTHRESH	../src/Weapon.h	/^#define EPICTHRESH /;"	d
+GREEN	../ctrek/Game/con_c_nix_cpp.h	/^#define GREEN /;"	d
+GREEN	../src/conOut_nix.h	/^#define GREEN /;"	d
+GREEN	../src/conOut_win.h	/^#define GREEN /;"	d
+Galaxy	../ctrek/Game/galaxy.h	/^typedef struct Galaxy {$/;"	s
+Galaxy	../ctrek/Game/galaxy.h	/^} Galaxy;$/;"	t	typeref:struct:Galaxy
+GalaxyNode	../ctrek/Game/galaxy.h	/^typedef struct GalaxyNode {$/;"	s
+GalaxyNode	../ctrek/Game/galaxy.h	/^} GalaxyNode;$/;"	t	typeref:struct:GalaxyNode
+GalaxyNodePlanet	../ctrek/Game/galaxy.h	/^typedef struct GalaxyNodePlanet {$/;"	s
+GalaxyNodePlanet	../ctrek/Game/galaxy.h	/^} GalaxyNodePlanet;$/;"	t	typeref:struct:GalaxyNodePlanet
+HS_ACHIEV	../ctrek/Game/player.h	/^#define HS_ACHIEV /;"	d
+HS_CARGO	../ctrek/Game/player.h	/^#define HS_CARGO /;"	d
+HS_CREDITS	../ctrek/Game/player.h	/^#define HS_CREDITS /;"	d
+HS_DATE	../ctrek/Game/player.h	/^#define HS_DATE /;"	d
+HS_DEPLETION	../ctrek/Game/player.h	/^#define HS_DEPLETION /;"	d
+HS_DUTERIUM	../ctrek/Game/player.h	/^#define HS_DUTERIUM /;"	d
+HS_ENERGY	../ctrek/Game/player.h	/^#define HS_ENERGY /;"	d
+HS_GAL_X	../ctrek/Game/player.h	/^#define HS_GAL_X /;"	d
+HS_GAL_Y	../ctrek/Game/player.h	/^#define HS_GAL_Y /;"	d
+HS_HULL	../ctrek/Game/player.h	/^#define HS_HULL /;"	d
+HS_IN_RANGE	../ctrek/Game/player.h	/^#define HS_IN_RANGE /;"	d
+HS_I_UP_CARGO	../ctrek/Game/upgrades.h	/^#define HS_I_UP_CARGO /;"	d
+HS_I_UP_DMG	../ctrek/Game/upgrades.h	/^#define HS_I_UP_DMG /;"	d
+HS_I_UP_ENGINE	../ctrek/Game/upgrades.h	/^#define HS_I_UP_ENGINE /;"	d
+HS_I_UP_HULL	../ctrek/Game/upgrades.h	/^#define HS_I_UP_HULL /;"	d
+HS_I_UP_RANGE	../ctrek/Game/upgrades.h	/^#define HS_I_UP_RANGE /;"	d
+HS_I_UP_SHIELD	../ctrek/Game/upgrades.h	/^#define HS_I_UP_SHIELD /;"	d
+HS_I_UP_TORP	../ctrek/Game/upgrades.h	/^#define HS_I_UP_TORP /;"	d
+HS_LASTBUY	../ctrek/Game/player.h	/^#define HS_LASTBUY /;"	d
+HS_LATINUM	../ctrek/Game/player.h	/^#define HS_LATINUM /;"	d
+HS_NWEAPONS	../ctrek/Game/player.h	/^#define HS_NWEAPONS /;"	d
+HS_PASSENGERS	../ctrek/Game/player.h	/^#define HS_PASSENGERS /;"	d
+HS_PLANETS	../ctrek/Game/system.h	/^#define HS_PLANETS /;"	d
+HS_PLASMA	../ctrek/Game/player.h	/^#define HS_PLASMA /;"	d
+HS_POS	../ctrek/Game/player.h	/^#define HS_POS /;"	d
+HS_SECURITY	../ctrek/Game/player.h	/^#define HS_SECURITY /;"	d
+HS_SHIELD	../ctrek/Game/player.h	/^#define HS_SHIELD /;"	d
+HS_SHIP	../ctrek/Game/player.h	/^#define HS_SHIP /;"	d
+HS_SHIP_TYPE	../ctrek/Game/player.h	/^#define HS_SHIP_TYPE /;"	d
+HS_SKILLS	../ctrek/Game/player.h	/^#define HS_SKILLS /;"	d
+HS_STELLAR	../ctrek/Game/system.h	/^#define HS_STELLAR /;"	d
+HS_SYS_X	../ctrek/Game/player.h	/^#define HS_SYS_X /;"	d
+HS_SYS_Y	../ctrek/Game/player.h	/^#define HS_SYS_Y /;"	d
+HS_TORPEDOS	../ctrek/Game/player.h	/^#define HS_TORPEDOS /;"	d
+HS_UP_CARGO	../ctrek/Game/player.h	/^#define HS_UP_CARGO /;"	d
+HS_UP_DMG	../ctrek/Game/player.h	/^#define HS_UP_DMG /;"	d
+HS_UP_ENGINE	../ctrek/Game/player.h	/^#define HS_UP_ENGINE /;"	d
+HS_UP_HULL	../ctrek/Game/player.h	/^#define HS_UP_HULL /;"	d
+HS_UP_RANGE	../ctrek/Game/player.h	/^#define HS_UP_RANGE /;"	d
+HS_UP_SHIELD	../ctrek/Game/player.h	/^#define HS_UP_SHIELD /;"	d
+HS_UP_TORP	../ctrek/Game/player.h	/^#define HS_UP_TORP /;"	d
+HS_URANIUM	../ctrek/Game/player.h	/^#define HS_URANIUM /;"	d
+HS_WATER	../ctrek/Game/player.h	/^#define HS_WATER /;"	d
+HS_WEAPON1	../ctrek/Game/player.h	/^#define HS_WEAPON1 /;"	d
+HS_WEAPON2	../ctrek/Game/player.h	/^#define HS_WEAPON2 /;"	d
+HS_WEAPON3	../ctrek/Game/player.h	/^#define HS_WEAPON3 /;"	d
+HS_WEAPON4	../ctrek/Game/player.h	/^#define HS_WEAPON4 /;"	d
+HS_WEAPON5	../ctrek/Game/player.h	/^#define HS_WEAPON5 /;"	d
+HS_WEAPONS	../ctrek/Game/player.h	/^#define HS_WEAPONS /;"	d
+HUD	../ctrek/Game/drawable.h	/^void HUD(int startX, int startY) {$/;"	f	typeref:typename:void
+HUD_CARGO_HEIGHT	../ctrek/Game/cTrekGame.h	/^#define HUD_CARGO_HEIGHT /;"	d
+HUD_COM_HEIGHT	../ctrek/Game/cTrekGame.h	/^#define HUD_COM_HEIGHT /;"	d
+HUD_HELM_HEIGHT	../ctrek/Game/cTrekGame.h	/^#define HUD_HELM_HEIGHT /;"	d
+HUD_LINE	../ctrek/Game/cTrekGame.h	/^#define HUD_LINE /;"	d
+HUD_MINIMAL_START	../ctrek/Game/cTrekGame.h	/^#define HUD_MINIMAL_START /;"	d
+HUD_STATUS_HEIGHT	../ctrek/Game/cTrekGame.h	/^#define HUD_STATUS_HEIGHT /;"	d
+HUD_SYSTEM_HEIGHT	../ctrek/Game/cTrekGame.h	/^#define HUD_SYSTEM_HEIGHT /;"	d
+HUD_WIDTH	../ctrek/Game/cTrekGame.h	/^#define HUD_WIDTH /;"	d
+INN	../ctrek/Equipment/defs.h	/^#define INN /;"	d
+INNOVATION	../src/Weapon.h	/^#define INNOVATION /;"	d
+INTE	../ctrek/Equipment/defs.h	/^#define INTE /;"	d
+INTELECT	../src/Weapon.h	/^#define INTELECT /;"	d
+INTU	../ctrek/Equipment/defs.h	/^#define INTU /;"	d
+INTUITION	../src/Weapon.h	/^#define INTUITION /;"	d
+KEY_ATTACK	../ctrek/Game/player.h	/^#define KEY_ATTACK /;"	d
+KEY_DEBUG	../ctrek/Game/player.h	/^#define KEY_DEBUG /;"	d
+KEY_DIVERT	../ctrek/Game/player.h	/^#define KEY_DIVERT /;"	d
+KEY_DOWN	../ctrek/Game/player.h	/^#define KEY_DOWN /;"	d
+KEY_ENEMY_MOVE	../ctrek/Game/player.h	/^#define KEY_ENEMY_MOVE /;"	d
+KEY_HELP	../ctrek/Game/player.h	/^#define KEY_HELP /;"	d
+KEY_HUDSTAT	../ctrek/Game/player.h	/^#define KEY_HUDSTAT /;"	d
+KEY_LEFT	../ctrek/Game/player.h	/^#define KEY_LEFT /;"	d
+KEY_RANGE	../ctrek/Game/player.h	/^#define KEY_RANGE /;"	d
+KEY_RETURN	../ctrek/Game/player.h	/^#define KEY_RETURN /;"	d
+KEY_RIGHT	../ctrek/Game/player.h	/^#define KEY_RIGHT /;"	d
+KEY_SCAN	../ctrek/Game/player.h	/^#define KEY_SCAN /;"	d
+KEY_SCANS	../ctrek/Game/player.h	/^#define KEY_SCANS /;"	d
+KEY_SKILLS	../ctrek/Game/player.h	/^#define KEY_SKILLS /;"	d
+KEY_SKILLS_ARRAY	../ctrek/Game/player.h	/^#define KEY_SKILLS_ARRAY /;"	d
+KEY_STATS	../ctrek/Game/player.h	/^#define KEY_STATS /;"	d
+KEY_TAKE_DMG	../ctrek/Game/player.h	/^#define KEY_TAKE_DMG /;"	d
+KEY_TEST	../ctrek/Game/player.h	/^#define KEY_TEST /;"	d
+KEY_TORPEDO	../ctrek/Game/player.h	/^#define KEY_TORPEDO /;"	d
+KEY_UP	../ctrek/Game/player.h	/^#define KEY_UP /;"	d
+KEY_WARP_DOWN	../ctrek/Game/player.h	/^#define KEY_WARP_DOWN /;"	d
+KEY_WARP_LEFT	../ctrek/Game/player.h	/^#define KEY_WARP_LEFT /;"	d
+KEY_WARP_RIGHT	../ctrek/Game/player.h	/^#define KEY_WARP_RIGHT /;"	d
+KEY_WARP_UP	../ctrek/Game/player.h	/^#define KEY_WARP_UP /;"	d
+LASTBUY_DUTERIUM	../ctrek/Game/player.h	/^#define LASTBUY_DUTERIUM /;"	d
+LASTBUY_I_SIZE	../ctrek/Game/ship.h	/^#define LASTBUY_I_SIZE /;"	d
+LASTBUY_LATINUM	../ctrek/Game/player.h	/^#define LASTBUY_LATINUM /;"	d
+LASTBUY_PLASMA	../ctrek/Game/player.h	/^#define LASTBUY_PLASMA /;"	d
+LASTBUY_URANIUM	../ctrek/Game/player.h	/^#define LASTBUY_URANIUM /;"	d
+LASTBUY_WATER	../ctrek/Game/player.h	/^#define LASTBUY_WATER /;"	d
+LEAD	../ctrek/Equipment/defs.h	/^#define LEAD /;"	d
+LEADERSHIP	../src/Weapon.h	/^#define LEADERSHIP /;"	d
+LOGD	../src/global.h	/^#define LOGD(/;"	d
+LOGDN	../src/global.h	/^#define LOGDN(/;"	d
+LOGERR	../src/global.h	/^#define LOGERR(/;"	d
+LOGW	../src/global.h	/^#define LOGW(/;"	d
+LVLREQ	../src/Weapon.h	/^#define LVLREQ /;"	d
+MAGENTA	../ctrek/Game/con_c_nix_cpp.h	/^#define MAGENTA /;"	d
+MAGENTA	../src/conOut_nix.h	/^#define MAGENTA /;"	d
+MAGENTA	../src/conOut_win.h	/^#define MAGENTA /;"	d
+MATH	../ctrek/Game/libs.h	/^typedef struct MATH {$/;"	s
+MATH	../ctrek/Game/libs.h	/^} MATH;$/;"	t	typeref:struct:MATH
+MAXDMG	../src/Weapon.h	/^#define MAXDMG /;"	d
+MAXUPGRADES	../src/Weapon.h	/^#define MAXUPGRADES /;"	d
+MEC	../ctrek/Equipment/defs.h	/^#define MEC /;"	d
+MECHAPT	../src/Weapon.h	/^#define MECHAPT /;"	d
+MENU_I_SIZE	../ctrek/Game/planet.h	/^#define MENU_I_SIZE /;"	d
+Math	../ctrek/Game/libs.h	/^static MATH Math;$/;"	v	typeref:typename:MATH
+Menu	../ctrek/Game/menu.h	/^  Menu() {$/;"	f	struct:Menu
+Menu	../ctrek/Game/menu.h	/^  Menu(int sx, int sy) {$/;"	f	struct:Menu
+Menu	../ctrek/Game/menu.h	/^typedef struct Menu {$/;"	s
+Menu	../ctrek/Game/menu.h	/^} Menu;$/;"	t	typeref:struct:Menu
+Menu	../ctrek/Game/tmp.h	/^typedef struct Menu {$/;"	s
+NONE	../ctrek/Game/player.h	/^#define NONE /;"	d
+OPTION_LENGTH	../ctrek/Game/menu.h	/^#define OPTION_LENGTH /;"	d
+OPTION_LENGTH	../ctrek/Game/tmp.h	/^#define OPTION_LENGTH /;"	d
+PIL	../ctrek/Equipment/defs.h	/^#define PIL /;"	d
+PILOT	../src/Weapon.h	/^#define PILOT /;"	d
+PLANET_MAX	../ctrek/Game/galaxy.h	/^  #define PLANET_MAX /;"	d
+PLANET_MAX	../ctrek/Game/system.h	/^#define PLANET_MAX /;"	d
+PLANET_MENU_HEADER	../ctrek/Game/cTrekGame.h	/^#define PLANET_MENU_HEADER /;"	d
+PLANET_MENU_START	../ctrek/Game/cTrekGame.h	/^#define PLANET_MENU_START /;"	d
+PLAYER	../ctrek/Game/player.h	/^#define PLAYER /;"	d
+Planet	../ctrek/Game/planet.h	/^typedef struct Planet {$/;"	s
+Planet	../ctrek/Game/planet.h	/^} Planet;$/;"	t	typeref:struct:Planet
+Player	../ctrek/Game/player.h	/^typedef struct Player {$/;"	s
+Player	../ctrek/Game/player.h	/^} Player;$/;"	t	typeref:struct:Player
+RARETHRESH	../src/Weapon.h	/^#define RARETHRESH /;"	d
+RED	../ctrek/Game/con_c_nix_cpp.h	/^#define RED /;"	d
+RED	../src/conOut_nix.h	/^#define RED /;"	d
+RED	../src/conOut_win.h	/^#define RED /;"	d
+REKNOWN	../src/Weapon.h	/^#define REKNOWN /;"	d
+RELATIVE_LISTS	../src/Weapon.h	/^#define RELATIVE_LISTS /;"	d
+REN	../ctrek/Equipment/defs.h	/^#define REN /;"	d
+SCI	../ctrek/Equipment/defs.h	/^#define SCI /;"	d
+SCIENCE	../src/Weapon.h	/^#define SCIENCE /;"	d
+SECURITY_INRANGE	../ctrek/Game/player.h	/^#define SECURITY_INRANGE /;"	d
+SECURITY_SAFE	../ctrek/Game/player.h	/^#define SECURITY_SAFE /;"	d
+SECURITY_UNSAFE	../ctrek/Game/player.h	/^#define SECURITY_UNSAFE /;"	d
+SELL	../ctrek/Game/planet.h	/^#define SELL /;"	d
+SHIP_DERELICT_DESTROYER	../ctrek/Game/ship.h	/^#define SHIP_DERELICT_DESTROYER /;"	d
+SHIP_DESTROYER	../ctrek/Game/ship.h	/^#define SHIP_DESTROYER /;"	d
+SHIP_ESCAPE_POD	../ctrek/Game/ship.h	/^#define SHIP_ESCAPE_POD /;"	d
+SHOTS	../src/Weapon.h	/^#define SHOTS /;"	d
+SKILLS_I_SIZE	../ctrek/Game/player.h	/^#define SKILLS_I_SIZE /;"	d
+SOC	../ctrek/Equipment/defs.h	/^#define SOC /;"	d
+SOCIAL	../src/Weapon.h	/^#define SOCIAL /;"	d
+SOCIALREQ	../src/Weapon.h	/^#define SOCIALREQ /;"	d
+STR_COL_BLACK	../ctrek/Game/con_c_nix.h	/^#define STR_COL_BLACK /;"	d
+STR_COL_BLACK_BG	../ctrek/Game/con_c_nix.h	/^#define STR_COL_BLACK_BG /;"	d
+STR_COL_BLUE	../ctrek/Game/con_c_nix.h	/^#define STR_COL_BLUE /;"	d
+STR_COL_BLUE_BG	../ctrek/Game/con_c_nix.h	/^#define STR_COL_BLUE_BG /;"	d
+STR_COL_CYAN	../ctrek/Game/con_c_nix.h	/^#define STR_COL_CYAN /;"	d
+STR_COL_CYAN_BG	../ctrek/Game/con_c_nix.h	/^#define STR_COL_CYAN_BG /;"	d
+STR_COL_GREEN	../ctrek/Game/con_c_nix.h	/^#define STR_COL_GREEN /;"	d
+STR_COL_GREEN_BG	../ctrek/Game/con_c_nix.h	/^#define STR_COL_GREEN_BG /;"	d
+STR_COL_GREY	../ctrek/Game/con_c_nix.h	/^#define STR_COL_GREY /;"	d
+STR_COL_GREY_BG	../ctrek/Game/con_c_nix.h	/^#define STR_COL_GREY_BG /;"	d
+STR_COL_INVERT	../ctrek/Game/con_c_nix.h	/^#define STR_COL_INVERT /;"	d
+STR_COL_MAGENTA	../ctrek/Game/con_c_nix.h	/^#define STR_COL_MAGENTA /;"	d
+STR_COL_MAGENTA_BG	../ctrek/Game/con_c_nix.h	/^#define STR_COL_MAGENTA_BG /;"	d
+STR_COL_RED	../ctrek/Game/con_c_nix.h	/^#define STR_COL_RED /;"	d
+STR_COL_RED_BG	../ctrek/Game/con_c_nix.h	/^#define STR_COL_RED_BG /;"	d
+STR_COL_RESET	../ctrek/Game/con_c_nix.h	/^#define STR_COL_RESET /;"	d
+STR_COL_WHITE	../ctrek/Game/con_c_nix.h	/^#define STR_COL_WHITE /;"	d
+STR_COL_WHITE_BG	../ctrek/Game/con_c_nix.h	/^#define STR_COL_WHITE_BG /;"	d
+STR_COL_YELLOW	../ctrek/Game/con_c_nix.h	/^#define STR_COL_YELLOW /;"	d
+STR_COL_YELLOW_BG	../ctrek/Game/con_c_nix.h	/^#define STR_COL_YELLOW_BG /;"	d
+SYSTEM_SIZE	../ctrek/Game/system.h	/^#define SYSTEM_SIZE /;"	d
+Ship	../ctrek/Game/ship.h	/^typedef struct Ship {$/;"	s
+Ship	../ctrek/Game/ship.h	/^} Ship;$/;"	t	typeref:struct:Ship
+System	../ctrek/Game/system.h	/^typedef struct System {$/;"	s
+System	../ctrek/Game/system.h	/^} System;$/;"	t	typeref:struct:System
+TEC	../ctrek/Equipment/defs.h	/^#define TEC /;"	d
+TECHAPT	../src/Weapon.h	/^#define TECHAPT /;"	d
+TILE_DERELICT1	../ctrek/Game/system.h	/^#define TILE_DERELICT1 /;"	d
+TILE_DERELICT2	../ctrek/Game/system.h	/^#define TILE_DERELICT2 /;"	d
+TILE_DERELICT3	../ctrek/Game/system.h	/^#define TILE_DERELICT3 /;"	d
+TILE_DERELICT4	../ctrek/Game/system.h	/^#define TILE_DERELICT4 /;"	d
+TILE_DERELICT5	../ctrek/Game/system.h	/^#define TILE_DERELICT5 /;"	d
+TILE_EMPTY	../ctrek/Game/system.h	/^#define TILE_EMPTY /;"	d
+TILE_ENEMY1	../ctrek/Game/system.h	/^#define TILE_ENEMY1 /;"	d
+TILE_ENEMY2	../ctrek/Game/system.h	/^#define TILE_ENEMY2 /;"	d
+TILE_ENEMY3	../ctrek/Game/system.h	/^#define TILE_ENEMY3 /;"	d
+TILE_ENEMY4	../ctrek/Game/system.h	/^#define TILE_ENEMY4 /;"	d
+TILE_ENEMY5	../ctrek/Game/system.h	/^#define TILE_ENEMY5 /;"	d
+TILE_PLANET	../ctrek/Game/system.h	/^#define TILE_PLANET /;"	d
+TILE_PLAYER	../ctrek/Game/system.h	/^#define TILE_PLAYER /;"	d
+UNCOMMONTHRESH	../src/Weapon.h	/^#define UNCOMMONTHRESH /;"	d
+UPGRADES	../ctrek/Game/upgrades.h	/^static const Upgrade UPGRADES[7] = {$/;"	v	typeref:typename:const Upgrade[7]
+UPGRADES_I_SIZE	../ctrek/Game/ship.h	/^#define UPGRADES_I_SIZE /;"	d
+UPGRADE_CARGO	../ctrek/Game/upgrades.h	/^#define UPGRADE_CARGO /;"	d
+UPGRADE_DMG	../ctrek/Game/upgrades.h	/^#define UPGRADE_DMG /;"	d
+UPGRADE_ENGINE	../ctrek/Game/upgrades.h	/^#define UPGRADE_ENGINE /;"	d
+UPGRADE_HULL	../ctrek/Game/upgrades.h	/^#define UPGRADE_HULL /;"	d
+UPGRADE_RANGE	../ctrek/Game/upgrades.h	/^#define UPGRADE_RANGE /;"	d
+UPGRADE_SHIELD	../ctrek/Game/upgrades.h	/^#define UPGRADE_SHIELD /;"	d
+UPGRADE_TORP	../ctrek/Game/upgrades.h	/^#define UPGRADE_TORP /;"	d
+Upgrade	../ctrek/Game/upgrades.h	/^  Upgrade($/;"	f	struct:Upgrade
+Upgrade	../ctrek/Game/upgrades.h	/^typedef struct Upgrade {$/;"	s
+Upgrade	../ctrek/Game/upgrades.h	/^} Upgrade;$/;"	t	typeref:struct:Upgrade
+WEAPONS	../ctrek/Game/weapons.h	/^static const Weapon WEAPONS[3] = {$/;"	v	typeref:typename:const Weapon[3]
+WEAPONS_I_SIZE	../ctrek/Game/ship.h	/^#define WEAPONS_I_SIZE /;"	d
+WHITE	../ctrek/Game/con_c_nix_cpp.h	/^#define WHITE /;"	d
+WHITE	../src/conOut_nix.h	/^#define WHITE /;"	d
+WHITE	../src/conOut_win.h	/^#define WHITE /;"	d
+WLEGENDARY_FILE	../src/Weapon.h	/^#define WLEGENDARY_FILE /;"	d
+WNAMES_FILE	../src/Weapon.h	/^#define WNAMES_FILE /;"	d
+WPREFIX_FILE	../src/Weapon.h	/^#define WPREFIX_FILE /;"	d
+WSUFFIX_FILE	../src/Weapon.h	/^#define WSUFFIX_FILE /;"	d
+WTYPE_FILE	../src/Weapon.h	/^#define WTYPE_FILE /;"	d
+WUNIQUENAMES_FILE	../src/Weapon.h	/^#define WUNIQUENAMES_FILE /;"	d
+WUNIQUES_FILE	../src/Weapon.h	/^#define WUNIQUES_FILE /;"	d
+Weapon	../ctrek/Game/weapons.h	/^  Weapon(int pDmg, int pDep, int pRange, int pType, int pCompatibility,$/;"	f	struct:Weapon
+Weapon	../ctrek/Game/weapons.h	/^typedef struct Weapon {$/;"	s
+Weapon	../ctrek/Game/weapons.h	/^} Weapon;$/;"	t	typeref:struct:Weapon
+YELLOW	../ctrek/Game/con_c_nix_cpp.h	/^#define YELLOW /;"	d
+YELLOW	../src/conOut_nix.h	/^#define YELLOW /;"	d
+YELLOW	../src/conOut_win.h	/^#define YELLOW /;"	d
+_GLIBCXX_USE_C99	../src/global.h	/^#define _GLIBCXX_USE_C99 /;"	d
+_HS_I_DUTERIUM	../ctrek/Game/player.h	/^#define _HS_I_DUTERIUM /;"	d
+_HS_I_LATINUM	../ctrek/Game/player.h	/^#define _HS_I_LATINUM /;"	d
+_HS_I_PLASMA	../ctrek/Game/player.h	/^#define _HS_I_PLASMA /;"	d
+_HS_I_URANIUM	../ctrek/Game/player.h	/^#define _HS_I_URANIUM /;"	d
+_HS_I_WATER	../ctrek/Game/player.h	/^#define _HS_I_WATER /;"	d
+_HS_I_WEAPON1	../ctrek/Game/player.h	/^#define _HS_I_WEAPON1 /;"	d
+_HS_I_WEAPON2	../ctrek/Game/player.h	/^#define _HS_I_WEAPON2 /;"	d
+_HS_I_WEAPON3	../ctrek/Game/player.h	/^#define _HS_I_WEAPON3 /;"	d
+_HS_I_WEAPON4	../ctrek/Game/player.h	/^#define _HS_I_WEAPON4 /;"	d
+_HS_I_WEAPON5	../ctrek/Game/player.h	/^#define _HS_I_WEAPON5 /;"	d
+__anon0b083a2d0108	../ctrek/Equipment/equipment.h	/^typedef struct{$/;"	s
+__anon0b083a2d0208	../ctrek/Equipment/equipment.h	/^typedef struct{$/;"	s
+__anon0b083a2d0308	../ctrek/Equipment/equipment.h	/^typedef struct{$/;"	s
+__anon0b083a2d0408	../ctrek/Equipment/equipment.h	/^typedef struct{ \/\/neck, lring, rring$/;"	s
+__anon1753ce9b0108	../ctrek/Equipment/enemies.h	/^typedef struct{$/;"	s
+__anon568b80a20108	../ctrek/Equipment/player.h	/^typedef struct{\/\/inventory$/;"	s
+__anon568b80a20208	../ctrek/Equipment/player.h	/^typedef struct{\/\/equipment item ids$/;"	s
+__anon568b80a20308	../ctrek/Equipment/player.h	/^typedef struct{$/;"	s
+__anon568b80a20408	../ctrek/Equipment/player.h	/^typedef struct{$/;"	s
+ability	../ctrek/Equipment/player.h	/^	int ability;\/\/equip bonus$/;"	m	struct:__anon568b80a20408	typeref:typename:int
+acc	../ctrek/Equipment/equipment.h	/^}acc;$/;"	t	typeref:struct:__anon0b083a2d0408
+achieveColour	../ctrek/Game/planet.h	/^  const char *achieveColour(int current, int target) {$/;"	f	struct:Planet	typeref:typename:const char *
+achievements	../ctrek/Game/player.h	/^  int achievements[ACHIEVE_I_SIZE];$/;"	m	struct:Player	typeref:typename:int[]
+achievementsMenu	../ctrek/Game/drawable.h	/^void achievementsMenu() {$/;"	f	typeref:typename:void
+achievementsMenu	../ctrek/Game/planet.h	/^  void achievementsMenu() {$/;"	f	struct:Planet	typeref:typename:void
+addOption	../ctrek/Game/menu.h	/^  int addOption(char *i) {$/;"	f	struct:Menu	typeref:typename:int
+addOption	../ctrek/Game/menu.h	/^  int addOption(const char *format, ...) {$/;"	f	struct:Menu	typeref:typename:int
+agl	../ctrek/Equipment/enemies.h	/^	int agl;\/\/dodge,turns, ranged skills$/;"	m	struct:__anon1753ce9b0108	typeref:typename:int
+all	../ctrek/Equipment/makefile	/^all: trek.cpp; g++ trek.cpp -o test$/;"	t
+all	../ctrek/Game/makefile	/^all: cTrekGame.cpp; rm -f trek trek.exe; g++ -g cTrekGame.cpp $(warnings) -std=gnu++0x -o trek 2/;"	t
+all	../src/makefile	/^all: test.cpp; g++ test.cpp -o test;$/;"	t
+ammo	../ctrek/Equipment/equipment.h	/^	int ammo; \/\/how much ammo for this type in inventory -- have elsewhere?$/;"	m	struct:__anon0b083a2d0108	typeref:typename:int
+ammoType	../src/Weapon.h	/^    std::string ammoType;  \/\/ $/;"	m	class:CWeapon	typeref:typename:std::string
+applyPlayerDamageReduction	../ctrek/Game/cTrekGame.cpp	/^int applyPlayerDamageReduction(int damage) {$/;"	f	typeref:typename:int
+applyStats	../src/Weapon.cpp	/^void CWeapon::applyStats(std::string statsName, std::string statsValue) {$/;"	f	class:CWeapon	typeref:typename:void
+applyUpgrade	../src/Weapon.cpp	/^void CWeapon::applyUpgrade(std::pair<std::string, std::string> statPair) {$/;"	f	class:CWeapon	typeref:typename:void
+armour	../ctrek/Equipment/enemies.h	/^	int armour;\/\/mana shield\/armour$/;"	m	struct:__anon1753ce9b0108	typeref:typename:int
+armourmult	../ctrek/Equipment/equipment.h	/^	int armourmult;$/;"	m	struct:__anon0b083a2d0308	typeref:typename:int
+armourpts	../ctrek/Equipment/equipment.h	/^	int armourpts;$/;"	m	struct:__anon0b083a2d0308	typeref:typename:int
+avg	../ctrek/Game/commodities.h	/^  int avg;$/;"	m	struct:Commodity	typeref:typename:int
+barMenus	../ctrek/Game/planet.h	/^  void barMenus() {$/;"	f	struct:Planet	typeref:typename:void
+base	../ctrek/Game/commodities.h	/^  int base;$/;"	m	struct:Commodity	typeref:typename:int
+buildCommerceMenu	../ctrek/Game/planet.h	/^  void buildCommerceMenu() {$/;"	f	struct:Planet	typeref:typename:void
+buildOutfitterMenu	../ctrek/Game/planet.h	/^  int buildOutfitterMenu() {$/;"	f	struct:Planet	typeref:typename:int
+buildShipMenu	../ctrek/Game/planet.h	/^  int buildShipMenu() {$/;"	f	struct:Planet	typeref:typename:int
+buyMenu	../ctrek/Game/planet.h	/^  Menu *buyMenu;$/;"	m	struct:Planet	typeref:typename:Menu *
+cap	../ctrek/Equipment/player.h	/^	int cap; \/\/cargo capacity$/;"	m	struct:__anon568b80a20108	typeref:typename:int
+capacity	../ctrek/Game/ship.h	/^  int capacity[CAP_I_SIZE];$/;"	m	struct:Ship	typeref:typename:int[]
+cargo	../ctrek/Equipment/player.h	/^}cargo;$/;"	t	typeref:struct:__anon568b80a20108
+cargo	../ctrek/Game/ship.h	/^  int cargo() {$/;"	f	struct:Ship	typeref:typename:int
+cargoLeft	../ctrek/Game/ship.h	/^  int cargoLeft() {$/;"	f	struct:Ship	typeref:typename:int
+cargoLeft	../ctrek/Game/utils.h	/^int cargoLeft() {$/;"	f	typeref:typename:int
+charColour	../ctrek/Game/drawable.h	/^char* charColour(int mapTile, int scanTarget, int mapIndex) {$/;"	f	typeref:typename:char *
+charisma	../ctrek/Equipment/player.h	/^	int charisma; \/\/pilot\/social - dialog bonus$/;"	m	struct:__anon568b80a20408	typeref:typename:int
+checkCapacity	../ctrek/Game/utils.h	/^int checkCapacity(int hudstat, int quantity, int ship) {$/;"	f	typeref:typename:int
+choiceMenu	../ctrek/Game/cTrekGame.cpp	/^void choiceMenu(int debug) {$/;"	f	typeref:typename:void
+clean	../ctrek/Game/cTrekGame.cpp	/^void clean () {$/;"	f	typeref:typename:void
+clearWeapons	../ctrek/Game/ship.h	/^  void clearWeapons() {$/;"	f	struct:Ship	typeref:typename:void
+clout	../ctrek/Equipment/player.h	/^	int clout;\/\/learn skills\/use better equip$/;"	m	struct:__anon568b80a20408	typeref:typename:int
+clr	../ctrek/Equipment/gutils.h	/^void clr(){$/;"	f	typeref:typename:void
+clrLine	../ctrek/Game/con_c_nix.h	/^void clrLine() {$/;"	f	typeref:typename:void
+clrin	../ctrek/Equipment/gutils.h	/^void clrin(){$/;"	f	typeref:typename:void
+clrs	../ctrek/Game/con_c_nix.h	/^void clrs() {$/;"	f	typeref:typename:void
+clrs	../ctrek/Game/con_c_nix_cpp.h	/^void clrs() {$/;"	f	typeref:typename:void
+clrs	../src/conOut_nix.h	/^void clrs() {$/;"	f	typeref:typename:void
+clrs	../src/conOut_win.h	/^void clrs() {$/;"	f	typeref:typename:void
+clrsCB	../ctrek/Game/con_c_nix.h	/^void clrsCB(int c, int b) {$/;"	f	typeref:typename:void
+clrsCB	../ctrek/Game/con_c_nix_cpp.h	/^void clrsCB(int c, int b) {$/;"	f	typeref:typename:void
+clrsc	../src/conOut_nix.h	/^void clrsc(int c, int b) {  $/;"	f	typeref:typename:void
+clrsc	../src/conOut_win.h	/^void clrsc(int ForgC, int BackC) {$/;"	f	typeref:typename:void
+comLog	../ctrek/Game/drawable.h	/^void comLog(int x, int y) {$/;"	f	typeref:typename:void
+combat	../ctrek/Equipment/player.h	/^	int combat;$/;"	m	struct:__anon568b80a20408	typeref:typename:int
+commMenu	../ctrek/Game/planet.h	/^  Menu *commMenu;$/;"	m	struct:Planet	typeref:typename:Menu *
+commerce	../ctrek/Equipment/player.h	/^	int commerce; \/\/science\/social - market bonus$/;"	m	struct:__anon568b80a20408	typeref:typename:int
+commerce	../ctrek/Game/galaxy.h	/^  int commerce;$/;"	m	struct:GalaxyNodePlanet	typeref:typename:int
+commerceArray	../ctrek/Game/planet.h	/^  int commerceArray[MENU_I_SIZE];$/;"	m	struct:Planet	typeref:typename:int[]
+commerceMenu	../ctrek/Game/planet.h	/^  void commerceMenu() {$/;"	f	struct:Planet	typeref:typename:void
+commodities	../ctrek/Game/ship.h	/^  int commodities[COMMODITIES_I_SIZE];$/;"	m	struct:Ship	typeref:typename:int[]
+commodityAvg	../ctrek/Game/player.h	/^int commodityAvg[LASTBUY_I_SIZE] = { 12, 35, 85, 425, 860 };$/;"	v	typeref:typename:int[]
+commodityLastBuy	../ctrek/Game/player.h	/^  int commodityLastBuy[LASTBUY_I_SIZE];$/;"	m	struct:Player	typeref:typename:int[]
+commodityPreview	../ctrek/Game/planet.h	/^  int commodityPreview(int x, int y, int buying) {$/;"	f	struct:Planet	typeref:typename:int
+compDesc	../ctrek/Game/weapons.h	/^  const char* compDesc;$/;"	m	struct:Weapon	typeref:typename:const char *
+compatibility	../ctrek/Game/upgrades.h	/^  int compatibility;$/;"	m	struct:Upgrade	typeref:typename:int
+compatibility	../ctrek/Game/weapons.h	/^  int compatibility;$/;"	m	struct:Weapon	typeref:typename:int
+cost	../ctrek/Game/upgrades.h	/^  int cost;$/;"	m	struct:Upgrade	typeref:typename:int
+countLinesInFile	../src/fileUtils.h	/^int countLinesInFile(std::string path){\/\/opens and closes file @path$/;"	f	typeref:typename:int
+credits	../ctrek/Game/player.h	/^  int credits;$/;"	m	struct:Player	typeref:typename:int
+crit	../ctrek/Equipment/equipment.h	/^	float crit;$/;"	m	struct:__anon0b083a2d0108	typeref:typename:float
+crit	../ctrek/Equipment/equipment.h	/^	float crit;\/\/crit resist$/;"	m	struct:__anon0b083a2d0308	typeref:typename:float
+crit	../src/Weapon.h	/^    float crit = 0;$/;"	m	class:CWeapon	typeref:typename:float
+currentPlayer	../ctrek/Game/player.h	/^struct Player *currentPlayer;$/;"	v	typeref:struct:Player *
+currentSystem	../ctrek/Game/player.h	/^struct System *currentSystem;$/;"	v	typeref:struct:System *
+cursor	../ctrek/Game/con_c_nix.h	/^void cursor(int toggle) {$/;"	f	typeref:typename:void
+cursor	../ctrek/Game/con_c_nix_cpp.h	/^void cursor() {$/;"	f	typeref:typename:void
+cursor	../src/conOut_nix.h	/^void cursor() {$/;"	f	typeref:typename:void
+damageReport	../ctrek/Game/cTrekGame.cpp	/^void damageReport(int damage, int target) {$/;"	f	typeref:typename:void
+date	../ctrek/Game/player.h	/^  int date;$/;"	m	struct:Player	typeref:typename:int
+debug	../src/global.h	/^bool debug = true;$/;"	v	typeref:typename:bool
+debuggingMenu	../ctrek/Game/cTrekGame.cpp	/^void debuggingMenu(char *s, int value) {$/;"	f	typeref:typename:void
+dep	../ctrek/Game/weapons.h	/^  int dep;$/;"	m	struct:Weapon	typeref:typename:int
+depletion	../ctrek/Game/ship.h	/^  int depletion;$/;"	m	struct:Ship	typeref:typename:int
+derelictAtTile	../ctrek/Game/utils.h	/^int derelictAtTile(int coord) {$/;"	f	typeref:typename:int
+desc	../ctrek/Equipment/equipment.h	/^	char *desc;\/\/weapon writup$/;"	m	struct:__anon0b083a2d0108	typeref:typename:char *
+desc	../ctrek/Game/weapons.h	/^  const char* desc;$/;"	m	struct:Weapon	typeref:typename:const char *
+desc	../src/Weapon.h	/^    std::string desc = "";  \/\/ weapon writup$/;"	m	class:CWeapon	typeref:typename:std::string
+description	../ctrek/Game/upgrades.h	/^  const char* description;$/;"	m	struct:Upgrade	typeref:typename:const char *
+destroy	../ctrek/Game/ship.h	/^  int destroy() {$/;"	f	struct:Ship	typeref:typename:int
+destroyEnemy	../ctrek/Game/system.h	/^  static Player * destroyEnemy(Player *enemy) {$/;"	f	struct:System	typeref:typename:Player *
+destruct	../ctrek/Game/menu.h	/^  void destruct() {$/;"	f	struct:Menu	typeref:typename:void
+destruct	../ctrek/Game/tmp.h	/^  void destruct(int x, char *y) {$/;"	f	struct:Menu	typeref:typename:void
+dexterity	../ctrek/Equipment/player.h	/^	int dexterity;\/\/pilot\/combat - $/;"	m	struct:__anon568b80a20408	typeref:typename:int
+divertPower	../ctrek/Game/cTrekGame.cpp	/^void divertPower(int quantity) {$/;"	f	typeref:typename:void
+dmg	../ctrek/Equipment/equipment.h	/^	int dmg;$/;"	m	struct:__anon0b083a2d0108	typeref:typename:int
+dmg	../ctrek/Game/weapons.h	/^  int dmg;$/;"	m	struct:Weapon	typeref:typename:int
+dmg	../src/Weapon.h	/^    int dmg = 0;$/;"	m	class:CWeapon	typeref:typename:int
+dock	../ctrek/Game/planet.h	/^  void dock() {$/;"	f	struct:Planet	typeref:typename:void
+dodge	../ctrek/Equipment/enemies.h	/^	float dodge; \/\/melee$/;"	m	struct:__anon1753ce9b0108	typeref:typename:float
+drawWindow	../ctrek/Game/drawable.h	/^void drawWindow(int x, int y, int w, int h) {$/;"	f	typeref:typename:void
+drawgrid	../ctrek/Equipment/gutils.h	/^void drawgrid(int topleftx, int toplefty, int width, int height,int clear){$/;"	f	typeref:typename:void
+durability	../ctrek/Equipment/equipment.h	/^	int durability;$/;"	m	struct:__anon0b083a2d0308	typeref:typename:int
+enabled	../ctrek/Game/libs.h	/^  int enabled;$/;"	m	struct:DEBUG	typeref:typename:int
+enemy	../ctrek/Equipment/enemies.h	/^}enemy;/;"	t	typeref:struct:__anon1753ce9b0108
+enemy	../ctrek/Game/system.h	/^  Player *enemy;$/;"	m	struct:System	typeref:typename:Player *
+enemyAtTile	../ctrek/Game/utils.h	/^int enemyAtTile(int coord) {$/;"	f	typeref:typename:int
+enemyMovement	../ctrek/Game/cTrekGame.cpp	/^void enemyMovement() {$/;"	f	typeref:typename:void
+energy	../ctrek/Game/ship.h	/^  int energy;$/;"	m	struct:Ship	typeref:typename:int
+equip	../ctrek/Equipment/player.h	/^	equipment *equip;$/;"	m	struct:__anon568b80a20308	typeref:typename:equipment *
+equipment	../ctrek/Equipment/player.h	/^}equipment;$/;"	t	typeref:struct:__anon568b80a20208
+fExists	../ctrek/Game/utils.h	/^inline int fExists(char *f) {$/;"	f	typeref:typename:int
+fcountstrings	../ctrek/Equipment/wutils.h	/^int fcountstrings(char *path){\/\/opens and closes file @path$/;"	f	typeref:typename:int
+fgetrandomstring	../ctrek/Equipment/wutils.h	/^char *fgetrandomstring(char *path){\/\/,weapon *wep,int mods){$/;"	f	typeref:typename:char *
+findmod	../ctrek/Equipment/wutils.h	/^void findmod(char *path,char *matchstr,weapon *wep,char rare){$/;"	f	typeref:typename:void
+fire	../ctrek/Game/cTrekGame.cpp	/^void fire(int playerFiring) {$/;"	f	typeref:typename:void
+firetorpedo	../ctrek/Game/cTrekGame.cpp	/^void firetorpedo() {$/;"	f	typeref:typename:void
+galaxyX	../ctrek/Game/player.h	/^  int galaxyX;$/;"	m	struct:Player	typeref:typename:int
+galaxyX	../ctrek/Game/system.h	/^  int galaxyX;$/;"	m	struct:System	typeref:typename:int
+galaxyY	../ctrek/Game/player.h	/^  int galaxyY;$/;"	m	struct:Player	typeref:typename:int
+galaxyY	../ctrek/Game/system.h	/^  int galaxyY;$/;"	m	struct:System	typeref:typename:int
+gamblingMenu	../ctrek/Game/planet.h	/^  void gamblingMenu() {$/;"	f	struct:Planet	typeref:typename:void
+generateSystem	../ctrek/Game/cTrekGame.cpp	/^void generateSystem() {$/;"	f	typeref:typename:void
+getAmmoType	../src/Weapon.h	/^    std::string getAmmoType() {return ammoType;}$/;"	f	class:CWeapon	typeref:typename:std::string
+getCoords	../ctrek/Game/utils.h	/^char* getCoords() {$/;"	f	typeref:typename:char *
+getCrit	../src/Weapon.h	/^    float getCrit() {return crit;}$/;"	f	class:CWeapon	typeref:typename:float
+getDesc	../src/Weapon.h	/^    std::string getDesc() {return desc;}$/;"	f	class:CWeapon	typeref:typename:std::string
+getDmg	../src/Weapon.h	/^    int getDmg() {return dmg;}$/;"	f	class:CWeapon	typeref:typename:int
+getInput	../ctrek/Game/menu.h	/^  int getInput() {$/;"	f	struct:Menu	typeref:typename:int
+getLvl	../src/Weapon.h	/^    int getLvl() {return lvl;}$/;"	f	class:CWeapon	typeref:typename:int
+getMapTile	../ctrek/Game/utils.h	/^int getMapTile(int coord) {$/;"	f	typeref:typename:int
+getMaxdmg	../src/Weapon.h	/^    int getMaxdmg() {return maxdmg;}$/;"	f	class:CWeapon	typeref:typename:int
+getMenuCommodity	../ctrek/Game/planet.h	/^  void getMenuCommodity(char *opt, int *price, int *index) {$/;"	f	struct:Planet	typeref:typename:void
+getMupgrades	../src/Weapon.h	/^    int getMupgrades() {return mupgrades;}$/;"	f	class:CWeapon	typeref:typename:int
+getName	../src/Weapon.h	/^    std::string getName() {return name;}$/;"	f	class:CWeapon	typeref:typename:std::string
+getNupgrades	../src/Weapon.h	/^    int getNupgrades() {return nupgrades;}$/;"	f	class:CWeapon	typeref:typename:int
+getPlanet	../ctrek/Game/system.h	/^  Planet *getPlanet(int pos) {$/;"	f	struct:System	typeref:typename:Planet *
+getPrefix	../src/Weapon.h	/^    std::string getPrefix() {return prefix;}$/;"	f	class:CWeapon	typeref:typename:std::string
+getRandomStringFromFile	../src/fileUtils.h	/^std::string getRandomStringFromFile(std::string path, bool mode = true) {$/;"	f	typeref:typename:std::string
+getRarity	../src/Weapon.h	/^    std::string getRarity() {return rarity;}$/;"	f	class:CWeapon	typeref:typename:std::string
+getRclout	../src/Weapon.h	/^    int getRclout() {return rclout;}$/;"	f	class:CWeapon	typeref:typename:int
+getRlvl	../src/Weapon.h	/^    int getRlvl() {return rlvl;}$/;"	f	class:CWeapon	typeref:typename:int
+getRsocial	../src/Weapon.h	/^    int getRsocial() {return rsocial;}$/;"	f	class:CWeapon	typeref:typename:int
+getSType	../src/Weapon.h	/^    std::string getSType() {return sType;}$/;"	f	class:CWeapon	typeref:typename:std::string
+getSelection	../ctrek/Game/menu.h	/^  int getSelection() {$/;"	f	struct:Menu	typeref:typename:int
+getShots	../src/Weapon.h	/^    int getShots() {return shots;}$/;"	f	class:CWeapon	typeref:typename:int
+getStats	../src/Weapon.h	/^    std::vector<std::pair<std::string, std::string>> getStats() {return stats;}$/;"	f	class:CWeapon	typeref:typename:std::vector<std::pair<std::string,std::string>>
+getStatsLine	../src/Weapon.cpp	/^std::string CWeapon::getStatsLine(std::string path, std::string toFind) {$/;"	f	class:CWeapon	typeref:typename:std::string
+getSuffix	../src/Weapon.h	/^    std::string getSuffix() {return suffix;}$/;"	f	class:CWeapon	typeref:typename:std::string
+getTier	../src/Weapon.h	/^    int getTier() {return tier;}$/;"	f	class:CWeapon	typeref:typename:int
+getType	../src/Weapon.h	/^    std::string getType() {return type;}$/;"	f	class:CWeapon	typeref:typename:std::string
+getUpgrades	../src/Weapon.h	/^    std::vector<std::pair<std::string, std::string>> getUpgrades() {return upgrades;}$/;"	f	class:CWeapon	typeref:typename:std::vector<std::pair<std::string,std::string>>
+getbasestats	../ctrek/Equipment/wutils.h	/^void getbasestats(weapon *wep){\/\/int lvl$/;"	f	typeref:typename:void
+getch	../ctrek/Game/getch.h	/^int getch(void) {$/;"	f	typeref:typename:int
+getch	../ctrek/Game/getch_new.h	/^int getch() { $/;"	f	typeref:typename:int
+getch	../src/getch.h	/^int getch(void) {$/;"	f	typeref:typename:int
+getch_arrow	../ctrek/Game/getch.h	/^int getch_arrow() {$/;"	f	typeref:typename:int
+getche	../ctrek/Game/getch.h	/^int getche(void) {$/;"	f	typeref:typename:int
+getche	../src/getch.h	/^  int getche(void) {$/;"	f	typeref:typename:int
+getmods	../ctrek/Equipment/wutils.h	/^void getmods(weapon *wep, char mode){$/;"	f	typeref:typename:void
+getrarity	../ctrek/Equipment/wutils.h	/^char *getrarity(\/*int mult*\/){$/;"	f	typeref:typename:char *
+getstats	../ctrek/Equipment/wutils.h	/^void getstats(weapon *wep){$/;"	f	typeref:typename:void
+getwepdesc	../ctrek/Equipment/wutils.h	/^int getwepdesc(weapon *wep){$/;"	f	typeref:typename:int
+gotoXY	../ctrek/Game/con_c_nix.h	/^void gotoXY(unsigned int x, unsigned int y){$/;"	f	typeref:typename:void
+gotoxy	../ctrek/Equipment/gutils.h	/^void gotoxy(int x,int y){$/;"	f	typeref:typename:void
+gotoxy	../ctrek/Game/con_c_nix_cpp.h	/^void gotoxy(unsigned int x, unsigned int y){$/;"	f	typeref:typename:void
+gotoxy	../src/conOut_nix.h	/^void gotoxy(unsigned int x, unsigned int y){$/;"	f	typeref:typename:void
+gotoxy	../src/conOut_win.h	/^void gotoxy(int x, int y) {$/;"	f	typeref:typename:void
+gunRangeColour	../ctrek/Game/drawable.h	/^const char* gunRangeColour(int totalGuns, int gunsInRange) {$/;"	f	typeref:typename:const char *
+healthBars	../ctrek/Game/drawable.h	/^void healthBars() {$/;"	f	typeref:typename:void
+help	../ctrek/Game/cTrekGame.cpp	/^void help() {$/;"	f	typeref:typename:void
+highlighted	../ctrek/Game/menu.h	/^  int highlighted;$/;"	m	struct:Menu	typeref:typename:int
+highlighted	../ctrek/Game/tmp.h	/^  int highlighted;$/;"	m	struct:Menu	typeref:typename:int
+hitAnim	../ctrek/Game/cTrekGame.cpp	/^void hitAnim(int playerHit) {$/;"	f	typeref:typename:void
+hp	../ctrek/Equipment/enemies.h	/^	int hp;$/;"	m	struct:__anon1753ce9b0108	typeref:typename:int
+hudColours	../ctrek/Game/drawable.h	/^char* hudColours(int currentHud, int maxHud) {$/;"	f	typeref:typename:char *
+hudstat	../ctrek/Game/upgrades.h	/^  int hudstat;$/;"	m	struct:Upgrade	typeref:typename:int
+hudstatToCapacity	../ctrek/Game/utils.h	/^int hudstatToCapacity(int hudstat) {$/;"	f	typeref:typename:int
+hudstatToCommodity	../ctrek/Game/utils.h	/^const char *hudstatToCommodity(int hudstat) {$/;"	f	typeref:typename:const char *
+hudstatToQuantity	../ctrek/Game/utils.h	/^int *hudstatToQuantity(int hudstat) {$/;"	f	typeref:typename:int *
+hull	../ctrek/Equipment/equipment.h	/^}hull;$/;"	t	typeref:struct:__anon0b083a2d0308
+hull	../ctrek/Equipment/player.h	/^	int hull;$/;"	m	struct:__anon568b80a20308	typeref:typename:int
+hull	../ctrek/Game/ship.h	/^  int hull;$/;"	m	struct:Ship	typeref:typename:int
+id	../ctrek/Equipment/enemies.h	/^	int *id;$/;"	m	struct:__anon1753ce9b0108	typeref:typename:int *
+id	../ctrek/Equipment/equipment.h	/^	int *id; \/\/may not use?$/;"	m	struct:__anon0b083a2d0108	typeref:typename:int *
+id	../ctrek/Equipment/equipment.h	/^	int *id;$/;"	m	struct:__anon0b083a2d0308	typeref:typename:int *
+id	../ctrek/Equipment/equipment.h	/^	int *id;$/;"	m	struct:__anon0b083a2d0408	typeref:typename:int *
+id	../ctrek/Equipment/player.h	/^	int *id;$/;"	m	struct:__anon568b80a20308	typeref:typename:int *
+id	../ctrek/Equipment/player.h	/^	int *id;$/;"	m	struct:__anon568b80a20408	typeref:typename:int *
+inRange	../ctrek/Game/cTrekGame.cpp	/^int inRange(int playerScanniing, int mapIndex) {$/;"	f	typeref:typename:int
+indexToStat	../src/Weapon.h	/^ std::map<int, std::string> indexToStat = {$/;"	v	typeref:typename:std::map<int,std::string>
+indices	../ctrek/Game/menu.h	/^  int *indices;$/;"	m	struct:Menu	typeref:typename:int *
+indices	../ctrek/Game/tmp.h	/^  int *indices;$/;"	m	struct:Menu	typeref:typename:int *
+init	../ctrek/Game/libs.h	/^  void init(const char *f, int level) {$/;"	f	struct:DEBUG	typeref:typename:void
+initCommerce	../ctrek/Game/planet.h	/^  int initCommerce() {$/;"	f	struct:Planet	typeref:typename:int
+initEnemy	../ctrek/Game/system.h	/^  int initEnemy(int died) {$/;"	f	struct:System	typeref:typename:int
+initOutfit	../ctrek/Game/planet.h	/^  int initOutfit() {$/;"	f	struct:Planet	typeref:typename:int
+initShips	../ctrek/Game/planet.h	/^  int initShips() {$/;"	f	struct:Planet	typeref:typename:int
+initialize	../ctrek/Game/planet.h	/^  void initialize() {$/;"	f	struct:Planet	typeref:typename:void
+initialize	../ctrek/Game/player.h	/^  void initialize(int shipType) {$/;"	f	struct:Player	typeref:typename:void
+initialize	../ctrek/Game/system.h	/^  void initialize() {$/;"	f	struct:System	typeref:typename:void
+initialized	../ctrek/Game/planet.h	/^  int initialized;$/;"	m	struct:Planet	typeref:typename:int
+initialized	../ctrek/Game/system.h	/^  int initialized;$/;"	m	struct:System	typeref:typename:int
+innovation	../ctrek/Equipment/player.h	/^	int innovation;$/;"	m	struct:__anon568b80a20408	typeref:typename:int
+intellect	../ctrek/Equipment/enemies.h	/^	float intellect; \/\/spell dodge$/;"	m	struct:__anon1753ce9b0108	typeref:typename:float
+intelligence	../ctrek/Equipment/player.h	/^	int intelligence; \/\/learn skills\/use better equip$/;"	m	struct:__anon568b80a20408	typeref:typename:int
+intuition	../ctrek/Equipment/player.h	/^	int intuition;$/;"	m	struct:__anon568b80a20408	typeref:typename:int
+inv	../ctrek/Equipment/player.h	/^	cargo *inv;$/;"	m	struct:__anon568b80a20308	typeref:typename:cargo *
+isHighlighted	../ctrek/Game/menu.h	/^  int isHighlighted(const char *searchStr) {$/;"	f	struct:Menu	typeref:typename:int
+kbhit	../ctrek/Game/getch_new.h	/^int kbhit() { $/;"	f	typeref:typename:int
+lastSeed	../ctrek/Game/cTrekGame.h	/^unsigned int lastSeed;$/;"	v	typeref:typename:unsigned int
+leadership	../ctrek/Equipment/player.h	/^	int leadership;\/\/equip bonuses$/;"	m	struct:__anon568b80a20408	typeref:typename:int
+length	../ctrek/Game/menu.h	/^  int length;$/;"	m	struct:Menu	typeref:typename:int
+length	../ctrek/Game/tmp.h	/^  int length;$/;"	m	struct:Menu	typeref:typename:int
+load	../ctrek/Game/menu.h	/^  static Menu *load(FILE *fp) {$/;"	f	struct:Menu	typeref:typename:Menu *
+load	../ctrek/Game/planet.h	/^  static Planet *load(FILE *fp) {$/;"	f	struct:Planet	typeref:typename:Planet *
+load	../ctrek/Game/player.h	/^  static Player *load() {$/;"	f	struct:Player	typeref:typename:Player *
+load	../ctrek/Game/system.h	/^  static System *load(int x, int y) {$/;"	f	struct:System	typeref:typename:System *
+loadEnemy	../ctrek/Game/player.h	/^  static Player *loadEnemy(FILE *fp) {$/;"	f	struct:Player	typeref:typename:Player *
+log	../ctrek/Game/libs.h	/^  void log(int loglevel, const char *file, int line) {$/;"	f	struct:DEBUG	typeref:typename:void
+log	../ctrek/Game/libs.h	/^  void log(int loglevel, const char *file, int line, char *s) {$/;"	f	struct:DEBUG	typeref:typename:void
+log	../ctrek/Game/libs.h	/^  void log(int loglevel, const char *file, int line, const char *format, ...) {$/;"	f	struct:DEBUG	typeref:typename:void
+logLevel	../ctrek/Game/libs.h	/^  int logLevel;$/;"	m	struct:DEBUG	typeref:typename:int
+loot	../ctrek/Game/cTrekGame.cpp	/^void loot() {$/;"	f	typeref:typename:void
+lvl	../ctrek/Equipment/equipment.h	/^	int lvl;$/;"	m	struct:__anon0b083a2d0108	typeref:typename:int
+lvl	../ctrek/Equipment/equipment.h	/^	int lvl;$/;"	m	struct:__anon0b083a2d0308	typeref:typename:int
+lvl	../ctrek/Equipment/equipment.h	/^	int lvl;$/;"	m	struct:__anon0b083a2d0408	typeref:typename:int
+lvl	../ctrek/Equipment/player.h	/^	int lvl;$/;"	m	struct:__anon568b80a20408	typeref:typename:int
+lvl	../src/Weapon.h	/^    int lvl = 0;$/;"	m	class:CWeapon	typeref:typename:int
+main	../ctrek/Equipment/trek.cpp	/^int main(){$/;"	f	typeref:typename:int
+main	../ctrek/Game/cTrekGame.cpp	/^int main() {$/;"	f	typeref:typename:int
+main	../ctrek/Game/to_string.h	/^ } int main() {$/;"	f	typeref:typename:int
+main	../src/test.cpp	/^int main() {$/;"	f	typeref:typename:int
+mainMenu	../ctrek/Game/planet.h	/^  Menu *mainMenu;$/;"	m	struct:Planet	typeref:typename:Menu *
+map	../ctrek/Game/system.h	/^  int map[SYSTEM_SIZE];$/;"	m	struct:System	typeref:typename:int[]
+marmour	../ctrek/Equipment/enemies.h	/^	int marmour;$/;"	m	struct:__anon1753ce9b0108	typeref:typename:int
+max	../ctrek/Game/libs.h	/^  int max(int a, int b) {$/;"	f	struct:MATH	typeref:typename:int
+max	../ctrek/Game/upgrades.h	/^  int max;$/;"	m	struct:Upgrade	typeref:typename:int
+maxdmg	../ctrek/Equipment/equipment.h	/^	int maxdmg;$/;"	m	struct:__anon0b083a2d0108	typeref:typename:int
+maxdmg	../src/Weapon.h	/^    int maxdmg = 0;$/;"	m	class:CWeapon	typeref:typename:int
+maxdurability	../ctrek/Equipment/equipment.h	/^	int maxdurability;$/;"	m	struct:__anon0b083a2d0308	typeref:typename:int
+maxhp	../ctrek/Equipment/enemies.h	/^	int maxhp;$/;"	m	struct:__anon1753ce9b0108	typeref:typename:int
+mcrit	../ctrek/Equipment/enemies.h	/^	float mcrit;\/\/melee crit$/;"	m	struct:__anon1753ce9b0108	typeref:typename:float
+mcritres	../ctrek/Equipment/enemies.h	/^	float mcritres;\/\/melee crit res$/;"	m	struct:__anon1753ce9b0108	typeref:typename:float
+mechapt	../ctrek/Equipment/player.h	/^	int mechapt;\/\/skill\/equip$/;"	m	struct:__anon568b80a20408	typeref:typename:int
+mhardpoints	../ctrek/Equipment/player.h	/^	int  mhardpoints;$/;"	m	struct:__anon568b80a20308	typeref:typename:int
+mhit	../ctrek/Equipment/enemies.h	/^	float mhit; \/\/melee chance to hit$/;"	m	struct:__anon1753ce9b0108	typeref:typename:float
+mhull	../ctrek/Equipment/player.h	/^	int mhull;\/\/max hull$/;"	m	struct:__anon568b80a20308	typeref:typename:int
+min	../ctrek/Game/libs.h	/^  int min(int a, int b) {$/;"	f	struct:MATH	typeref:typename:int
+minimalHUD	../ctrek/Game/drawable.h	/^void minimalHUD(int startX, int startY) {$/;"	f	typeref:typename:void
+mods	../ctrek/Equipment/equipment.h	/^	char **mods;$/;"	m	struct:__anon0b083a2d0308	typeref:typename:char **
+mods	../ctrek/Equipment/equipment.h	/^	char **mods;$/;"	m	struct:__anon0b083a2d0408	typeref:typename:char **
+mods	../ctrek/Equipment/equipment.h	/^	int *mods; \/\/other buffs from upgrades?$/;"	m	struct:__anon0b083a2d0108	typeref:typename:int *
+move	../ctrek/Game/cTrekGame.cpp	/^void move(char toWhere) { \/\/ move to com log$/;"	f	typeref:typename:void
+mshield	../ctrek/Equipment/player.h	/^	int mshield;\/\/max shield$/;"	m	struct:__anon568b80a20308	typeref:typename:int
+msockets	../ctrek/Equipment/equipment.h	/^	int msockets;\/\/max # sockets$/;"	m	struct:__anon0b083a2d0308	typeref:typename:int
+mupgrades	../ctrek/Equipment/equipment.h	/^	int mupgrades;\/\/max # sockets$/;"	m	struct:__anon0b083a2d0108	typeref:typename:int
+mupgrades	../src/Weapon.h	/^    int mupgrades = 0;  \/\/ max # sockets$/;"	m	class:CWeapon	typeref:typename:int
+nGunsInRange	../ctrek/Game/ship.h	/^  int nGunsInRange;$/;"	m	struct:Ship	typeref:typename:int
+nNodes	../ctrek/Game/galaxy.h	/^  int nNodes;$/;"	m	struct:Galaxy	typeref:typename:int
+nPlanets	../ctrek/Game/system.h	/^  int nPlanets;$/;"	m	struct:System	typeref:typename:int
+name	../ctrek/Equipment/equipment.h	/^	char *name;$/;"	m	struct:__anon0b083a2d0108	typeref:typename:char *
+name	../ctrek/Game/planet.h	/^  char name[32];$/;"	m	struct:Planet	typeref:typename:char[32]
+name	../ctrek/Game/upgrades.h	/^  const char* name;$/;"	m	struct:Upgrade	typeref:typename:const char *
+name	../ctrek/Game/weapons.h	/^  const char* name;$/;"	m	struct:Weapon	typeref:typename:const char *
+name	../src/Weapon.h	/^    std::string name = "";$/;"	m	class:CWeapon	typeref:typename:std::string
+newEnemy	../ctrek/Game/player.h	/^  static Player *newEnemy(int type) {$/;"	f	struct:Player	typeref:typename:Player *
+newMenu	../ctrek/Game/menu.h	/^  static Menu *newMenu(int sx, int sy) {$/;"	f	struct:Menu	typeref:typename:Menu *
+newPlanet	../ctrek/Game/planet.h	/^  static Planet *newPlanet(int pos) {$/;"	f	struct:Planet	typeref:typename:Planet *
+newPlayer	../ctrek/Game/player.h	/^  static Player *newPlayer() {$/;"	f	struct:Player	typeref:typename:Player *
+newShip	../ctrek/Game/ship.h	/^  static Ship *newShip(int type) {$/;"	f	struct:Ship	typeref:typename:Ship *
+newSystem	../ctrek/Game/galaxy.h	/^  static System *newSystem(int x, int y) {$/;"	f	struct:Galaxy	typeref:typename:System *
+newSystem	../ctrek/Game/system.h	/^  static System *newSystem(int x, int y) {$/;"	f	struct:System	typeref:typename:System *
+nodes	../ctrek/Game/galaxy.h	/^  GalaxyNode **nodes;$/;"	m	struct:Galaxy	typeref:typename:GalaxyNode **
+nsockets	../ctrek/Equipment/equipment.h	/^	int nsockets;\/\/actual # sockets$/;"	m	struct:__anon0b083a2d0308	typeref:typename:int
+nupgrades	../ctrek/Equipment/equipment.h	/^	int nupgrades;\/\/actual # sockets$/;"	m	struct:__anon0b083a2d0108	typeref:typename:int
+nupgrades	../src/Weapon.h	/^    int nupgrades = 0;  \/\/ actual # sockets$/;"	m	class:CWeapon	typeref:typename:int
+optionIndex	../ctrek/Game/menu.h	/^  int optionIndex(const char *searchStr) {$/;"	f	struct:Menu	typeref:typename:int
+options	../ctrek/Game/menu.h	/^  char **options;$/;"	m	struct:Menu	typeref:typename:char **
+options	../ctrek/Game/tmp.h	/^  char **options;$/;"	m	struct:Menu	typeref:typename:char **
+orig_termios	../ctrek/Game/getch_new.h	/^struct termios orig_termios;$/;"	v	typeref:struct:termios
+outfitArray	../ctrek/Game/planet.h	/^  int outfitArray[MENU_I_SIZE];$/;"	m	struct:Planet	typeref:typename:int[]
+outfitMenu	../ctrek/Game/planet.h	/^  Menu *outfitMenu;$/;"	m	struct:Planet	typeref:typename:Menu *
+outfitter	../ctrek/Game/galaxy.h	/^  int outfitter;$/;"	m	struct:GalaxyNodePlanet	typeref:typename:int
+outfitterMenu	../ctrek/Game/planet.h	/^  void outfitterMenu() {$/;"	f	struct:Planet	typeref:typename:void
+pSystem	../ctrek/Game/player.h	/^  int pSystem;$/;"	m	struct:Player	typeref:typename:int
+passengers	../ctrek/Game/ship.h	/^  int passengers;$/;"	m	struct:Ship	typeref:typename:int
+percentile	../ctrek/Game/utils.h	/^int percentile() {$/;"	f	typeref:typename:int
+pilot	../ctrek/Equipment/player.h	/^	int pilot;$/;"	m	struct:__anon568b80a20408	typeref:typename:int
+planetHUD	../ctrek/Game/planet.h	/^  void planetHUD() {$/;"	f	struct:Planet	typeref:typename:void
+planetWindow	../ctrek/Game/planet.h	/^  void planetWindow() {$/;"	f	struct:Planet	typeref:typename:void
+planets	../ctrek/Game/galaxy.h	/^  GalaxyNodePlanet *planets[PLANET_MAX];$/;"	m	struct:GalaxyNode	typeref:typename:GalaxyNodePlanet * []
+planets	../ctrek/Game/system.h	/^  Planet *planets[PLANET_MAX];$/;"	m	struct:System	typeref:typename:Planet * []
+player	../ctrek/Equipment/player.h	/^}player;/;"	t	typeref:struct:__anon568b80a20408
+pos	../ctrek/Game/player.h	/^  int pos() {$/;"	f	struct:Player	typeref:typename:int
+position	../ctrek/Game/planet.h	/^  int position;$/;"	m	struct:Planet	typeref:typename:int
+preGameMenu	../ctrek/Game/cTrekGame.cpp	/^int preGameMenu() {$/;"	f	typeref:typename:int
+prefix	../ctrek/Equipment/enemies.h	/^	char *prefix;\/\/angry, dire,champion, ghost --attributes$/;"	m	struct:__anon1753ce9b0108	typeref:typename:char *
+prefix	../ctrek/Equipment/equipment.h	/^	char *prefix;$/;"	m	struct:__anon0b083a2d0108	typeref:typename:char *
+prefix	../ctrek/Equipment/equipment.h	/^	char *prefix;$/;"	m	struct:__anon0b083a2d0308	typeref:typename:char *
+prefix	../ctrek/Equipment/equipment.h	/^	char *prefix;$/;"	m	struct:__anon0b083a2d0408	typeref:typename:char *
+prefix	../ctrek/Game/utils.h	/^char* prefix(int arrayValue, char unit) {$/;"	f	typeref:typename:char *
+prefix	../src/Weapon.h	/^    std::string prefix = "";$/;"	m	class:CWeapon	typeref:typename:std::string
+printAchievementPage	../ctrek/Game/planet.h	/^  void printAchievementPage(int page) {$/;"	f	struct:Planet	typeref:typename:void
+printAt	../ctrek/Game/drawable.h	/^int printAt(int x, int y, const char *fmt, ...) {$/;"	f	typeref:typename:int
+printBuySell	../ctrek/Game/utils.h	/^static char* printBuySell(char buySell, int commodity, int quantity, int costProfit, int shipCos/;"	f	typeref:typename:char *
+printDealArrow	../ctrek/Game/planet.h	/^  const char* printDealArrow(int buySellPrice, int lastBuy, int buying) {$/;"	f	struct:Planet	typeref:typename:const char *
+printLinesAt	../ctrek/Game/drawable.h	/^int printLinesAt(int x, int y, const char *str) {$/;"	f	typeref:typename:int
+printLogPage	../ctrek/Game/planet.h	/^  void printLogPage(int page) {$/;"	f	struct:Planet	typeref:typename:void
+printMap	../ctrek/Game/drawable.h	/^void printMap(int scanTarget) {$/;"	f	typeref:typename:void
+printProgressBar	../ctrek/Game/drawable.h	/^void printProgressBar(int skillSlot) {$/;"	f	typeref:typename:void
+printShip	../ctrek/Game/drawable.h	/^const char* printShip(int ship) {$/;"	f	typeref:typename:const char *
+printfLinesAt	../ctrek/Game/drawable.h	/^int printfLinesAt(int x, int y, const char *fmt, ...) {$/;"	f	typeref:typename:int
+processStatsLine	../src/Weapon.cpp	/^void CWeapon::processStatsLine(std::string statsLine) {$/;"	f	class:CWeapon	typeref:typename:void
+processmods	../ctrek/Equipment/wutils.h	/^int processmods(weapon *wep, char *mod, int val){$/;"	f	typeref:typename:int
+prof	../ctrek/Equipment/player.h	/^	char *prof;\/\/class$/;"	m	struct:__anon568b80a20408	typeref:typename:char *
+race	../ctrek/Equipment/player.h	/^	char *race;$/;"	m	struct:__anon568b80a20408	typeref:typename:char *
+randomNumber	../ctrek/Game/utils.h	/^int randomNumber(int max) {$/;"	f	typeref:typename:int
+range	../ctrek/Game/commodities.h	/^  int range;$/;"	m	struct:Commodity	typeref:typename:int
+range	../ctrek/Game/weapons.h	/^  int range;$/;"	m	struct:Weapon	typeref:typename:int
+rangeMap	../ctrek/Game/drawable.h	/^void rangeMap(int scanner) {$/;"	f	typeref:typename:void
+rarity	../ctrek/Equipment/equipment.h	/^	char *rarity;\/\/0-1000$/;"	m	struct:__anon0b083a2d0108	typeref:typename:char *
+rarity	../ctrek/Equipment/equipment.h	/^	int rarity;\/\/0-5 ?$/;"	m	struct:__anon0b083a2d0308	typeref:typename:int
+rarity	../ctrek/Equipment/equipment.h	/^	int rarity;\/\/0-5 ?$/;"	m	struct:__anon0b083a2d0408	typeref:typename:int
+rarity	../src/Weapon.h	/^    std::string rarity = "";  \/\/ common, uncommon, rare, unique, epic, legendary$/;"	m	class:CWeapon	typeref:typename:std::string
+rbled	../ctrek/Equipment/enemies.h	/^	int rbled;\/\/bleeding$/;"	m	struct:__anon1753ce9b0108	typeref:typename:int
+rclout	../ctrek/Equipment/equipment.h	/^	int rclout; \/\/combat subskill req;$/;"	m	struct:__anon0b083a2d0108	typeref:typename:int
+rclout	../src/Weapon.h	/^    int rclout = 0;  \/\/ combat subskill req;$/;"	m	class:CWeapon	typeref:typename:int
+rcold	../ctrek/Equipment/enemies.h	/^	int rcold;\/\/cold$/;"	m	struct:__anon1753ce9b0108	typeref:typename:int
+rcrit	../ctrek/Equipment/enemies.h	/^	float rcrit;$/;"	m	struct:__anon1753ce9b0108	typeref:typename:float
+readGalaxy	../ctrek/Game/galaxy.h	/^  static int readGalaxy() {$/;"	f	struct:Galaxy	typeref:typename:int
+rebuildCommerceMenus	../ctrek/Game/planet.h	/^  void rebuildCommerceMenus() {$/;"	f	struct:Planet	typeref:typename:void
+reflex	../ctrek/Equipment/enemies.h	/^	float reflex; \/\/ranged$/;"	m	struct:__anon1753ce9b0108	typeref:typename:float
+removeUpgrade	../src/Weapon.cpp	/^void CWeapon::removeUpgrade(std::pair<std::string, std::string> statPair) {$/;"	f	class:CWeapon	typeref:typename:void
+renown	../ctrek/Equipment/player.h	/^	int renown; \/\/$/;"	m	struct:__anon568b80a20408	typeref:typename:int
+repairMenu	../ctrek/Game/planet.h	/^  Menu *repairMenu;$/;"	m	struct:Planet	typeref:typename:Menu *
+resaleValue	../ctrek/Game/planet.h	/^  int resaleValue() { \/\/ torps???????!?!?!?$/;"	f	struct:Planet	typeref:typename:int
+reset_terminal_mode	../ctrek/Game/getch_new.h	/^void reset_terminal_mode() { $/;"	f	typeref:typename:void
+rfire	../ctrek/Equipment/enemies.h	/^	int rfire;\/\/fire res$/;"	m	struct:__anon1753ce9b0108	typeref:typename:int
+rhit	../ctrek/Equipment/enemies.h	/^	float rhit; \/\/ranged to hit$/;"	m	struct:__anon1753ce9b0108	typeref:typename:float
+rlight	../ctrek/Equipment/enemies.h	/^	int rlight;\/\/lightning$/;"	m	struct:__anon1753ce9b0108	typeref:typename:int
+rlvl	../ctrek/Equipment/equipment.h	/^	int rlvl;\/\/lvl req$/;"	m	struct:__anon0b083a2d0108	typeref:typename:int
+rlvl	../src/Weapon.h	/^    int rlvl = 0;  \/\/ lvl req$/;"	m	class:CWeapon	typeref:typename:int
+rndm	../ctrek/Equipment/gutils.h	/^int rndm(int min, int max){$/;"	f	typeref:typename:int
+rndm	../src/global.h	/^int rndm(int low, int high) {$/;"	f	typeref:typename:int
+round	../ctrek/Game/libs.h	/^  float round(float value) {$/;"	f	struct:MATH	typeref:typename:float
+rpois	../ctrek/Equipment/enemies.h	/^	int rpois;\/\/poison$/;"	m	struct:__anon1753ce9b0108	typeref:typename:int
+rsocial	../ctrek/Equipment/equipment.h	/^	int rsocial;$/;"	m	struct:__anon0b083a2d0108	typeref:typename:int
+rsocial	../src/Weapon.h	/^    int rsocial = 0;$/;"	m	class:CWeapon	typeref:typename:int
+rstun	../ctrek/Equipment/enemies.h	/^	int rstun;\/\/stun$/;"	m	struct:__anon1753ce9b0108	typeref:typename:int
+sType	../src/Weapon.h	/^    std::string sType = "";$/;"	m	class:CWeapon	typeref:typename:std::string
+save	../ctrek/Game/menu.h	/^  int save(FILE *fp) {$/;"	f	struct:Menu	typeref:typename:int
+save	../ctrek/Game/planet.h	/^  int save(FILE *fp) {$/;"	f	struct:Planet	typeref:typename:int
+save	../ctrek/Game/player.h	/^  int save() {$/;"	f	struct:Player	typeref:typename:int
+save	../ctrek/Game/system.h	/^  int save() {$/;"	f	struct:System	typeref:typename:int
+saveEnemy	../ctrek/Game/player.h	/^  int saveEnemy(FILE *fp) {$/;"	f	struct:Player	typeref:typename:int
+scan	../ctrek/Game/cTrekGame.cpp	/^void scan(int scanTarget) {$/;"	f	typeref:typename:void
+science	../ctrek/Equipment/player.h	/^	int science;$/;"	m	struct:__anon568b80a20408	typeref:typename:int
+sclass	../ctrek/Equipment/player.h	/^	char *sclass;\/\/spec$/;"	m	struct:__anon568b80a20408	typeref:typename:char *
+scrit	../ctrek/Equipment/enemies.h	/^	float scrit;\/\/spell crit$/;"	m	struct:__anon1753ce9b0108	typeref:typename:float
+scritres	../ctrek/Equipment/enemies.h	/^	float scritres;$/;"	m	struct:__anon1753ce9b0108	typeref:typename:float
+security	../ctrek/Game/player.h	/^  int security;$/;"	m	struct:Player	typeref:typename:int
+securityStatus	../ctrek/Game/utils.h	/^const char* securityStatus() {$/;"	f	typeref:typename:const char *
+seed	../ctrek/Equipment/global.h	/^double seed=0;/;"	v	typeref:typename:double
+seed	../ctrek/Game/utils.h	/^void seed() {$/;"	f	typeref:typename:void
+seeded	../src/global.h	/^bool seeded = false;$/;"	v	typeref:typename:bool
+sellMenu	../ctrek/Game/planet.h	/^  Menu *sellMenu;$/;"	m	struct:Planet	typeref:typename:Menu *
+setBaseStats	../src/Weapon.cpp	/^void CWeapon::setBaseStats() {  \/\/ int lvl$/;"	f	class:CWeapon	typeref:typename:void
+setC	../ctrek/Game/con_c_nix.h	/^void setC(int c) {$/;"	f	typeref:typename:void
+setC	../ctrek/Game/con_c_nix_cpp.h	/^void setC(int c) {$/;"	f	typeref:typename:void
+setC	../src/conOut_nix.h	/^void setC(int c) {$/;"	f	typeref:typename:void
+setC	../src/conOut_win.h	/^void setC(int ForgC) {$/;"	f	typeref:typename:void
+setCB	../ctrek/Game/con_c_nix.h	/^void setCB(int c, int b) {$/;"	f	typeref:typename:void
+setCB	../ctrek/Game/con_c_nix_cpp.h	/^void setCB(int c, int b) {$/;"	f	typeref:typename:void
+setCB	../src/conOut_nix.h	/^void setCB(int c, int b) {$/;"	f	typeref:typename:void
+setCB	../src/conOut_win.h	/^void setCB(int ForgC, int BackC) {$/;"	f	typeref:typename:void
+setGalaxyPos	../ctrek/Game/player.h	/^  int setGalaxyPos(int p) {$/;"	f	struct:Player	typeref:typename:int
+setGalaxyPos	../ctrek/Game/player.h	/^  int setGalaxyPos(int x, int y) {$/;"	f	struct:Player	typeref:typename:int
+setPos	../ctrek/Game/player.h	/^  int setPos(int p) {$/;"	f	struct:Player	typeref:typename:int
+setRarity	../src/Weapon.cpp	/^void CWeapon::setRarity() {  \/\/ int mult) {$/;"	f	class:CWeapon	typeref:typename:void
+setStats	../src/Weapon.cpp	/^void CWeapon::setStats() {$/;"	f	class:CWeapon	typeref:typename:void
+setType	../ctrek/Game/ship.h	/^  int setType(int type) {$/;"	f	struct:Ship	typeref:typename:int
+set_conio_terminal_mode	../ctrek/Game/getch_new.h	/^void set_conio_terminal_mode() { $/;"	f	typeref:typename:void
+shield	../ctrek/Equipment/player.h	/^	int shield;$/;"	m	struct:__anon568b80a20308	typeref:typename:int
+shield	../ctrek/Game/ship.h	/^  int shield;$/;"	m	struct:Ship	typeref:typename:int
+shieldregen	../ctrek/Equipment/player.h	/^	int shieldregen;$/;"	m	struct:__anon568b80a20308	typeref:typename:int
+ship	../ctrek/Equipment/player.h	/^	warship *ship;$/;"	m	struct:__anon568b80a20408	typeref:typename:warship *
+ship	../ctrek/Game/player.h	/^  Ship *ship;$/;"	m	struct:Player	typeref:typename:Ship *
+shipCapacity	../ctrek/Game/ship.h	/^  static int shipCapacity(int shipType, int index) {$/;"	f	struct:Ship	typeref:typename:int
+shipClass	../ctrek/Game/ship.h	/^  static const char* shipClass(int shipType) {$/;"	f	struct:Ship	typeref:typename:const char *
+shipDestroyed	../ctrek/Game/cTrekGame.cpp	/^void shipDestroyed() {$/;"	f	typeref:typename:void
+shipInfo	../ctrek/Game/planet.h	/^  void shipInfo(int ship) {$/;"	f	struct:Planet	typeref:typename:void
+shipMenu	../ctrek/Game/planet.h	/^  Menu *shipMenu;$/;"	m	struct:Planet	typeref:typename:Menu *
+shipName	../ctrek/Game/ship.h	/^  static const char* shipName(int shipType) {$/;"	f	struct:Ship	typeref:typename:const char *
+shipType	../ctrek/Game/ship.h	/^  int shipType;$/;"	m	struct:Ship	typeref:typename:int
+shipsLog	../ctrek/Game/planet.h	/^  void shipsLog() {$/;"	f	struct:Planet	typeref:typename:void
+shipyard	../ctrek/Game/galaxy.h	/^  int shipyard;$/;"	m	struct:GalaxyNodePlanet	typeref:typename:int
+shipyardArray	../ctrek/Game/planet.h	/^  int shipyardArray[MENU_I_SIZE];$/;"	m	struct:Planet	typeref:typename:int[]
+shipyardMenu	../ctrek/Game/planet.h	/^  void shipyardMenu() {$/;"	f	struct:Planet	typeref:typename:void
+shit	../ctrek/Equipment/enemies.h	/^	float shit; \/\/spell to hit$/;"	m	struct:__anon1753ce9b0108	typeref:typename:float
+shots	../ctrek/Equipment/equipment.h	/^	int shots; \/\/hits per turn$/;"	m	struct:__anon0b083a2d0108	typeref:typename:int
+shots	../src/Weapon.h	/^    int shots = 0;  \/\/ hits per turn$/;"	m	class:CWeapon	typeref:typename:int
+skills	../ctrek/Equipment/player.h	/^	char *skills;$/;"	m	struct:__anon568b80a20408	typeref:typename:char *
+skills	../ctrek/Game/player.h	/^  int skills[SKILLS_I_SIZE];$/;"	m	struct:Player	typeref:typename:int[]
+skillsHUD	../ctrek/Game/drawable.h	/^void skillsHUD(int x, int page) {$/;"	f	typeref:typename:void
+slot	../ctrek/Equipment/player.h	/^	int *slot;\/\/stores itemid's$/;"	m	struct:__anon568b80a20108	typeref:typename:int *
+social	../ctrek/Equipment/player.h	/^	int social;$/;"	m	struct:__anon568b80a20408	typeref:typename:int
+sockets	../ctrek/Equipment/equipment.h	/^	int *sockets;\/\/sockets holding gem id$/;"	m	struct:__anon0b083a2d0308	typeref:typename:int *
+spawnEnemy	../ctrek/Game/system.h	/^  int spawnEnemy(int edgeOfSpace) {$/;"	f	struct:System	typeref:typename:int
+speed	../ctrek/Equipment/player.h	/^	int speed;$/;"	m	struct:__anon568b80a20308	typeref:typename:int
+spells	../ctrek/Equipment/enemies.h	/^	char **spells;\/\/shield,heal fireball--determined by prefix,suffix, type$/;"	m	struct:__anon1753ce9b0108	typeref:typename:char **
+standard	../ctrek/Game/makefile	/^standard = -std=gnu++0x$/;"	m
+startingSystem	../ctrek/Game/system.h	/^  void startingSystem() {$/;"	f	struct:System	typeref:typename:void
+statToDataType	../src/Weapon.h	/^std::map<std::string, std::string> statToDataType = {$/;"	v	typeref:typename:std::map<std::string,std::string>
+statToIndex	../src/Weapon.h	/^ std::map<std::string, int> statToIndex = {$/;"	v	typeref:typename:std::map<std::string,int>
+stats	../src/Weapon.h	/^    std::vector<std::pair<std::string, std::string>> stats;$/;"	m	class:CWeapon	typeref:typename:std::vector<std::pair<std::string,std::string>>
+stellarObjects	../ctrek/Game/system.h	/^  int stellarObjects;$/;"	m	struct:System	typeref:typename:int
+str	../ctrek/Equipment/enemies.h	/^	int str;\/\/hp,armour,crit res$/;"	m	struct:__anon1753ce9b0108	typeref:typename:int
+strict	../ctrek/Game/makefile	/^strict: cTrekGame.cpp; rm -f trek trek.exe; g++ -g cTrekGame.cpp $(warnings) -std=gnu++0x -pedan/;"	t
+stype	../ctrek/Equipment/equipment.h	/^	char *stype;$/;"	m	struct:__anon0b083a2d0108	typeref:typename:char *
+stype	../ctrek/Equipment/equipment.h	/^	char *stype;\/\/circlet,horned helm...$/;"	m	struct:__anon0b083a2d0308	typeref:typename:char *
+stype	../ctrek/Equipment/equipment.h	/^	char *stype;\/\/quarts,ruby$/;"	m	struct:__anon0b083a2d0408	typeref:typename:char *
+suffix	../ctrek/Equipment/enemies.h	/^	char *suffix;\/\/of sorrow,brute,cleric,mage,ranger of fthe flame, vampire --skills$/;"	m	struct:__anon1753ce9b0108	typeref:typename:char *
+suffix	../ctrek/Equipment/equipment.h	/^	char *suffix;$/;"	m	struct:__anon0b083a2d0108	typeref:typename:char *
+suffix	../ctrek/Equipment/equipment.h	/^	char *suffix;$/;"	m	struct:__anon0b083a2d0308	typeref:typename:char *
+suffix	../ctrek/Equipment/equipment.h	/^	char *suffix;$/;"	m	struct:__anon0b083a2d0408	typeref:typename:char *
+suffix	../src/Weapon.h	/^    std::string suffix = "";$/;"	m	class:CWeapon	typeref:typename:std::string
+supplyMenu	../ctrek/Game/planet.h	/^  Menu *supplyMenu;$/;"	m	struct:Planet	typeref:typename:Menu *
+systemX	../ctrek/Game/player.h	/^  int systemX;$/;"	m	struct:Player	typeref:typename:int
+systemY	../ctrek/Game/player.h	/^  int systemY;$/;"	m	struct:Player	typeref:typename:int
+tech	../ctrek/Equipment/player.h	/^	int tech; \/\/equip bonuses$/;"	m	struct:__anon568b80a20408	typeref:typename:int
+test	../ctrek/Game/cTrekGame.cpp	/^void test() {$/;"	f	typeref:typename:void
+tier	../ctrek/Equipment/equipment.h	/^	char *tier;\/\/cloth,leather,scale,chain,plate$/;"	m	struct:__anon0b083a2d0308	typeref:typename:char *
+tier	../ctrek/Equipment/equipment.h	/^	int tier;$/;"	m	struct:__anon0b083a2d0108	typeref:typename:int
+tier	../src/Weapon.h	/^    int tier = 0;$/;"	m	class:CWeapon	typeref:typename:int
+tile	../ctrek/Game/player.h	/^  int tile;$/;"	m	struct:Player	typeref:typename:int
+to_string	../ctrek/Game/to_string.h	/^template <typename T> std::string to_string(T value) {$/;"	f	typeref:typename:std::string
+torpedos	../ctrek/Game/ship.h	/^  int torpedos;$/;"	m	struct:Ship	typeref:typename:int
+trimCRLF	../src/global.h	/^std::string trimCRLF(std::string s) {$/;"	f	typeref:typename:std::string
+tryToBuy	../ctrek/Game/utils.h	/^int tryToBuy(int quantity, int price, int hudstat) {$/;"	f	typeref:typename:int
+tryToSell	../ctrek/Game/utils.h	/^int tryToSell(int quantity, int price, int hudstat) {$/;"	f	typeref:typename:int
+type	../ctrek/Equipment/enemies.h	/^	char *type;\/\/slele,zomb,wolf$/;"	m	struct:__anon1753ce9b0108	typeref:typename:char *
+type	../ctrek/Equipment/equipment.h	/^	char *type;$/;"	m	struct:__anon0b083a2d0108	typeref:typename:char *
+type	../ctrek/Equipment/equipment.h	/^	char *type;\/\/head,chest,shield...$/;"	m	struct:__anon0b083a2d0308	typeref:typename:char *
+type	../ctrek/Equipment/equipment.h	/^	char *type;\/\/ring,amulet...$/;"	m	struct:__anon0b083a2d0408	typeref:typename:char *
+type	../ctrek/Game/weapons.h	/^  int type;$/;"	m	struct:Weapon	typeref:typename:int
+type	../src/Weapon.h	/^    std::string type = "";$/;"	m	class:CWeapon	typeref:typename:std::string
+unload	../ctrek/Game/menu.h	/^  static void unload(Menu *m) {$/;"	f	struct:Menu	typeref:typename:void
+unload	../ctrek/Game/planet.h	/^  static void unload(Planet *p) {$/;"	f	struct:Planet	typeref:typename:void
+unload	../ctrek/Game/player.h	/^  static void unload(Player *p) {$/;"	f	struct:Player	typeref:typename:void
+unload	../ctrek/Game/system.h	/^  static void unload(System *s) {$/;"	f	struct:System	typeref:typename:void
+updateStatsVector	../src/Weapon.cpp	/^void CWeapon::updateStatsVector(std::string statsName, std::string statsValue) {$/;"	f	class:CWeapon	typeref:typename:void
+upgradeMenu	../ctrek/Game/planet.h	/^  Menu *upgradeMenu;$/;"	m	struct:Planet	typeref:typename:Menu *
+upgrades	../ctrek/Equipment/equipment.h	/^	int *upgrades;\/\/sockets holding upgrade id$/;"	m	struct:__anon0b083a2d0108	typeref:typename:int *
+upgrades	../ctrek/Game/ship.h	/^  int upgrades[UPGRADES_I_SIZE];$/;"	m	struct:Ship	typeref:typename:int[]
+upgrades	../src/Weapon.h	/^    std::vector<std::pair<std::string, std::string>> upgrades;  \/\/ STAT, value$/;"	m	class:CWeapon	typeref:typename:std::vector<std::pair<std::string,std::string>>
+value	../ctrek/Game/upgrades.h	/^  int value;$/;"	m	struct:Upgrade	typeref:typename:int
+warnings	../ctrek/Game/makefile	/^warnings = -W -Wall -Wextra -ansi -Werror$/;"	m
+warship	../ctrek/Equipment/player.h	/^}warship;$/;"	t	typeref:struct:__anon568b80a20308
+weapon	../ctrek/Equipment/equipment.h	/^}weapon;$/;"	t	typeref:struct:__anon0b083a2d0108
+weaponCount	../ctrek/Game/ship.h	/^  int weaponCount() {$/;"	f	struct:Ship	typeref:typename:int
+weaponStatus	../ctrek/Game/drawable.h	/^char* weaponStatus() {$/;"	f	typeref:typename:char *
+weapons	../ctrek/Game/ship.h	/^  int weapons[WEAPONS_I_SIZE];$/;"	m	struct:Ship	typeref:typename:int[]
+weaponsCheck	../ctrek/Game/cTrekGame.cpp	/^int weaponsCheck(int playerFiring) {$/;"	f	typeref:typename:int
+wepgen	../ctrek/Equipment/wepgen.h	/^weapon *wepgen(){\/\/,int lvl,int raremult){$/;"	f	typeref:typename:weapon *
+weps	../ctrek/Equipment/player.h	/^	int *weps;$/;"	m	struct:__anon568b80a20208	typeref:typename:int *
+wis	../ctrek/Equipment/enemies.h	/^	int wis;\/\/mana, spell dmg,spell crit$/;"	m	struct:__anon1753ce9b0108	typeref:typename:int
+write	../ctrek/Game/libs.h	/^  void write(char *s) {$/;"	f	struct:DEBUG	typeref:typename:void
+write	../ctrek/Game/libs.h	/^  void write(const char *file, int line, char *s) {$/;"	f	struct:DEBUG	typeref:typename:void
+write	../ctrek/Game/libs.h	/^  void write(const char *file, int line, const char *format, ...) {$/;"	f	struct:DEBUG	typeref:typename:void
+write	../ctrek/Game/libs.h	/^  void write(const char *format, ...) {$/;"	f	struct:DEBUG	typeref:typename:void
+writeSystem	../ctrek/Game/galaxy.h	/^  static int writeSystem() {$/;"	f	struct:Galaxy	typeref:typename:int
+wupgrade	../ctrek/Equipment/equipment.h	/^}wupgrade;$/;"	t	typeref:struct:__anon0b083a2d0208
+x	../ctrek/Game/galaxy.h	/^  int x;$/;"	m	struct:GalaxyNode	typeref:typename:int
+x	../ctrek/Game/menu.h	/^  int x;$/;"	m	struct:Menu	typeref:typename:int
+x	../ctrek/Game/tmp.h	/^  int x;$/;"	m	struct:Menu	typeref:typename:int
+xp	../ctrek/Equipment/player.h	/^	int xp;$/;"	m	struct:__anon568b80a20408	typeref:typename:int
+y	../ctrek/Game/galaxy.h	/^  int y;$/;"	m	struct:GalaxyNode	typeref:typename:int
+y	../ctrek/Game/menu.h	/^  int y;$/;"	m	struct:Menu	typeref:typename:int
+y	../ctrek/Game/tmp.h	/^  int y;$/;"	m	struct:Menu	typeref:typename:int
+~Menu	../ctrek/Game/menu.h	/^  ~Menu() {$/;"	f	struct:Menu
+~Menu	../ctrek/Game/tmp.h	/^  ~Menu() {$/;"	f	struct:Menu

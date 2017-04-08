@@ -1,0 +1,179 @@
+In file included from test.cpp:1:
+In file included from ./Weapon.cpp:6:
+In file included from ./Weapon.h:6:
+In file included from ./global.h:12:
+./conOut_nix.h:14:31: error: no member named 'to_string' in namespace 'std'
+  std::cout << "\033[" + std::to_string(y) + ";" + std::to_string(y) + "f";
+                         ~~~~~^
+./conOut_nix.h:14:57: error: no member named 'to_string' in namespace 'std'
+  std::cout << "\033[" + std::to_string(y) + ";" + std::to_string(y) + "f";
+                                                   ~~~~~^
+./conOut_nix.h:17:33: error: no member named 'to_string' in namespace 'std'
+  std::cout << "\033[0;" + std::to_string(c) + "m";
+                           ~~~~~^
+./conOut_nix.h:20:33: error: no member named 'to_string' in namespace 'std'
+  std::cout << "\033[0;" + std::to_string(c) + "m" << "\033[0;" + std::to_string(b + 10) + "m";
+                           ~~~~~^
+./conOut_nix.h:20:72: error: no member named 'to_string' in namespace 'std'
+  std::cout << "\033[0;" + std::to_string(c) + "m" << "\033[0;" + std::to_string(b + 10) + "m";
+                                                                  ~~~~~^
+In file included from test.cpp:1:
+In file included from ./Weapon.cpp:6:
+In file included from ./Weapon.h:7:
+./fileUtils.h:5:17: error: no matching constructor for initialization of 'std::ifstream' (aka 'basic_ifstream<char>')
+  std::ifstream file(path);
+                ^    ~~~~
+/data/data/com.termux/files/usr/include/fstream:470:7: note: candidate constructor not viable: no known conversion from 'std::string' (aka 'basic_string<char>') to 'const char *' for 1st argument
+      basic_ifstream(const char* __s, ios_base::openmode __mode = ios_base::in)
+      ^
+/data/data/com.termux/files/usr/include/bits/fstream.tcc:969:25: note: candidate constructor (the implicit copy constructor) not viable: no known conversion from 'std::string' (aka 'basic_string<char>') to 'const std::basic_ifstream<char>' for 1st argument
+  extern template class basic_ifstream<char>;
+                        ^
+/data/data/com.termux/files/usr/include/fstream:456:7: note: candidate constructor not viable: requires 0 arguments, but 1 was provided
+      basic_ifstream() : __istream_type(), _M_filebuf()
+      ^
+In file included from test.cpp:1:
+In file included from ./Weapon.cpp:6:
+In file included from ./Weapon.h:7:
+./fileUtils.h:23:16: error: no matching constructor for initialization of 'std::fstream' (aka 'basic_fstream<char>')
+  std::fstream file(path);
+               ^    ~~~~
+/data/data/com.termux/files/usr/include/fstream:819:7: note: candidate constructor not viable: no known conversion from 'std::string' (aka 'basic_string<char>') to 'const char *' for 1st argument
+      basic_fstream(const char* __s,
+      ^
+/data/data/com.termux/files/usr/include/bits/fstream.tcc:971:25: note: candidate constructor (the implicit copy constructor) not viable: no known conversion from 'std::string' (aka 'basic_string<char>') to 'const std::basic_fstream<char>' for 1st argument
+  extern template class basic_fstream<char>;
+                        ^
+/data/data/com.termux/files/usr/include/fstream:806:7: note: candidate constructor not viable: requires 0 arguments, but 1 was provided
+      basic_fstream()
+      ^
+In file included from test.cpp:1:
+In file included from ./Weapon.cpp:6:
+./Weapon.h:55:22: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+    std::string type = "";
+                     ^
+./Weapon.h:56:23: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+    std::string sType = "";
+                      ^
+./Weapon.h:57:24: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+    std::string prefix = "";
+                       ^
+./Weapon.h:58:24: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+    std::string suffix = "";
+                       ^
+./Weapon.h:59:22: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+    std::string name = "";
+                     ^
+./Weapon.h:60:22: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+    std::string desc = "";  // weapon writup
+                     ^
+./Weapon.h:61:24: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+    std::string rarity = "";  // common, uncommon, rare, unique, epic, legendary
+                       ^
+./Weapon.h:63:13: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+    int lvl = 0;
+            ^
+./Weapon.h:64:14: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+    int tier = 0;
+             ^
+./Weapon.h:65:16: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+    float crit = 0;
+               ^
+./Weapon.h:66:15: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+    int shots = 0;  // hits per turn
+              ^
+./Weapon.h:67:16: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+    int maxdmg = 0;
+               ^
+./Weapon.h:68:13: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+    int dmg = 0;
+            ^
+./Weapon.h:69:19: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+    int mupgrades = 0;  // max # sockets
+                  ^
+./Weapon.h:70:19: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+    int nupgrades = 0;  // actual # sockets
+                  ^
+./Weapon.h:71:14: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+    int rlvl = 0;  // lvl req
+             ^
+./Weapon.h:72:16: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+    int rclout = 0;  // combat subskill req;
+               ^
+./Weapon.h:73:17: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+    int rsocial = 0;
+                ^
+./Weapon.h:74:51: error: a space is required between consecutive right angle brackets (use '> >')
+    std::vector<std::pair<std::string, std::string>> upgrades;  // STAT, value
+                                                  ^~
+                                                  > >
+./Weapon.h:75:51: error: a space is required between consecutive right angle brackets (use '> >')
+    std::vector<std::pair<std::string, std::string>> stats;
+                                                  ^~
+                                                  > >
+./Weapon.h:97:53: error: a space is required between consecutive right angle brackets (use '> >')
+      std::vector<std::pair<std::string, std::string>> upgrades,
+                                                    ^~
+                                                    > >
+./Weapon.h:101:53: error: a space is required between consecutive right angle brackets (use '> >')
+      std::vector<std::pair<std::string, std::string>> stats);
+                                                    ^~
+                                                    > >
+./Weapon.h:123:51: error: a space is required between consecutive right angle brackets (use '> >')
+    std::vector<std::pair<std::string, std::string>> getStats() {return stats;}
+                                                  ^~
+                                                  > >
+./Weapon.h:124:51: error: a space is required between consecutive right angle brackets (use '> >')
+    std::vector<std::pair<std::string, std::string>> getUpgrades() {return upgrades;}
+                                                  ^~
+                                                  > >
+./Weapon.h:144:29: error: non-aggregate type 'std::map<std::string, int>' (aka 'map<basic_string<char>, int>') cannot be initialized with an initializer list
+ std::map<std::string, int> statToIndex = {
+                            ^             ~
+./Weapon.h:170:29: error: non-aggregate type 'std::map<int, std::string>' (aka 'map<int, basic_string<char> >') cannot be initialized with an initializer list
+ std::map<int, std::string> indexToStat = {
+                            ^             ~
+./Weapon.h:197:36: error: non-aggregate type 'std::map<std::string, std::string>' (aka 'map<basic_string<char>, basic_string<char> >') cannot be initialized with an initializer list
+std::map<std::string, std::string> statToDataType = {
+                                   ^                ~
+In file included from test.cpp:1:
+./Weapon.cpp:159:19: error: no matching constructor for initialization of 'std::ifstream' (aka 'basic_ifstream<char>')
+    std::ifstream uniqueStats(path);
+                  ^           ~~~~
+/data/data/com.termux/files/usr/include/fstream:470:7: note: candidate constructor not viable: no known conversion from 'std::string' (aka 'basic_string<char>') to 'const char *' for 1st argument
+      basic_ifstream(const char* __s, ios_base::openmode __mode = ios_base::in)
+      ^
+/data/data/com.termux/files/usr/include/bits/fstream.tcc:969:25: note: candidate constructor (the implicit copy constructor) not viable: no known conversion from 'std::string' (aka 'basic_string<char>') to 'const std::basic_ifstream<char>' for 1st argument
+  extern template class basic_ifstream<char>;
+                        ^
+/data/data/com.termux/files/usr/include/fstream:456:7: note: candidate constructor not viable: requires 0 arguments, but 1 was provided
+      basic_ifstream() : __istream_type(), _M_filebuf()
+      ^
+In file included from test.cpp:1:
+./Weapon.cpp:193:17: error: no matching constructor for initialization of 'std::ifstream' (aka 'basic_ifstream<char>')
+  std::ifstream statsFile(path);
+                ^         ~~~~
+/data/data/com.termux/files/usr/include/fstream:470:7: note: candidate constructor not viable: no known conversion from 'std::string' (aka 'basic_string<char>') to 'const char *' for 1st argument
+      basic_ifstream(const char* __s, ios_base::openmode __mode = ios_base::in)
+      ^
+/data/data/com.termux/files/usr/include/bits/fstream.tcc:969:25: note: candidate constructor (the implicit copy constructor) not viable: no known conversion from 'std::string' (aka 'basic_string<char>') to 'const std::basic_ifstream<char>' for 1st argument
+  extern template class basic_ifstream<char>;
+                        ^
+/data/data/com.termux/files/usr/include/fstream:456:7: note: candidate constructor not viable: requires 0 arguments, but 1 was provided
+      basic_ifstream() : __istream_type(), _M_filebuf()
+      ^
+In file included from test.cpp:1:
+./Weapon.cpp:226:17: error: no matching constructor for initialization of 'std::ifstream' (aka 'basic_ifstream<char>')
+  std::ifstream subTypeFile(path);
+                ^           ~~~~
+/data/data/com.termux/files/usr/include/fstream:470:7: note: candidate constructor not viable: no known conversion from 'std::string' (aka 'basic_string<char>') to 'const char *' for 1st argument
+      basic_ifstream(const char* __s, ios_base::openmode __mode = ios_base::in)
+      ^
+/data/data/com.termux/files/usr/include/bits/fstream.tcc:969:25: note: candidate constructor (the implicit copy constructor) not viable: no known conversion from 'std::string' (aka 'basic_string<char>') to 'const std::basic_ifstream<char>' for 1st argument
+  extern template class basic_ifstream<char>;
+                        ^
+/data/data/com.termux/files/usr/include/fstream:456:7: note: candidate constructor not viable: requires 0 arguments, but 1 was provided
+      basic_ifstream() : __istream_type(), _M_filebuf()
+      ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+18 warnings and 20 errors generated.
